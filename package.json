@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/acbihm/game/issues"
   },
-  "homepage": "https://github.com/acbihm/game#readme"
+  "homepage": "https://github.com/acbihm/game#readme",
+  "dependencies": {
+    "create-react-app": "^3.0.0"
+  }
 }
