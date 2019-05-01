@@ -2,21 +2,30 @@ import React from "react";
 import TypeTest from './TypeTest.js';
 
 
-const background = 'https://data.whicdn.com/images/147235454/large.jpg'
+// const background = 'https://data.whicdn.com/images/147235454/large.jpg'
 const styles = {
     content: {
-        padding: 20,
+        paddingRight: 17,
+        paddingLeft: 17,
+        paddingTop: 40,
+        minHeight: 63, 
+        maxHeight: 90,
         color: "black",
-        background: "lightgray",
-        minHeight: 90,
-        width: 860,
-        left: 55,
-        position: 'absolute',
-        top: 520,
-        borderRadius:30,
-        borderStyle: 'outset',
-        backgroundImage:`url(${background})`,
-        fontWeight: 'bold'
+        background: '#fbfbf0',
+        width: '87%',
+        left: 40,
+        position: 'relative',
+        float: 'left',
+        borderRadius:20,
+        borderStyle: 'inset',
+        // backgroundImage:`url(${background})`,
+        fontWeight: 'bold', 
+
+        // float: 'left',
+        top: 35, 
+        marginRight: 'auto', /* 1 */
+        marginLeft:  'auto', /* 1 */
+
 
     }
 };

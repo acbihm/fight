@@ -3,12 +3,14 @@ import React from "react";
 
 const styles = {
     content: {
-        padding: 20,
         color: "white",
         background: "green",
-        minHeight: 50,
-        width: 1000,
-        borderStyle: 'outset'
+        minHeight: 100,
+        float: 'left',
+        width: '100%',
+        padding: 0,
+        margin: 0
+
     }
 };
 

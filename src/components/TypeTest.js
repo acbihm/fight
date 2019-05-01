@@ -4,8 +4,8 @@ import React from "react";
 const styles = {
     content: {
         fontSize: 100,
-        top: 200,
-position: 'absolute'
+        float: 'left',
+position: 'static'
     }
 };
 

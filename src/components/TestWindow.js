@@ -4,16 +4,22 @@ import React from "react";
 
 const styles = {
     content: {
-        
+        borderRadius:20,
+        paddingRight: 17,
+        paddingLeft: 17,
         color: "blue",
         background: "white",
-        minHeight: 300,
-        width: 900,
-        left: 60,
-        position: 'absolute',
-        top: 150,
-        borderStyle: 'inset'
-
+        width: '87%',
+        float: 'left',
+        marginRight: 'auto', /* 1 */
+        marginLeft:  'auto', /* 1 */
+        borderStyle: 'inset',
+        height: 480,
+        left: 40,
+        top: 20,
+        position: 'relative',
+  
+    
 
     }
 };
