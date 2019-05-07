@@ -6,38 +6,27 @@
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
   <title>React App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crafty/0.5.4/crafty-min.js"></script>
 </head>
 
 <body>
   <style>
-    /* #canvas {
-      border: 1px solid black;
-    } */
-
-
-    
   </style>
   <!-- <div id=container>
-
     <canvas id='canvas' width='500' height='500' onclick="showCoords(event)"></canvas>
   </div> -->
+  <div>
+
+    <div id="cr-stage"></div><br><br>
+    <p id="alert"></p>
+  </div>
+
   <div id="root"></div>
-  <div class="cube">
+  <!-- <div class="cube">
       
       <div class="side   back"></div>
       <div class="sideR  right"></div>
@@ -48,55 +37,41 @@
       <div class="side    top"></div>
       <div class="side bottom"></div>
     </div>
-  <p id='showCoords'></p>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-
-
-
-  <script>
-    // function draw() {
-    //   var canvas = document.getElementById('canvas');
-    //   if (canvas.getContext) {
-    //     var context = canvas.getContext('2d');
-    //     for (var x = 0.5; x < 500; x += 25) {
-    //       context.moveTo(x, 0);
-    //       context.lineTo(x, 500);
-    //     }
-    //     for (var y = 0.5; y < 500; y += 25) {
-    //       context.moveTo(0, y);
-    //       context.lineTo(500, y);
-    //     }
-    //     context.strokeStyle = 'grey';
-    //     context.stroke();
-    //   }
-    // }
-
-    // function showCoords(event) {
-    //   var x = event.clientX //- 25;
-    //   var y = event.clientY //- 25;
-    //   var coords = "X coordinates: " + x + ", Y coordinates: " + y;
-    //   document.getElementById('showCoords').innerHTML = coords;
-    // }
+  <p id='showCoords'></p> -->
 
 
 
 
+  <script>Crafty.init(1000, 600);
 
-    // var xx = 25;
-    // var yy = 25;
-    // var canvas = document.getElementById("canvas");
-    // var ctx = canvas.getContext("2d");
-    // ctx.rect(0, 0, 150, 100);
-    // ctx.font = "5px Arial";
-    // ctx.strokeText("0,0", 0, 0);
-    // ctx.strokeText("10,10", 10, 10);
-    // ctx.strokeText("20,20", 20, 20);
-    // ctx.stroke();
+    var dim1a = { x: 5, y: 5, w: 30, h: 100 }
+    var dim1b = { x: 3, y: 2, w: 100, h: 30 }
 
-    // ctx.beginPath();
-    // ctx.rect(xx, yy, 50, 50);
-    // ctx.fillStyle = "red";
-    // ctx.fill();
+    var dim2 = { x: 20, y: 10, w: 60, h: 40 }
+
+    var p1Red = Crafty.e("2D, Canvas, Color").attr(dim1a).color("red");
+    var p1Yellow = Crafty.e("2D, Canvas, Color").attr(dim1b).color("yellow");
+    var p2Top = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
+
+    p2Top.bind("EnterFrame", function () {
+      if ((p1Red.x < p2Top.x + p2Top.w &&
+        p1Red.x + p1Red.w > p2Top.x &&
+        p1Red.y < p2Top.y + p2Top.h &&
+        p1Red.h + p1Red.y > p2Top.y)
+        || (p1Yellow.x < p2Top.x + p2Top.w &&
+          p1Yellow.x + p1Yellow.w > p2Top.x &&
+          p1Yellow.y < p2Top.y + p2Top.h &&
+          p1Yellow.h + p1Yellow.y > p2Top.y)) {
+        // collision detected!
+        // this.color("green");
+        $('#alert').html("Collision");
+      } else {
+        // no collision
+        $('#alert').html("No collision");
+      }
+    });
+
+
 
   </script>
 </body>
