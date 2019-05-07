@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "arrow-keys-react": "^1.0.6",
     "express": "^4.16.4",
     "mongoose": "^5.5.4",
     "react": "^16.8.6",

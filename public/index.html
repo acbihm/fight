@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -19,20 +20,85 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <title>React App</title>
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
+  <style>
+    /* #canvas {
+      border: 1px solid black;
+    } */
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+
+    
+  </style>
+  <!-- <div id=container>
+
+    <canvas id='canvas' width='500' height='500' onclick="showCoords(event)"></canvas>
+  </div> -->
+  <div id="root"></div>
+  <div class="cube">
+      
+      <div class="side   back"></div>
+      <div class="sideR  right"></div>
+      <div class="sideRD   left"></div>
+      <div class="sideL   left"></div>
+      <div class="sideLD   left"></div>
+
+      <div class="side    top"></div>
+      <div class="side bottom"></div>
+    </div>
+  <p id='showCoords'></p>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+
+
+
+  <script>
+    // function draw() {
+    //   var canvas = document.getElementById('canvas');
+    //   if (canvas.getContext) {
+    //     var context = canvas.getContext('2d');
+    //     for (var x = 0.5; x < 500; x += 25) {
+    //       context.moveTo(x, 0);
+    //       context.lineTo(x, 500);
+    //     }
+    //     for (var y = 0.5; y < 500; y += 25) {
+    //       context.moveTo(0, y);
+    //       context.lineTo(500, y);
+    //     }
+    //     context.strokeStyle = 'grey';
+    //     context.stroke();
+    //   }
+    // }
+
+    // function showCoords(event) {
+    //   var x = event.clientX //- 25;
+    //   var y = event.clientY //- 25;
+    //   var coords = "X coordinates: " + x + ", Y coordinates: " + y;
+    //   document.getElementById('showCoords').innerHTML = coords;
+    // }
+
+
+
+
+
+    // var xx = 25;
+    // var yy = 25;
+    // var canvas = document.getElementById("canvas");
+    // var ctx = canvas.getContext("2d");
+    // ctx.rect(0, 0, 150, 100);
+    // ctx.font = "5px Arial";
+    // ctx.strokeText("0,0", 0, 0);
+    // ctx.strokeText("10,10", 10, 10);
+    // ctx.strokeText("20,20", 20, 20);
+    // ctx.stroke();
+
+    // ctx.beginPath();
+    // ctx.rect(xx, yy, 50, 50);
+    // ctx.fillStyle = "red";
+    // ctx.fill();
+
+  </script>
+</body>
+
 </html>

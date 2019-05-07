@@ -1,0 +1,113 @@
+/* @import "compass/css3"; */
+.cube {
+  font-size: 5em;
+  width: 3em;
+  height: 2em;
+  margin: 1em auto;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  animation: move-origin infinite 9s;
+}
+.side {
+  position: absolute;
+  width: 7em;
+  /* keep this at 7 */
+  height: 2em;
+  background: rgba(255, 99, 71, .6);
+  border: 1px solid rgba(0, 0, 0, .5);
+  color: white;
+  text-align: center;
+  line-height: 2em;
+}
+
+.sideR {
+    position: fixed;
+    width: 2em;
+    height: 2em;
+    background: rgba(255, 99, 71, .6);
+    border: 1px solid rgba(0, 0, 0, .5);
+    color: white;
+    text-align: center;
+    line-height: 2em;
+    right: -323px;
+
+  }
+  
+  .sideL {
+    position: fixed;
+    width: 2em;
+    height: 2em;
+    background: rgba(255, 99, 71, .6);
+    border: 1px solid rgba(0, 0, 0, .5);
+    color: white;
+    text-align: center;
+    line-height: 2em;
+    left: 0px;
+  }
+
+  .sideLD {
+    position: fixed;
+    width: .2em;
+    height: .8em;
+    background: rgba(4, 99, 71, .6);
+    border: 1px solid rgba(0, 0, 0, .5);
+    color: white;
+    text-align: center;
+    line-height: 2em;
+    left: 70px;
+    bottom: -2px;
+  }
+
+  .sideRD {
+    position: fixed;
+    width: .2em;
+    height: .8em;
+    background: rgba(4, 99, 71, .6);
+    border: 1px solid rgba(0, 0, 0, .5);
+    color: white;
+    text-align: center;
+    line-height: 2em;
+    right: -410px;
+    bottom: -2px;
+    mix-blend-mode: exclusion;
+    /* background-blend-mode: exclusion; */
+  }
+
+.front {
+  transform: translateZ(1em);
+}
+.top {
+  transform: rotateX(90deg) translateZ(1em);
+}
+.right {
+  transform: rotateY(90deg) translateZ(1em);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(1em);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(1em);
+  /* background-image: url('g.jpg'); */
+}
+.back {
+  transform: rotateY(-180deg) translateZ(1em);
+}
+/* @keyframes move-origin {
+  0% {
+    perspective-origin: 200% 0%;
+  }
+  25% {
+    perspective-origin: 100% 0%;
+  }
+  50% {
+    perspective-origin: 0% 0%;
+  }
+  75% {
+    perspective-origin: -100% 0%;
+  }
+  100% {
+    perspective-origin: -200% 0%;
+  }
+
+  
+} */

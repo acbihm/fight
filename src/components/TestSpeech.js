@@ -12,7 +12,7 @@ const styles = {
         maxHeight: 90,
         color: "black",
         background: '#fbfbf0',
-        width: '87%',
+        width: '90%',
         left: 40,
         position: 'relative',
         float: 'left',

@@ -7,7 +7,7 @@ import './App.css';
 // import TestWindow from "./components/TestWindow.js";
 // import TestFrame from "./components/TestFrame.js";
 // import TestFloor from "./components/TestFloor.js";
-import Wrapper from "./components/Wrapper.js";
+import Wrapper from "./Wrapper.js";
 
 
 // import TypeTest from './components/TypeTest.js';
@@ -15,6 +15,7 @@ import Wrapper from "./components/Wrapper.js";
 function App() {
   return (
     <div>
+    <ArrowKeysReact {...ArrowKeysReact.events} />
       <Wrapper>
       {/* <TestFrame />
       <TestHUD />
