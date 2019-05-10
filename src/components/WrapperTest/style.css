@@ -9,5 +9,13 @@
     height: 100vh;
     position: absolute;
     top: 0;
+    background-image: url('https://im3.ezgif.com/tmp/ezgif-3-64693d2afad8.gif');
+
+    background-attachment: fixed;
+    background-size: cover;
+    
+    background-color: black;
+    /* opacity: .3; */
+
 
 }
