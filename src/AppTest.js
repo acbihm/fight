@@ -5,8 +5,16 @@ import KeyEvents from './components/KeyEvents';
 import EnemyTest from "./components/Test/EnemyTest";
 import WrapperTest from "./components/WrapperTest";
 import Image from "./components/Image";
+import Bar from "./components/Bar";
+// import Button from 'react-bootstrap/Button';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import SelectScreen from './components/SelectScreen';
+import SelectStats from './components/SelectStats';
+import SelectHeader from "./components/SelectHeader";
 
-class App3 extends React.Component {
+
+
+class AppTest extends React.Component {
   state = {
     x: 0,
     y: 0,
@@ -36,33 +44,19 @@ class App3 extends React.Component {
     });
   };
 
-  // moveUpLeft = () => {
-  //   this.setState(prevState => {
-  //     this.setState({ y: prevState.y + 10 }, { x: prevState.x - 10 });
-  //   });
-
-  // };
-  // moveUpLeft = () => {
-  //   this.setState(prevState => {
-  //     this.setState({ y: prevState.y - 10 }, { x: prevState.x - 10 });
-  //   });
-  // };
-  // moveDownLeft = () => {
-  //   this.setState(prevState => {
-  //     this.setState({ y: prevState.y - 10 }, { x: prevState.x - 10 });
-  //   });
-  // };
-  // moveDownRight = () => {
-  //   this.setState(prevState => {
-  //     this.setState({ y: prevState.y - 10 }, { x: prevState.x + 10 });
-  //   });
-  // };
-
   render() {
     return (
       <Fragment>
         <WrapperTest>
-        <Image /><Image /><Image />
+        {/* <Bar/> */}
+        <ProgressBar now={50} />
+        
+        <SelectScreen>
+        <SelectHeader />
+        <Image /><Image /><Image /><Image /><Image /><Image /><Image /><Image />
+                <SelectStats />
+
+        </SelectScreen>
           <KeyEvents
             onLeft={this.moveLeft}
             onRight={this.moveRight}
@@ -76,6 +70,7 @@ class App3 extends React.Component {
               position: "absolute",
               backgroundColor: "lightblue",
               top: 0,
+              left: 0,
               clear: 'both',
               height: 600,
               width: 200,
@@ -91,4 +86,4 @@ class App3 extends React.Component {
     );
   }
 }
-export default App3;
+export default AppTest;

@@ -1,0 +1,17 @@
+.select-header {
+    display: flex;
+    padding: 0 8px 0 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 86%;
+    margin: 0 auto;
+    letter-spacing: 6px;
+
+    color: yellow;
+    z-index: 300px;
+    font-family: 'Luckiest Guy', cursive;
+font-size: 1.37rem;
+text-shadow: 4px 6px black;
+
+
+}

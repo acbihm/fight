@@ -1,11 +1,18 @@
 .img-block {
   height: 100px;
   width: 100px;
-  margin: 7px 22px;
-  border: 10px solid black;
-  position: relative;
+  margin: 7px 15px;
+  border: 8px double goldenrod;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  /* position: static; */
   float: left;
   background-size: cover;
   background-position: center;
   z-index: 100;
+  /* border-image: linear-gradient(45deg, rgb(100,0,0), rgb(250,224,66)) 1; */
+  
+
+
 }
+
