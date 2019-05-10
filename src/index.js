@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import AppTest from './AppTest';
-import AppMenu from './AppTest';
+import AppMenu from './AppMenu';
 
 
 import * as serviceWorker from './serviceWorker';

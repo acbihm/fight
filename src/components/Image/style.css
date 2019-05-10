@@ -1,18 +1,19 @@
 .img-block {
-  height: 100px;
-  width: 100px;
-  margin: 7px 15px;
-  border: 8px double goldenrod;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  /* position: static; */
+  height: 120px;
+  width: 130px;
+  margin: 9px 17px;
+  border: 6px double gold;
+  border-style: inset;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  border-bottom-left-radius: 20px;
   float: left;
   background-size: cover;
   background-position: center;
   z-index: 100;
-  /* border-image: linear-gradient(45deg, rgb(100,0,0), rgb(250,224,66)) 1; */
-  
-
+  box-shadow: 6px 9px brown;
 
 }
 

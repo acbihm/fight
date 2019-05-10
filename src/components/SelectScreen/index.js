@@ -4,7 +4,7 @@ import "./style.css";
 
 
 function SelectScreen(props) {
-    return <div className="select-images ">
+    return <div className="select-screen">
     {props.children}</div>;
 }
 

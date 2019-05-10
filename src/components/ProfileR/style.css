@@ -1,0 +1,10 @@
+.profile-R {
+    bottom: 0;
+    right: -60px;
+    z-index: 100;
+    position: absolute;
+    width: 32%;
+    /* height: 0%; */
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}

@@ -4,12 +4,17 @@ import React, { Fragment } from "react";
 import KeyEvents from './components/KeyEvents';
 import WrapperTest from "./components/WrapperTest";
 import Image from "./components/Image";
+import Profile from "./components/Profile";
+import ProfileR from "./components/ProfileR";
+
+import SelectStats from './components/SelectStats';
+import SelectHeader from "./components/SelectHeader";
 import SelectScreen from './components/SelectScreen';
 
 
 
 class AppMenu extends React.Component {
-  
+
   // state = {
   //   x: 0,
   //   y: 0,
@@ -42,11 +47,17 @@ class AppMenu extends React.Component {
   render() {
     return (
       <Fragment>
+        <Profile />
+        <ProfileR />
+
         <WrapperTest>
-        <SelectScreen>
-        <Image /><Image /><Image /><Image /><Image /><Image /><Image /><Image /><Image />
-        </SelectScreen>
-        
+          <SelectScreen>
+            <SelectHeader />
+            <Image /><Image /><Image /><Image /><Image /><Image /><Image /><Image />
+            <SelectStats />
+
+          </SelectScreen>
+
         </WrapperTest>
       </Fragment>
     );

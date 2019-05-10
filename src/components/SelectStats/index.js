@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.css";
 
-
 function SelectStats(props) {
     return <div className="select-stats">
         <h2>NAME</h2>
@@ -11,10 +10,8 @@ function SelectStats(props) {
             <li>ATK: 150</li>
             <li>DEF: 300</li>
         </ul>
+        <h3>Special: NAME NAME</h3>
     </div>;
-
 }
-
-
 
 export default SelectStats;

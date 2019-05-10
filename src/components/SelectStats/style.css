@@ -1,12 +1,9 @@
 .select-stats {
-    margin-top: 10px;
-    /* display: flex; */
-    padding: 0 35px 35px 50px;
+    margin-top: -5px;
+    padding: 0 35px 35px 35px;
     position: static;
     width: 98%;
     justify-content: center;
-    /* padding-top: 350px; */
-    /* border-image: linear-gradient(45deg, rgb(100,0,0), rgb(250,224,66)) 1; */
 }
 h1 {
     letter-spacing: 5px;
@@ -14,14 +11,13 @@ h1 {
 }
 h2 {
     color: goldenrod;
-    
-
 }
+
 h3, li {
+    list-style: none;
     color: gold;
     clear: both;
-    /* float: right; */
-    padding-right: 200px;
+    padding-left: 25%;
     margin: 0 auto;
 
 }

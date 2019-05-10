@@ -1,11 +1,11 @@
-.select-images {
+.select-screen {
     margin-top: 2.7%;
     display: flex;
     padding: 0 50px 50px 50px;
     flex-wrap: wrap;
     justify-content: center;
     position: fixed;
-    width: 50%;
+    width: 55%;
     margin: 10 auto;
     background-color: navy;
     z-index: 300px;
@@ -14,7 +14,7 @@
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border: 8px double goldenrod;
-    background-image: url('https://i.stack.imgur.com/XZDsP.jpg');
+    background-image: url('https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg');
 
     /* border-image: linear-gradient(45deg, rgb(100,0,0), rgb(250,224,66)) 1; */
 
