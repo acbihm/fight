@@ -14,7 +14,13 @@
 </head>
 
 <body>
-  <style>
+  <!-- <style>
+    .enemy {
+      background-color: green;
+      height: 600px;
+      width: 200px;
+      float: right;
+    } -->
   </style>
   <!-- <div id=container>
     <canvas id='canvas' width='500' height='500' onclick="showCoords(event)"></canvas>
@@ -24,7 +30,7 @@
     <div id="cr-stage"></div><br><br>
     <p id="alert"></p>
   </div>
-
+<!-- <div class="enemy"></div> -->
   <div id="root"></div>
   <!-- <div class="cube">
       
@@ -42,35 +48,69 @@
 
 
 
-  <script>Crafty.init(1000, 600);
+ <script>
+    // Crafty.init(1000, 600);
+    // Crafty.background('#122353 no-repeat center center');
 
-    var dim1a = { x: 5, y: 5, w: 30, h: 100 }
-    var dim1b = { x: 3, y: 2, w: 100, h: 30 }
+    // var dim1a = { x: 5, y: 5, w: 30, h: 100 }
+    // var dim1b = { x: 3, y: 2, w: 100, h: 30 }
 
-    var dim2 = { x: 20, y: 10, w: 60, h: 40 }
+    // var dim2 = { x: 20, y: 10, w: 60, h: 40 }
+    // var dimContainer = { x: 100, y: 100, w: 100, h: 100 };
 
-    var p1Red = Crafty.e("2D, Canvas, Color").attr(dim1a).color("red");
-    var p1Yellow = Crafty.e("2D, Canvas, Color").attr(dim1b).color("yellow");
-    var p2Top = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
+    // Crafty.e('2D, DOM, Color, Twoway, Gravity')
+    //   .attr({ x: 0, y: 400, w: 50, h: 50 })
+    //   .color('#F00')
+    //   .twoway(11)
 
-    p2Top.bind("EnterFrame", function () {
-      if ((p1Red.x < p2Top.x + p2Top.w &&
-        p1Red.x + p1Red.w > p2Top.x &&
-        p1Red.y < p2Top.y + p2Top.h &&
-        p1Red.h + p1Red.y > p2Top.y)
-        || (p1Yellow.x < p2Top.x + p2Top.w &&
-          p1Yellow.x + p1Yellow.w > p2Top.x &&
-          p1Yellow.y < p2Top.y + p2Top.h &&
-          p1Yellow.h + p1Yellow.y > p2Top.y)) {
-        // collision detected!
-        // this.color("green");
-        $('#alert').html("Collision");
-      } else {
-        // no collision
-        $('#alert').html("No collision");
-      }
-    });
+    //   .gravity('Floor')
+    // // .gravityConst(1000)
 
+
+    // Crafty.e('Floor, 2D, DOM, Color')
+    //   .attr({ x: 0, y: 590, w: 1000, h: 10 })
+
+    //   .color('green');
+
+
+    // var p1Red = Crafty.e("2D, DOM, Color").attr(dim1a).color("red");
+    // var p1Yellow = Crafty.e("2D, DOM, Color").attr(dim1b).color("yellow");
+    // // var p2Container = Crafty.e("2D, DOM, Color").attr(dimContainer).color("gray");
+
+    // var p2Top = Crafty.e("2D, DOM, Color, Keyboard, Fourway").fourway(11).attr(dim2).color("blue");
+
+    // p2Top.bind("EnterFrame", function () {
+    //   if ((p1Red.x < p2Top.x + p2Top.w &&
+    //     p1Red.x + p1Red.w > p2Top.x &&
+    //     p1Red.y < p2Top.y + p2Top.h &&
+    //     p1Red.h + p1Red.y > p2Top.y)
+    //     || (p1Yellow.x < p2Top.x + p2Top.w &&
+    //       p1Yellow.x + p1Yellow.w > p2Top.x &&
+    //       p1Yellow.y < p2Top.y + p2Top.h &&
+    //       p1Yellow.h + p1Yellow.y > p2Top.y)) {
+    //     // collision detected!
+    //     // this.color("green");
+    //     $('#alert').html("Collision");
+    //   } else {
+    //     // no collision
+    //     $('#alert').html("No collision");
+    //   }
+    // }); 
+
+
+    
+      // if ((p1Red.x < p2Top.x + p2Top.w &&
+      //   p1Red.x + p1Red.w > p2Top.x &&
+      //   p1Red.y < p2Top.y + p2Top.h &&
+      //   p1Red.h + p1Red.y > p2Top.y)
+      //   || (p1Yellow.x < p2Top.x + p2Top.w &&
+      //     p1Yellow.x + p1Yellow.w > p2Top.x &&
+      //     p1Yellow.y < p2Top.y + p2Top.h &&
+      //     p1Yellow.h + p1Yellow.y > p2Top.y)) {
+      //   $('#alert').html("Collision");
+      // } else {
+      //   $('#alert').html("No collision");
+      // }
 
 
   </script>

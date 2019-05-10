@@ -1,0 +1,11 @@
+.img-block {
+  height: 100px;
+  width: 100px;
+  margin: 7px 22px;
+  border: 10px solid black;
+  position: relative;
+  float: left;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+}

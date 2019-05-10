@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "image": "../public/assets/img/1.png",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "image": "../public/assets/img/2.png",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "image": "../public/assets/img/3.png",
+        "clicked": false
+    }
+]
