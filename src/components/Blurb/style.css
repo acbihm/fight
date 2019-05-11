@@ -22,5 +22,16 @@
     border-bottom-right-radius: 35px;
     border-top-right-radius: 35px;
     border-top-left-radius: 35px;
+    box-shadow: 10px 10px black;
+
 }
 
+#area {
+    animation: animatedBackground 17s linear infinite;
+    /* background-repeat: repeat-x; */
+}
+
+@keyframes animatedBackground {
+	from { background-position: 100% 0; }
+	to { background-position: 0 0; }
+}

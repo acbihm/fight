@@ -5,7 +5,7 @@ import "./style.css";
 
 function Blurb(props) {
     return (
-        <div className="blurb">
+        <div className="blurb" id="area">
             {props.children}
         </div>
     )
