@@ -9,12 +9,12 @@
     margin: 10 auto;
     background-color: #ffd17a;
     z-index: 300px;
-    min-height: 40%;
-    max-height: 70%;
-    border-bottom-left-radius: 50px;
+    min-height: 50%;
+    max-height: 80%;
+    /* border-bottom-left-radius: 50px;
     border-bottom-right-radius: 35%;
     border-top-right-radius: 50px;
-    border-top-left-radius: 35%;
+    border-top-left-radius: 35%; */
     border: 8px double goldenrod;
     background-attachment: fixed;
     background-size: cover;

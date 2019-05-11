@@ -1,0 +1,27 @@
+.blurb {
+    /* margin-top: 3.7%; */
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    vertical-align: middle;
+    margin: auto auto;
+    background-color: #ffd17a;
+    z-index: 300px;
+    min-height: 30vh;
+    max-height: 50vh;
+    border: 8px double goldenrod;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #c49c81;
+    background-image: url("https://www.transparenttextures.com/patterns/pinstriped-suit.png");
+    background-size: 40%;
+    background-blend-mode: multiply;
+
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+}
+

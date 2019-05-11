@@ -1,0 +1,21 @@
+.game-text {
+    display: flex;
+    padding: 5px;
+    padding-top: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+    letter-spacing: 3px;
+    line-height: 2.3rem;
+    /* position: static; */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #442323;
+    color: gold;
+    z-index: 300px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.7rem;
+    text-shadow: 2px 2px black;
+    text-indent: 3rem; 
+}
+

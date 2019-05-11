@@ -11,9 +11,14 @@
     position: absolute;
     top: 2.7rem;
     /* background-image: url('https://im3.ezgif.com/tmp/ezgif-3-64693d2afad8.gif'); */
-    background-color: #933a16;
-    background-attachment: fixed;
-    background-size: cover;
+    /* background-color: #933a16; */
+
+    background-color: #401c13;
+    background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /* background-attachment: fi; */
+    background-size: 40%;
+    background-size: repeat;
     /* background-color: black; */
     /* opacity: .3; */
 }

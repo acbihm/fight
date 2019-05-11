@@ -9,7 +9,7 @@
     letter-spacing: 6px;
     position: static;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: brown;
+    -webkit-text-stroke-color: #442323;
     color: yellow;
     z-index: 300px;
     font-family: 'Luckiest Guy', cursive;
@@ -22,3 +22,13 @@ h1 {
     opacity: 1;
     font-size: 2rem;
 }
+
+/* ::after {
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid black;
+    width: 100%;
+    margin: 0 1rem;
+    
+    
+  } */
