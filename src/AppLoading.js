@@ -8,24 +8,21 @@ import WrapperTest from "./components/WrapperTest";
 import SelectHeader from "./components/SelectHeader";
 import SelectScreen from './components/SelectScreen';
 import Footer from './components/Footer';
+import Head from './components/Head';
+
 
 
 
 
 class AppLoading extends React.Component {
-
-
     render() {
         return (
             <Fragment>
-
-
+                    <Head />
                 <WrapperTest>
                     <SelectScreen>
-                        <SelectHeader text="Searching for opponent!"/>
-
+                        <SelectHeader text="Searching for opponent!" />
                     </SelectScreen>
-
                 </WrapperTest>
                 <Footer />
             </Fragment>

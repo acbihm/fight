@@ -1,0 +1,38 @@
+.headbar {
+    /* height: 3rem; */
+    min-height: 2.7rem;
+    font-size: 13px;
+    color: white;
+    background-color: #33312c;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    z-index: 3;
+    border-bottom: double 5px orangered;
+    /* border-bottom-style: inset; */
+    
+}
+
+.headbar span {
+    padding-top: 5px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.headbar #small-nav {
+    float: left;
+    margin-left: 15px;
+}
+
+.headbar #head-game-logo {
+    float: left;
+    text-align: center;
+    /* margin-left: 50%; */
+}
+
+.headbar #username {
+    float: right;
+    margin-right: 15px;
+}

@@ -11,6 +11,7 @@ import SelectStats from './components/SelectStats';
 import SelectHeader from "./components/SelectHeader";
 import SelectScreen from './components/SelectScreen';
 import Footer from './components/Footer';
+import Head from "./components/Head";
 
 
 
@@ -49,9 +50,9 @@ class AppMenu extends React.Component {
   render() {
     return (
       <Fragment>
-        <Profile />
-        <ProfileR />
-
+        {/* <Profile />
+        <ProfileR /> */}
+        <Head />
         <WrapperTest>
           <SelectScreen>
             {/* <SelectHeader /> */}

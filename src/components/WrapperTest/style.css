@@ -7,14 +7,13 @@
     margin: 0 auto;
     background-color: gray;
     /* height: 100vh; */
-    min-height: calc(100vh - 20px);
+    min-height: calc(100vh - 4.1rem);
     position: absolute;
-    top: 0;
+    top: 2.7rem;
     /* background-image: url('https://im3.ezgif.com/tmp/ezgif-3-64693d2afad8.gif'); */
-background-color: #933a16;
+    background-color: #933a16;
     background-attachment: fixed;
     background-size: cover;
-    
     /* background-color: black; */
     /* opacity: .3; */
 }
