@@ -1,9 +1,0 @@
-.bar-style {
-    height: 100px;
-    width: 100px;
-    margin: 7px 1px;
-    border: 10px solid black;
-    position: absolute;
-    background-position: center;
-    z-index: 100;
-  }

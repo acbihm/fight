@@ -2,18 +2,38 @@
   height: 120px;
   width: 130px;
   margin: 9px 17px;
-  border: 6px double gold;
+  border: 6px double gray;
   border-style: inset;
-  border-top-right-radius: 20px;
+  border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
-
-  border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 5px;
   float: left;
   background-size: cover;
   background-position: center;
   z-index: 100;
-  box-shadow: 6px 9px brown;
+  box-shadow: 6px 9px black;
 
 }
+
+.img-text {
+ 
+  background-color: gray;
+  border-radius: 3px;
+  width: 131px;
+  height: 20px;
+  border-top-left-radius: 0px;
+
+  
+  border-top: 4px inset gray;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 3px;
+  color: white;
+  display: inline-block;
+  position: absolute;
+
+  transform: translate(-153px, 113px);
+}
+
 

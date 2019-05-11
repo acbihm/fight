@@ -8,8 +8,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 8px double goldenrod;
-  /* background-image: url('http://static.capcom.com/unity/harrisony/stage_estate_at_noon.jpg'); */
+  border: 8px inset goldenrod;
+  background-image: url('http://static.capcom.com/unity/harrisony/stage_estate_at_noon.jpg');
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-position: bottom;

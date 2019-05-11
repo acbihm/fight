@@ -1,44 +1,14 @@
 import "./style.css";
 import React, { Fragment } from "react";
 // import ReactDOM from "react-dom";
-import KeyEvents from './components/KeyEvents';
-// import EnemyTest from "./components/Test/EnemyTest";
+// import KeyEvents from './components/KeyEvents';
 import Wrapper from "./components/Wrapper";
 import Head from "./components/Head";
 import Stage from "./components/Stage"
 import Footer from "./components/Footer";
-import PlayerRange from "./components/PlayerRange"
 
 
 class AppFight extends React.Component {
-    // state = {
-    //     x: 0,
-    //     y: 0,
-    // };
-
-    // moveLeft = () => {
-    //     this.setState(prevState => {
-    //         this.setState({ x: prevState.x - 10 });
-    //     });
-    // };
-
-    // moveRight = () => {
-    //     this.setState(prevState => {
-    //         this.setState({ x: prevState.x + 10 });
-    //     });
-    // };
-
-    // moveUp = () => {
-    //     this.setState(prevState => {
-    //         this.setState({ y: prevState.y - 10 });
-    //     });
-    // };
-
-    // moveDown = () => {
-    //     this.setState(prevState => {
-    //         this.setState({ y: prevState.y + 10 });
-    //     });
-    // };
 
     render() {
         return (
@@ -51,10 +21,6 @@ class AppFight extends React.Component {
                         onUp={this.moveUp}
                         onDown={this.moveDown}
                         onUpLeft={this.moveUpLeft} /> */}
-                    
-
-                    
-                    
                     <Stage />
                 </Wrapper>
                 <Footer />

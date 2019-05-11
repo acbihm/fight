@@ -1,25 +1,19 @@
 import React from "react";
 import "./style.css";
-// import EnemyTest from "../Test/EnemyTest";
-// import PlayerTest from "../Test/PlayerTest";
 import EnemyRange from "../EnemyRange";
 import PlayerRange from "../PlayerRange";
+import HPBar from "../HPBar";
 
 
 class Stage extends React.Component {
   render() {
     return (
       <div>
-        <div className="stage">test
+        <div className="stage">
+        <HPBar />
         <PlayerRange />
-
-
           <EnemyRange />
-          {/* <EnemyTest /> */}
         </div>
-
-
-
       </div>
     );
   }

@@ -7,7 +7,6 @@ import KeyEvents from "../KeyEvents";
 // import "./style.css";
 
 const styles = {
-
     position: 'inherit',
     height: 550,
     width: 380,
@@ -15,11 +14,7 @@ const styles = {
     left: 35,
     zIndex: 9999,
     borderStyle: 'solid',
-
-
 };
-
-
 
 class PlayerRange extends React.Component {
     state = {
@@ -59,12 +54,12 @@ class PlayerRange extends React.Component {
                     onRight={this.moveRight}
                     onUp={this.moveUp}
                     onDown={this.moveDown}
-                    onUpLeft={this.moveUpLeft} />
+                    />
 
                 <div style={{...styles, ...{
                     transformOrigin: 'bottom left',
                     transform: `translate(${this.state.x}px, ${this.state.y}px)`,
-                    pointerEvents: 'none'
+                    pointerEvents: 'none',
                 }}}
                     id='TestingID'>
                     <PlayerTest />
@@ -75,7 +70,6 @@ class PlayerRange extends React.Component {
                 </div>
             </Fragment>
         );
-
     }
 }
 export default PlayerRange;
