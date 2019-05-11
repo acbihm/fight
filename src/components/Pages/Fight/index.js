@@ -1,9 +1,9 @@
 import React from "react";
-import AppTest from "../../../AppTest";
+import AppFight from "../../../AppFight";
 
 const Fight = () => (
   <div>
-    <AppTest />
+    <AppFight />
    
   </div>
 );

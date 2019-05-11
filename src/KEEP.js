@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 
 
 class AppTest extends React.Component {
+  
   state = {
     x: 0,
     y: 0,

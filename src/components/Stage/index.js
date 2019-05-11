@@ -6,23 +6,25 @@ import EnemyRange from "../EnemyRange";
 import PlayerRange from "../PlayerRange";
 
 
+class Stage extends React.Component {
+  render() {
+    return (
+      <div>
+        <div className="stage">test
+        <PlayerRange />
+
+
+          <EnemyRange />
+          {/* <EnemyTest /> */}
+        </div>
 
 
 
-const Stage = () => (
-  <div>
-    <div className="stage">test
-    <PlayerRange>
-        {/* <PlayerTest /> */}
-      </PlayerRange>
-
-      <EnemyRange />
-      {/* <EnemyTest /> */}
-    </div>
+      </div>
+    );
+  }
+}
 
 
-
-  </div>
-);
 
 export default Stage;
