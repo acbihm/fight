@@ -2,7 +2,7 @@ import "./style.css";
 import React, { Fragment } from "react";
 // import ReactDOM from "react-dom";
 // import KeyEvents from './components/KeyEvents';
-import WrapperTest from "./components/WrapperTest";
+import Wrapper from "./components/Wrapper";
 // import Image from "./components/Image";
 
 import SelectHeader from "./components/SelectHeader";
@@ -26,14 +26,14 @@ class AppLoading extends React.Component {
         return (
             <Fragment>
                     <Head />
-                <WrapperTest>
+                <Wrapper>
                     <Blurb>
                         <SelectHeader text="Fight for e-honor" />
                         <Gametext text="Use your avatar to attack other avatars and win honor online. You can use it to buy more characters, who you can then use to earn more honor points." />
                    {/* <Searching /> */}
                         <Spinner /> </Blurb>
                     
-                </WrapperTest>
+                </Wrapper>
                 <Footer />
             </Fragment>
         );

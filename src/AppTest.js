@@ -3,11 +3,11 @@ import React, { Fragment } from "react";
 // import ReactDOM from "react-dom";
 import KeyEvents from './components/KeyEvents';
 import EnemyTest from "./components/Test/EnemyTest";
-import WrapperTest from "./components/WrapperTest";
+import Wrapper from "./components/Wrapper";
 import Image from "./components/Image";
-import Bar from "./components/Bar";
+// import Bar from "./components/Bar";
 // import Button from 'react-bootstrap/Button';
-import ProgressBar from 'react-bootstrap/ProgressBar';
+// import ProgressBar from 'react-bootstrap/ProgressBar';
 import SelectScreen from './components/SelectScreen';
 import SelectStats from './components/SelectStats';
 import SelectHeader from "./components/SelectHeader";
@@ -47,7 +47,7 @@ class AppTest extends React.Component {
   render() {
     return (
       <Fragment>
-        <WrapperTest>
+        <Wrapper>
         {/* <Bar/> */}
         <ProgressBar now={50} />
         
@@ -81,7 +81,7 @@ class AppTest extends React.Component {
             <HitBoxKickTest />
             <GuardTest /> */}
           </div>
-        </WrapperTest>
+        </Wrapper>
       </Fragment>
     );
   }

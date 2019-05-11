@@ -2,7 +2,7 @@ import "./style.css";
 import React, { Fragment } from "react";
 // import ReactDOM from "react-dom";
 import KeyEvents from './components/KeyEvents';
-import WrapperTest from "./components/WrapperTest";
+import Wrapper from "./components/Wrapper";
 import Image from "./components/Image";
 import Profile from "./components/Profile";
 import ProfileR from "./components/ProfileR";
@@ -53,13 +53,13 @@ class AppMenu extends React.Component {
         {/* <Profile />
         <ProfileR /> */}
         <Head />
-        <WrapperTest>
+        <Wrapper>
           <SelectScreen>
             {/* <SelectHeader /> */}
             <Image /><Image /><Image /><Image /><Image /><Image /><Image /><Image />
             <SelectStats /> 
           </SelectScreen>
-        </WrapperTest>
+        </Wrapper>
         <Footer />
       </Fragment>
     );
