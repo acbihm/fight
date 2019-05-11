@@ -1,18 +1,19 @@
 import "./style.css";
 import React, { Fragment } from "react";
-// import ReactDOM from "react-dom";
-// import KeyEvents from './components/KeyEvents';
 import Wrapper from "./components/Wrapper";
-// import Image from "./components/Image";
-
 import SelectHeader from "./components/SelectHeader";
-// import SelectScreen from './components/SelectScreen';
 import Footer from './components/Footer';
 import Head from './components/Head';
 import Blurb from "./components/Blurb";
 import Gametext from "./components/Gametext";
 import Spinner from "./components/Spinner";
+
+// import ReactDOM from "react-dom";
+// import KeyEvents from './components/KeyEvents';
+// import Image from "./components/Image";
 // import Searching from "./components/Searching";
+// import SelectScreen from './components/SelectScreen';
+
 
 
 

@@ -1,0 +1,8 @@
+.nav{background-color: blue;
+    list-style: none;
+    /* display: inline; */
+    z-index: 9999;
+    position: absolute;
+    top: 100;
+    left: 0;
+}

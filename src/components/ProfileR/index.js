@@ -4,7 +4,7 @@ import "./style.css";
 function ProfileR() {
     return (
         <div>
-            <img src="../../assets/img/5.png" alt="" class='profile-R'/>
+            <img src="../../assets/img/5.png" alt="" className='profile-R'/>
         </div>
             
         
