@@ -1,29 +1,13 @@
 import React from 'react';
-
-
-const styles = {
-    player: {
-        position: "absolute",
-        backgroundColor: "yellow",
-        height: 600,
-        width: 200,
-        top: 0,
-        left: 0,
-        transform: `translate(${this.state.x}px, ${this.state.y}px)`,
-    }
-};
+import "./style.css";
 
 
 function PlayerTest() {
     return (
-        <div style={styles.player}>
-            <h2>Player Test</h2>
-        </div>
+        <div id="player-placeholder">
+            <h3>Test <br></br>(420 x 260px)</h3>
+            </div>
     );
 }
-
-
-
-
 
 export default PlayerTest;

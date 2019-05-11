@@ -1,0 +1,10 @@
+.player-range {
+    /* background-color: green; */
+    position: inherit;
+    height: 550px;
+    width: 380px;
+    bottom: 20px;
+    left: 35px;
+    z-Index: 9999;
+    border: 7px dashed green;
+}

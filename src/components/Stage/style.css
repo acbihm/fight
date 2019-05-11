@@ -1,0 +1,17 @@
+.stage {
+  background-color: purple;
+  height: 680px;
+  width: 1250px;
+  z-index: 4;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px double goldenrod;
+  /* background-image: url('http://static.capcom.com/unity/harrisony/stage_estate_at_noon.jpg'); */
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-position: bottom;
+  
+}

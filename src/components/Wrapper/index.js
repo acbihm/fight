@@ -3,11 +3,11 @@ import "./style.css";
 // import Image from "./../Image";
 
 
-function WrapperTest(props) {
+function Wrapper(props) {
     return <main className="wrapper">{props.children}</main>;
     
 }
 
 
 
-export default WrapperTest;
+export default Wrapper;

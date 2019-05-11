@@ -44,7 +44,7 @@ class AppTest extends React.Component {
       <Fragment>
         <Head />
         <Wrapper>
-          
+          <Stage />
           <KeyEvents
             onLeft={this.moveLeft}
             onRight={this.moveRight}
@@ -52,7 +52,6 @@ class AppTest extends React.Component {
             onDown={this.moveDown}
             onUpLeft={this.moveUpLeft}
           />
-          <Stage />
           {/* <EnemyTest /> */}
           {/*
           <div

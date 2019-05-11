@@ -1,29 +1,20 @@
 import React from 'react';
-
-import EnemyHitBoxPunchTest from "../../EnemyBoxes/EnemyHitBoxPunchTest";
-import EnemyHitBoxKickTest from "./../../EnemyBoxes/EnemyHitBoxKickTest";
+// import EnemyHitBoxPunchTest from "../../EnemyBoxes/EnemyHitBoxPunchTest";
+// import EnemyHitBoxKickTest from "./../../EnemyBoxes/EnemyHitBoxKickTest";
 // import EnemyGuardTest from ./../../EnemyBoxes/EnemyGuardTest";
+import "./style.css";
 
-const styles = {
-    enemy: {
-        backgroundColor: "green",
-        height: 600,
-        width: 200,
-        float: 'right',
-        position: 'absolute',
-        top: 0,
-        right: 0,
-    }
-}
+
 
 function EnemyTest() {
     return (
-        <div style={styles.enemy} id='TestingID'>
-        <EnemyHitBoxKickTest />
-        <EnemyHitBoxPunchTest />
+        <div id='enemy-placeholder'>
+        {/* <EnemyHitBoxKickTest /> */}
+        {/* <EnemyHitBoxPunchTest /> */}
         {/* <EnemyGuardTest /> */}
 
-        <p>hello</p>
+        <h3>Enemy Test</h3>
+        {/* <img src="../../../public/assets/img/testchar.png" alt="ff" /> */}
         </div>
     );
 }

@@ -15,25 +15,18 @@ import Spinner from "./components/Spinner";
 // import SelectScreen from './components/SelectScreen';
 
 
-
-
-
-
-
-
-
 class AppLoading extends React.Component {
     render() {
         return (
             <Fragment>
-                    <Head />
+                <Head />
                 <Wrapper>
                     <Blurb>
                         <SelectHeader text="Fight for e-honor" />
                         <Gametext text="Use your avatar to attack other avatars and win honor online. You can use it to buy more characters, who you can then use to earn more honor points." />
-                   {/* <Searching /> */}
+                        {/* <Searching /> */}
                         <Spinner /> </Blurb>
-                    
+
                 </Wrapper>
                 <Footer />
             </Fragment>

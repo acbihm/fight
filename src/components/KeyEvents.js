@@ -40,8 +40,8 @@ class KeyEvents extends React.Component {
                 onKeyDown={this.onKeyDown}
                 style={{
                     position: "absolute",
-                    width: '100vw',
-                    height: '100vh',
+                    width: '95vw',
+                    height: '94vh',
                     outline: 'none',
 
 

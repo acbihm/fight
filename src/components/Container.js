@@ -5,13 +5,6 @@ import About from "./Pages/About";
 import Select from "./Pages/Select";
 import Fight from "./Pages/Fight";
 
-import Wrapper from "./Wrapper";
-import SelectHeader from "./SelectHeader";
-import Footer from './Footer';
-import Head from './Head';
-import Blurb from "./Blurb";
-import Gametext from "./Gametext";
-import Spinner from "./Spinner";
 
 class Container extends Component {
     state = {
@@ -25,7 +18,7 @@ class Container extends Component {
             return <Home />;
         } else if (this.state.currentPage === "About") {
             return <About />;
-        } 
+        }
         else if (this.state.currentPage === "Select") {
             return <Select />;
         } else {
@@ -36,22 +29,11 @@ class Container extends Component {
     render() {
         return (
             <div>
-                
-                {this.renderPage()}
-                <Head />
                 <NavTabs
                     currentPage={this.state.currentPage}
                     handlePageChange={this.handlePageChange}
                 />
-                <Wrapper>
-                    <Blurb>
-                        <SelectHeader text="Fight for e-honor" />
-                        <Gametext text="Use your avatar to attack other avatars and win honor online. You can use it to buy more characters, who you can then use to earn more honor points." />
-                   {/* <Searching /> */}
-                        <Spinner /> </Blurb>
-                    
-                </Wrapper>
-                <Footer />
+                {this.renderPage()}
             </div>
         );
     }

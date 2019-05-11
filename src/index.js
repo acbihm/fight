@@ -5,7 +5,6 @@ import './index.css';
 // import AppMenu from './AppMenu';
 // import AppLoading from './AppLoading';
 import AppRoute from './AppRoute';
-
 import * as serviceWorker from './serviceWorker';
 
 // ReactDOM.render(<AppTest />, document.getElementById('root'));

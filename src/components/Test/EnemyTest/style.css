@@ -1,0 +1,15 @@
+#enemy-placeholder {
+    /* background-color: red; */
+    position: inherit;
+    height: 420px;
+    width: 260px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 6;
+    background-image: url("https://ui-ex.com/images/luigi-transparent-mario-character.png");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    border: 4px dotted yellow;
+    background-position: bottom;
+
+}

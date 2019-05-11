@@ -5,7 +5,7 @@ import "./style.css";
 
 function SelectScreen(props) {
     return (
-        <div className="select-screen">
+        <div className="select-screen" id="area">
             {props.children}
         </div>
     )
