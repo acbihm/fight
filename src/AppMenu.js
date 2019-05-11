@@ -10,6 +10,8 @@ import ProfileR from "./components/ProfileR";
 import SelectStats from './components/SelectStats';
 import SelectHeader from "./components/SelectHeader";
 import SelectScreen from './components/SelectScreen';
+import Footer from './components/Footer';
+
 
 
 
@@ -52,13 +54,12 @@ class AppMenu extends React.Component {
 
         <WrapperTest>
           <SelectScreen>
-            <SelectHeader />
+            {/* <SelectHeader /> */}
             <Image /><Image /><Image /><Image /><Image /><Image /><Image /><Image />
-            <SelectStats />
-
+            <SelectStats /> 
           </SelectScreen>
-
         </WrapperTest>
+        <Footer />
       </Fragment>
     );
   }

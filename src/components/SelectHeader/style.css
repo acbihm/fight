@@ -1,15 +1,24 @@
 .select-header {
     display: flex;
-    padding: 0 8px 0 8px;
+    padding: 5px;
+    padding-top: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    width: 86%;
+    width: 100%;
     margin: 0 auto;
     letter-spacing: 6px;
     position: static;
-    color: gold;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: brown;
+    color: yellow;
     z-index: 300px;
     font-family: 'Luckiest Guy', cursive;
-    font-size: 1.37rem;
+    font-size: 2.5rem;
     text-shadow: 4px 6px black;
+}
+
+h1 {
+    letter-spacing: 5px;
+    opacity: 1;
+    font-size: 2rem;
 }
