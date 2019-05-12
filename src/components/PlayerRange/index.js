@@ -14,6 +14,7 @@ const styles = {
     left: 35,
     zIndex: 9999,
     borderStyle: 'solid',
+    borderWith: 7,
 };
 
 class PlayerRange extends React.Component {

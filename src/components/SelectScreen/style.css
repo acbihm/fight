@@ -12,13 +12,17 @@
     min-height: 50%;
     max-height: 80%;
     border: 8px double goldenrod;
-
     background-attachment: fixed;
     background-size: cover;
     background-color: #c49c81;
     background-image: url("https://www.transparenttextures.com/patterns/pinstriped-suit.png");
     background-size: 40%;
     background-blend-mode: multiply;
+    box-shadow: 10px 10px black;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
 }
 
 #area {

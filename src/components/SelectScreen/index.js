@@ -1,6 +1,7 @@
 import React from "react";
 // import SelectHeader from "../SelectHeader";
 import "./style.css";
+// import SelectHeader from "../SelectHeader";
 
 
 function SelectScreen(props) {
@@ -10,7 +11,5 @@ function SelectScreen(props) {
         </div>
     )
 }
-
-
 
 export default SelectScreen;
