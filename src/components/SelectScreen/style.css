@@ -11,7 +11,7 @@
     z-index: 300px;
     min-height: 50%;
     max-height: 80%;
-    border: 8px double goldenrod;
+    border: 8px groove goldenrod;
     background-attachment: fixed;
     background-size: cover;
     background-color: #c49c81;

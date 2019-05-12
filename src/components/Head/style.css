@@ -35,4 +35,5 @@
 .headbar #username {
     float: right;
     margin-right: 15px;
+    /* border-left: 2px solid red; */
 }

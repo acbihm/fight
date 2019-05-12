@@ -7,13 +7,11 @@
     border-bottom-right-radius: 20px;
     box-shadow: 0px 3px 16px 2px black;
     background-color: #522f2c;
-    /* border-bottom: double 4px orangered; */
     border-top: solid 1px red;
     border-bottom: ridge 8px orangered;
     border-right: ridge 3px orangered;
     border-left: ridge 3px orangered;
     background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
-    /* border: */
 }
 
 .timer-elem {
@@ -37,7 +35,7 @@
     padding-right: 5.5rem;
 }
 
-.area {
+/* .area {
     animation: animatedBackground 5s linear infinite;
 }
 
@@ -48,7 +46,7 @@
     to {
         background-position: 0 0;
     }
-}
+} */
 
 .hp-bar {
     position: inherit;
