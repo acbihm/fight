@@ -1,4 +1,4 @@
-import React,{Fragment} from "react";
+import React, { Fragment } from "react";
 import "./style.css";
 import KeyEvents from "../../KeyEvents";
 
@@ -16,10 +16,8 @@ const styles = {
 
 class PlayerHitBoxPunchTest extends React.Component {
     state = {
-        
         pun: 'none',
     };
-
 
     punchMid = () => {
         this.setState(prevState => {
@@ -29,33 +27,34 @@ class PlayerHitBoxPunchTest extends React.Component {
                     this.setState({ pun: 'none' });
                 }
                     .bind(this),
-                300
+                    
+                400
             );
-
+            console.log(this)
         })
     }
 
     render() {
 
-        return (<Fragment>
-            <KeyEvents
-                    onLeft={this.moveLeft}
-                    onRight={this.moveRight}
-                    onUp={this.moveUp}
-                    onDown={this.moveDown}
+        return (
+            <Fragment>
+                <KeyEvents
+                    // onLeft={this.moveLeft}
+                    // onRight={this.moveRight}
+                    // onUp={this.moveUp}
+                    // onDown={this.moveDown}
                     punch={this.punchMid}
                 />
-            <div style={{
-                ...styles, ...{
-                    display: `${this.state.pun}`,
-                }
-            }}>
-                <div id="Ppunch">punch
-    </div>
-            </div>
+                <div style={{
+                    ...styles, ...{
+                        display: `${this.state.pun}`,
+                    }
+                }}>
+                    <div id="Ppunch">punch</div>
+                </div>
             </Fragment>)
     }
-    
+
 }
 
 export default PlayerHitBoxPunchTest;

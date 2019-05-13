@@ -35,6 +35,7 @@ class PlayerRange extends React.Component {
         this.setState(prevState => {
             this.setState({ x: prevState.x + 28 });
         });
+        console.log(this)
     };
 
     moveUp = () => {
@@ -45,9 +46,10 @@ class PlayerRange extends React.Component {
 
     moveDown = () => {
         this.setState(prevState => {
-            this.setState({ y: prevState.y + 28 });
+            this.setState({ y: prevState.y + 28 })
         });
-    };
+        
+    }
 
     // punchMid = () => {
     //     this.setState(prevState => {
