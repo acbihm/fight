@@ -5,18 +5,14 @@ class Image extends React.Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-console.log(this)
+        console.log(this)
         // this.setState({
         //     charName: ,
-            
+
         // });
     };
 
-
-
     render(props) {
-
-
 
         return (
             <div>

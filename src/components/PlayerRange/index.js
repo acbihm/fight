@@ -23,7 +23,6 @@ class PlayerRange extends React.Component {
         x: 0,
         y: 0,
         pun: 'none',
-
     };
 
     moveLeft = () => {
@@ -50,12 +49,19 @@ class PlayerRange extends React.Component {
         });
     };
 
-    punchMid = () => {
-        this.setState(prevState => {
-            this.setState({ pun: 'block' })
+    // punchMid = () => {
+    //     this.setState(prevState => {
+    //         this.setState({ pun: 'block' })
+    //         setTimeout(
+    //             function () {
+    //                 this.setState({ pun: 'none' });
+    //             }
+    //                 .bind(this),
+    //             300
+    //         );
 
-        })
-    }
+    //     })
+    // }
 
     // punchFunction = () => {
     //     return ( <PlayerHitBoxPunchTest id='ptest' turnedOn='no' />
@@ -85,10 +91,9 @@ class PlayerRange extends React.Component {
                         transformOrigin: 'bottom left',
                         transform: `translate(${this.state.x}px, ${this.state.y}px)`,
                         pointerEvents: 'none',
-                        display: `${this.state.pun}`,
+                        // display: `${this.state.pun}`,
                     }
-                }}
-                    id='TestingID'>
+                }}>
                     <PlayerTest />
                     <PlayerHitBoxKickTest />
                     <PlayerHitBoxPunchTest />
