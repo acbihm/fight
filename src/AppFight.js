@@ -15,12 +15,7 @@ class AppFight extends React.Component {
             <Fragment>
                 <Head />
                 <Wrapper>
-                    {/* <KeyEvents
-                        onLeft={this.moveLeft}
-                        onRight={this.moveRight}
-                        onUp={this.moveUp}
-                        onDown={this.moveDown}
-                        onUpLeft={this.moveUpLeft} /> */}
+                    
                     <Stage />
                 </Wrapper>
                 <Footer />

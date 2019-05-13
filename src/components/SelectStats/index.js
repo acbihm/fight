@@ -1,11 +1,12 @@
 import React from "react";
 import "./style.css";
+import SelectHeader from "../SelectHeader";
 
 function SelectStats(props) {
     return <div className="select-stats">
     <div className="selection-box">
         <div id="p1Select" className="select">
-        <h2><strong> {props.name}</strong></h2>
+        <SelectHeader text={props.name}></SelectHeader>
 
             <h3><i><b>Special: &nbsp;</b></i> {props.special}</h3>
             <ul>
@@ -16,7 +17,7 @@ function SelectStats(props) {
         </div>
 
         <div id="p2Select" className="select">
-        <h2><strong> {props.name}</strong></h2>
+        <SelectHeader text={props.name}></SelectHeader>
         <h3><i><b>Special: &nbsp;</b></i> {props.special}</h3>
             <ul>
                 <li><i><b>Strength: &nbsp;</b></i> {props.strength}</li>

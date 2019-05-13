@@ -14,6 +14,9 @@ class KeyEvents extends React.Component {
             case 39:
                 this.props.onRight();
                 break;
+                case 32:
+                this.props.punch();
+                break;
             // case 38:
             //     this.props.onUp();
             //     break;

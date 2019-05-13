@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import ReactDOM from 'react-dom';
 import PlayerHitBoxPunchTest from "../PlayerBoxes/PlayerHitBoxPunchTest";
 import PlayerHitBoxKickTest from "../PlayerBoxes/PlayerHitBoxKickTest";
 import PlayerTest from "../Test/PlayerTest";
@@ -21,6 +22,8 @@ class PlayerRange extends React.Component {
     state = {
         x: 0,
         y: 0,
+        pun: 'none',
+        
     };
 
     moveLeft = () => {
@@ -47,7 +50,27 @@ class PlayerRange extends React.Component {
         });
     };
 
+    punchMid = () => {
+        this.setState(prevState => {
+            this.setState({ pun: 'block' })
+
+        })
+    }
+
+    // punchFunction = () => {
+    //     return ( <PlayerHitBoxPunchTest id='ptest' turnedOn='no' />
+    //     )
+    // }
+
     render() {
+        // let punching;
+        // if (this.isPunching === true) {
+
+        //     punching =
+        //         <PlayerHitBoxPunchTest />
+        //         ReactDOM.render(punching); 
+        // }
+
         return (
             <Fragment>
                 <KeyEvents
@@ -55,17 +78,21 @@ class PlayerRange extends React.Component {
                     onRight={this.moveRight}
                     onUp={this.moveUp}
                     onDown={this.moveDown}
-                    />
-
-                <div style={{...styles, ...{
-                    transformOrigin: 'bottom left',
-                    transform: `translate(${this.state.x}px, ${this.state.y}px)`,
-                    pointerEvents: 'none',
-                }}}
+                    punch={this.punchMid}
+                />
+                <div style={{
+                    ...styles, ...{
+                        transformOrigin: 'bottom left',
+                        transform: `translate(${this.state.x}px, ${this.state.y}px)`,
+                        pointerEvents: 'none',
+                        display: `${this.state.pun}`,
+                    }
+                }}
                     id='TestingID'>
                     <PlayerTest />
                     <PlayerHitBoxKickTest />
                     <PlayerHitBoxPunchTest />
+
                     <h2>Player Range test</h2>
                     <h3>550 tall x 380 wide</h3>
                 </div>

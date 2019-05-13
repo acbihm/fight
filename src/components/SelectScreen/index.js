@@ -10,7 +10,7 @@ function SelectScreen(props) {
     return (
         <div className="select-screen" id="area">
             <SelectHeader text="Choose your character"></SelectHeader>
-            <Image /><Image /><Image /><Image /><br />
+            <Image /><br />
             <SelectStats name="Hank" strength="3" defense="4" speed="5" special="Propane" />
         </div>
     )
