@@ -15,7 +15,6 @@ class AppFight extends React.Component {
             <Fragment>
                 <Head />
                 <Wrapper>
-                    
                     <Stage />
                 </Wrapper>
                 <Footer />

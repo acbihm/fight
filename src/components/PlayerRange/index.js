@@ -23,7 +23,7 @@ class PlayerRange extends React.Component {
         x: 0,
         y: 0,
         pun: 'none',
-        
+
     };
 
     moveLeft = () => {
