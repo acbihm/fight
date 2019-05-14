@@ -3,9 +3,9 @@ import React, { Fragment } from "react";
 // import ReactDOM from "react-dom";
 // import KeyEvents from './components/KeyEvents';
 import Wrapper from "./components/Wrapper";
-import Head from "./components/Head";
+// import Head from "./components/Head";
 import Stage from "./components/Stage"
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 
 class AppFight extends React.Component {
@@ -13,12 +13,12 @@ class AppFight extends React.Component {
     render() {
         return (
             <Fragment>
-                <Head />
+                {/* <Head /> */}
                 <Wrapper>
                     
                     <Stage />
                 </Wrapper>
-                <Footer />
+                {/* <Footer /> */}
             </Fragment>
         );
     }

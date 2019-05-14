@@ -2,8 +2,8 @@ import "./style.css";
 import React, { Fragment } from "react";
 import Wrapper from "./components/Wrapper";
 import SelectHeader from "./components/SelectHeader";
-import Footer from './components/Footer';
-import Head from './components/Head';
+// import Footer from './components/Footer';
+// import Head from './components/Head';
 import Blurb from "./components/Blurb";
 import Gametext from "./components/Gametext";
 import Spinner from "./components/Spinner";
@@ -19,7 +19,7 @@ class AppLoading extends React.Component {
     render() {
         return (
             <Fragment>
-                <Head />
+                {/* <Head /> */}
                 <Wrapper>
                     <Blurb>
                         <SelectHeader text="Fight for e-honor" />
@@ -28,7 +28,7 @@ class AppLoading extends React.Component {
                         <Spinner /> </Blurb>
 
                 </Wrapper>
-                <Footer />
+                {/* <Footer /> */}
             </Fragment>
         );
     }

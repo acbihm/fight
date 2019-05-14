@@ -4,7 +4,8 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Select from "./Pages/Select";
 import Fight from "./Pages/Fight";
-
+import Head from "./Head";
+import Footer from "./Footer";
 
 class Container extends Component {
     state = {
@@ -29,11 +30,13 @@ class Container extends Component {
     render() {
         return (
             <div>
-                <NavTabs
-                    currentPage={this.state.currentPage}
-                    handlePageChange={this.handlePageChange}
-                />
-                {this.renderPage()}
+                <Head/>
+                    <NavTabs
+                        currentPage={this.state.currentPage}
+                        handlePageChange={this.handlePageChange}
+                    />
+                    {this.renderPage()}
+                    <Footer />
             </div>
         );
     }

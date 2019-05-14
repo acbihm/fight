@@ -4,9 +4,9 @@ import React, { Fragment } from "react";
 import KeyEvents from './components/KeyEvents';
 // import EnemyTest from "./components/Test/EnemyTest";
 import Wrapper from "./components/Wrapper";
-import Head from "./components/Head";
+// import Head from "./components/Head";
 import Stage from "./components/Stage"
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 
 class AppTest extends React.Component {
@@ -42,7 +42,7 @@ class AppTest extends React.Component {
   render() {
     return (
       <Fragment>
-        <Head />
+        {/* <Head /> */}
         <Wrapper>
           <KeyEvents
             onLeft={this.moveLeft}
@@ -73,7 +73,7 @@ class AppTest extends React.Component {
             <GuardTest /> 
           </div>*/}
         </Wrapper>
-        <Footer />
+        {/* <Footer /> */}
       </Fragment>
     );
   }

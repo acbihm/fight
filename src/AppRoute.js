@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "./components/Container";
-import NavTabs from "./components/NavTabs"
+// import NavTabs from "./components/NavTabs"
 
 const AppRoute = () => <div>
-    <NavTabs />
+    {/* <NavTabs /> */}
     <Container />
 </div>
 
