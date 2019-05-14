@@ -3,7 +3,7 @@ import "./style.css";
 import SelectHeader from "../SelectHeader";
 import Countdown from 'react-countdown-now';
 
-const Completionist = () => <span>You are good to go!</span>;
+const Completionist = () => <span>Time</span>;
 
 // Renderer callback with condition
 const renderer = ({seconds, completed }) => {

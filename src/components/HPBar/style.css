@@ -18,7 +18,7 @@
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     box-shadow: 0px 2px 8px 1px black;
-    height: 5.9rem;
+    height: 5.6rem;
     z-index: 999999;
     background-color: #522f2c;
     background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
@@ -28,25 +28,13 @@
     border-right: groove 3px orangered;
     border-left: ridge 3px orangered; 
     float: left;
+    padding-top: .8rem;
 }
 
 .timer-elem h1 {
     padding-left: 5.5rem;
     padding-right: 5.5rem;
 }
-
-/* .area {
-    animation: animatedBackground 5s linear infinite;
-}
-
-@keyframes animatedBackground {
-    from {
-        background-position: 100% 0;
-    }
-    to {
-        background-position: 0 0;
-    }
-} */
 
 .hp-bar {
     position: inherit;

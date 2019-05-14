@@ -1,11 +1,12 @@
 import React from "react";
 import "./style.css";
+import CharInfo from "../CharInfo";
 
 class Image extends React.Component {
 
-    handleFormSubmit = event => {
+    handleClick = event => {
         event.preventDefault();
-        console.log(this)
+        console.log()
         // this.setState({
         //     charName: ,
 
@@ -16,14 +17,25 @@ class Image extends React.Component {
 
         return (
             <div>
-                <img src={"../../assets/img/hank.jpg"} alt="" className='img-block' onClick={this.handleFormSubmit} />
-                <h4 className='img-text'>Hank H.</h4>
-                <img src={"../../assets/img/peggy.png"} alt="" className='img-block' onClick={this.handleFormSubmit} />
-                <h4 className='img-text'>Peggy H.</h4>
-                <img src={"../../assets/img/dale.jpg"} alt="" className='img-block' onClick={this.handleFormSubmit} />
-                <h4 className='img-text'>Dale G.</h4>
-                <img src={"../../assets/img/bobby.jpg"} alt="" className='img-block' onClick={this.handleFormSubmit} />
-                <h4 className='img-text'>Bobby H.</h4>
+                {/* <span id='test' onClick={this.handleClick} data-namee="hank">
+                    <img src={"../../assets/img/hank.jpg"} alt="" className='img-block' />
+                    <h4 className='img-text'>Hank H.</h4>
+                </span>
+                <span onClick={this.handleClick}>
+                    <img src={"../../assets/img/peggy.png"} alt="" className='img-block' />
+                    <h4 className='img-text'>Peggy H.</h4>
+                </span>
+                <span onClick={this.handleClick}>
+                    <img src={"../../assets/img/dale.jpg"} alt="" className='img-block' />
+                    <h4 className='img-text'>Dale G.</h4>
+                </span>
+                <span onClick={this.handleClick}>
+                    <img src={"../../assets/img/bobby.jpg"} alt="" className='img-block' />
+                    <h4 className='img-text'>Bobby H.</h4>
+                </span> */}
+                <CharInfo  />
+
+
             </div>
         );
     }
