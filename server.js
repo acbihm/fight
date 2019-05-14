@@ -1,6 +1,7 @@
-var data = require('./src/data.json');
+
 const express = require('express');
 const path = require('path');
+var data = require('./src/data.json');
 
 
 const app = express();

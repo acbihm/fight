@@ -5,10 +5,10 @@ import './index.css';
 // import AppMenu from './AppMenu';
 // import AppLoading from './AppLoading';
 import AppRoute from './AppRoute';
-import * as serviceWorker from './serviceWorker';
-import dataList from "./src";
+// import * as serviceWorker from './serviceWorker';
+
 
 // ReactDOM.render(<AppTest />, document.getElementById('root'));
 ReactDOM.render(<AppRoute />, document.getElementById('root'));
 
-serviceWorker.unregister();
+// serviceWorker.unregister();
