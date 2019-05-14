@@ -6,6 +6,7 @@ import './index.css';
 // import AppLoading from './AppLoading';
 import AppRoute from './AppRoute';
 import * as serviceWorker from './serviceWorker';
+import dataList from "./src";
 
 // ReactDOM.render(<AppTest />, document.getElementById('root'));
 ReactDOM.render(<AppRoute />, document.getElementById('root'));
