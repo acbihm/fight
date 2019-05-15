@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import EnemyRange from "../EnemyRange";
+// import EnemyRange from "../EnemyRange";
 import PlayerRange from "../PlayerRange";
 import HPBar from "../HPBar";
 
@@ -12,7 +12,7 @@ class Stage extends React.Component {
         <div className="stage">
           <HPBar />
           <PlayerRange />
-          <EnemyRange />
+          {/* <EnemyRange /> */}
         </div>
       </div>
     );

@@ -1,107 +1,142 @@
 import React, { Fragment } from 'react';
-import ReactDOM from 'react-dom';
-import PlayerHitBoxPunchTest from "../PlayerBoxes/PlayerHitBoxPunchTest";
-import PlayerHitBoxKickTest from "../PlayerBoxes/PlayerHitBoxKickTest";
+// import ReactDOM from 'react-dom';
 import PlayerTest from "../Test/PlayerTest";
+import PlayerTest2 from "../Test/PlayerTest2";
 import KeyEvents from "../KeyEvents";
 
-// import "./style.css";
-
-const styles = {
-    position: 'inherit',
-    height: 550,
-    width: 380,
+const styles1 = {
+    position: 'absolute',
+    height: 420,
+    width: 300,
     bottom: 20,
-    left: 35,
+    // left: 35,
     zIndex: 9999,
     borderStyle: 'solid',
     borderWith: 7,
+    transformOrigin: 'bottom left'
 };
 
+const styles2 = {
+    position: 'absolute',
+    height: 420,
+    width: 300,
+    bottom: 20,
+    // left: 35,
+    zIndex: 9999,
+    borderStyle: 'solid',
+    borderWith: 7,
+    transformOrigin: 'bottom right'
+};
 class PlayerRange extends React.Component {
     state = {
-        x: 0,
-        y: 0,
-        pun: 'none',
+        distanceApart: 0,
+        x1: 0,
+        y1: 0,
+        p1width:250,
+        punching1: 'none',
+        hp1: 100,
+        x2: 950,
+        y2: 0,
+        p2width:250,
+        punching2: 'none',
+        hp2: 100,
     };
-
-    moveLeft = () => {
+    moveLeft1 = () => {
         this.setState(prevState => {
-            this.setState({ x: prevState.x - 28 });
+            this.setState({ x1: prevState.x1 - 20 });
+            this.setState({distanceApart: Math.abs(this.p1width + this.x1)});
+            console.log(this.state.distanceApart)
         });
     };
-
-    moveRight = () => {
+    moveRight1 = () => {
         this.setState(prevState => {
-            this.setState({ x: prevState.x + 28 });
+            this.setState({ x1: prevState.x1 + 20 });
+            this.setState({distanceApart: Math.abs(this.p1width + this.x1)});
+            console.log(this.state.distanceApart)
         });
         console.log(this)
     };
-
-    moveUp = () => {
+    punchMid1 = () => {
         this.setState(prevState => {
-            this.setState({ y: prevState.y - 28 });
+            this.setState({ punching1: 'block' })
+            setTimeout(
+                function () {
+                    this.setState({ punching1: 'none' });
+                }.bind(this), 600
+            );
+        })
+    }
+    // moveUp = () => {
+    //     this.setState(prevState => {
+    //         this.setState({ y: prevState.y - 28 });
+    //     });
+    // };
+    // moveDown = () => {
+    //     this.setState(prevState => {
+    //         this.setState({ y: prevState.y + 28 })
+    //     });
+    // }
+    moveLeft2 = () => {
+        this.setState(prevState => {
+            this.setState({ x2: prevState.x2 - 20 });
         });
     };
-
-    moveDown = () => {
+    moveRight2 = () => {
         this.setState(prevState => {
-            this.setState({ y: prevState.y + 28 })
+            this.setState({ x2: prevState.x2 + 20 });
         });
-        
+        console.log(this)
+    };
+    punchMid2 = () => {
+        this.setState(prevState => {
+            this.setState({ punching2: 'block' })
+            setTimeout(
+                function () {
+                    this.setState({ punching2: 'none' });
+                }.bind(this), 600
+            );
+        })
     }
 
-    // punchMid = () => {
-    //     this.setState(prevState => {
-    //         this.setState({ pun: 'block' })
-    //         setTimeout(
-    //             function () {
-    //                 this.setState({ pun: 'none' });
-    //             }
-    //                 .bind(this),
-    //             300
-    //         );
 
-    //     })
-    // }
-
-    // punchFunction = () => {
-    //     return ( <PlayerHitBoxPunchTest id='ptest' turnedOn='no' />
-    //     )
-    // }
 
     render() {
-        // let punching;
-        // if (this.isPunching === true) {
-
-        //     punching =
-        //         <PlayerHitBoxPunchTest />
-        //         ReactDOM.render(punching); 
-        // }
-
         return (
             <Fragment>
                 <KeyEvents
-                    onLeft={this.moveLeft}
-                    onRight={this.moveRight}
-                    onUp={this.moveUp}
-                    onDown={this.moveDown}
-                    punch={this.punchMid}
+                    onAKey={this.moveLeft1}
+                    onDKey={this.moveRight1}
+                    // onUp={this.moveUp}
+                    // onDown={this.moveDown}
+                    onSpacebar={this.punchMid1}
+
+
+
+                    onLeft={this.moveLeft2}
+                    onRight={this.moveRight2}
+                    onPKey={this.punchMid2}
                 />
                 <div style={{
-                    ...styles, ...{
-                        transformOrigin: 'bottom left',
-                        transform: `translate(${this.state.x}px, ${this.state.y}px)`,
+                    ...styles1, ...{
+                        // transformOrigin: 'bottom left',
+                        transform: `translate(${this.state.x1}px, ${this.state.y1}px)`,
                         pointerEvents: 'none',
-                        // display: `${this.state.pun}`,
+                        display: `${this.state.punching1}`,
                     }
                 }}>
                     <PlayerTest />
-                    <PlayerHitBoxKickTest />
-                    <PlayerHitBoxPunchTest />
-
-                    <h2>Player Range test</h2>
-                    <h3>550 tall x 380 wide</h3>
+                    
+                </div>
+                <div style={{
+                    ...styles2, ...{
+                        // transformOrigin: 'bottom right',
+                        transform: `translate(${this.state.x2}px, ${this.state.y2}px)`,
+                        pointerEvents: 'none',
+                        display: `${this.state.punching2}`,
+                    }
+                }}>
+                    <PlayerTest2 />
+                    
                 </div>
             </Fragment>
         );

@@ -6,17 +6,33 @@ class KeyEvents extends React.Component {
     componentDidMount() {
         ReactDOM.findDOMNode(this.level).focus();
     }
+
     onKeyDown = event => {
         switch (event.keyCode) {
-            case 37:
+            case 65:
+                this.props.onAKey();
+
+                break;
+            case 68:
+                this.props.onDKey();
+                break;
+            case 32:
+                this.props.onSpacebar();
+                break;
+
+                case 37:
                 this.props.onLeft();
+
                 break;
             case 39:
                 this.props.onRight();
                 break;
-            case 32:
-                this.props.punch();
+            case 80:
+                this.props.onPKey();
                 break;
+
+
+
             // case 38:
             //     this.props.onUp();
             //     break;
@@ -41,6 +57,7 @@ class KeyEvents extends React.Component {
         }
     };
     render() {
+
         return (
             <div
                 onKeyDown={this.onKeyDown}
@@ -48,14 +65,19 @@ class KeyEvents extends React.Component {
                     position: "absolute",
                     width: '92vw',
                     height: '89vh',
-                    outline: 'none',
+                    outlineStyle: 'double',
+                    outlineColor: 'pink',
+                    outlineWidth: 10
                 }}
-                tabIndex="0"
+                tabIndex="-1"
                 ref={ref => {
                     this.level = ref;
+                    console.log(ref);
+                    // Foudn this on Stack overflow{(n) => this.node = n}
                 }}
             />
         );
     }
 }
 export default KeyEvents;
+
