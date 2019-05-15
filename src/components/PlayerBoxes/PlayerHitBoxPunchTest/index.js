@@ -27,7 +27,6 @@ class PlayerHitBoxPunchTest extends React.Component {
                     this.setState({ pun: 'none' });
                 }
                     .bind(this),
-                    
                 400
             );
             console.log(this)
@@ -38,13 +37,13 @@ class PlayerHitBoxPunchTest extends React.Component {
 
         return (
             <Fragment>
-                <KeyEvents
+                {/* <KeyEvents
                     // onLeft={this.moveLeft}
                     // onRight={this.moveRight}
                     // onUp={this.moveUp}
                     // onDown={this.moveDown}
                     punch={this.punchMid}
-                />
+                /> */}
                 <div style={{
                     ...styles, ...{
                         display: `${this.state.pun}`,
