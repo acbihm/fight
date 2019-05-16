@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import "./style.css";
-import KeyEvents from "../../KeyEvents";
+import KeyEvents from "../../../KeyEvents";
 
 const styles = {
     position: 'inherit',

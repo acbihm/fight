@@ -14,7 +14,6 @@ const p1Styles = {
     zIndex: 9999,
     borderStyle: 'solid',
     borderWith: 7,
-    // transformOrigin: 'bottom left'
 };
 
 const p2Styles = {
@@ -26,7 +25,6 @@ const p2Styles = {
     zIndex: 9999,
     borderStyle: 'solid',
     borderWith: 7,
-    // transformOrigin: 'bottom right'
 };
 class BothPlayers extends React.Component {
     state = {
@@ -34,16 +32,17 @@ class BothPlayers extends React.Component {
         y1: 0,
         p1width: 250,
         punching1: 'none',
+        punch1: false,
         hp1: 50,
-        spec1: 0,
-
+        spec1: 25,
 
         x2: 950,
         y2: 0,
         p2width: 250,
         punching2: 'none',
-        hp2: 100,
-        spec2: 0,
+        punch2: false,
+        hp2: 30,
+        spec2: 55,
 
         distanceApart: null
     };
@@ -77,10 +76,15 @@ class BothPlayers extends React.Component {
     };
     p1Punch = () => {
         this.setState(prevState => {
-            this.setState({ punching1: 'block' })
+            this.setState({ punch1: true })
+            if ((this.state.distanceApart <= 150) && (this.state.punch1 === true)) {
+                // this.setState({hp2: (this.state.hp2 - 50)});
+                console.log(this.state.hp2-20)
+                this.setState({hp2: this.state.hp2- 5 })
+            }
             setTimeout(
                 function () {
-                    this.setState({ punching1: 'none' });
+                    this.setState({ punch1: false });
                 }.bind(this), 6000
             );
         })
@@ -113,14 +117,18 @@ class BothPlayers extends React.Component {
             console.log(this.state.distanceApart)
 
         });
-        // console.log(this)
     };
     p2Punch = () => {
         this.setState(prevState => {
-            this.setState({ punching2: 'block' })
+            this.setState({ punch2: true })
+            if ((this.state.distanceApart <= 150) && (this.state.punch2 === true)) {
+                // this.setState({hp2: (this.state.hp2 - 50)});
+                console.log(this.state.hp2-20)
+                this.setState({hp1: this.state.hp1- 5 })
+            }
             setTimeout(
                 function () {
-                    this.setState({ punching2: 'none' });
+                    this.setState({ punch2: false });
                 }.bind(this), 6000
             );
         })
@@ -129,8 +137,8 @@ class BothPlayers extends React.Component {
     render() {
         return (
             <Fragment>
-                <HPBar hp1={this.state.hp1} />
-                {/* <HPBar hp1={this.state.hp1} hp2={this.state.hp2} /> */}
+                <HPBar hp1={this.state.hp1} hp2={this.state.hp2} spec1={this.state.spec1} spec2={this.state.spec2} />
+
                 <KeyEvents
                     onAKey={this.p1Left}
                     onDKey={this.p1Right}

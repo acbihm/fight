@@ -1,7 +1,5 @@
 import React from "react";
 import "./style.css";
-
-// import HPBar from "../HPBar";
 import BothPlayers from "../PlayerRange";
 
 
@@ -10,7 +8,7 @@ class Stage extends React.Component {
     return (
       <div>
         <div className="stage">
-          {/* <HPBar /> */}
+
           <BothPlayers />
         </div>
       </div>
