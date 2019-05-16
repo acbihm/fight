@@ -11,5 +11,6 @@
     background-repeat: no-repeat;
     border: 4px dotted yellow;
     background-position: bottom;
+    transform-origin: bottom left;
 
 }

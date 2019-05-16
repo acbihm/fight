@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
-// import EnemyRange from "../EnemyRange";
-import PlayerRange from "../PlayerRange";
-import HPBar from "../HPBar";
+
+// import HPBar from "../HPBar";
+import BothPlayers from "../PlayerRange";
 
 
 class Stage extends React.Component {
@@ -10,9 +10,8 @@ class Stage extends React.Component {
     return (
       <div>
         <div className="stage">
-          <HPBar />
-          <PlayerRange />
-          {/* <EnemyRange /> */}
+          {/* <HPBar /> */}
+          <BothPlayers />
         </div>
       </div>
     );

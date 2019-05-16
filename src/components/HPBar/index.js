@@ -19,7 +19,7 @@ class HPBar extends React.Component {
 
  
 
-    render() {
+    render(props) {
         return (
             <div className="timer-and-hp area">
                 {/* <div className="hp-bar" id="p1">
@@ -28,7 +28,7 @@ class HPBar extends React.Component {
 
                 <div className="p1">
                     <div className="hp-bar" >
-                        <meter min="0" low="40" high="95" max="100" value="85">
+                        <meter min="0" low="40" high="95" max="100" value={this.props.hp1}>
                         </meter>
                     </div>
 
@@ -50,7 +50,7 @@ class HPBar extends React.Component {
 
                 <div className="p2">
                     <div className="hp-bar" >
-                        <meter min="0" low="40" high="95" max="100" value="25">
+                        <meter min="0" low="40" high="95" max="100" value="10">
                         </meter>
                     </div>
 
