@@ -7,13 +7,15 @@
     "bootstrap": "^4.3.1",
     "easytimer": "^1.1.1",
     "express": "^4.16.4",
+    "formik": "^1.5.4",
     "mongoose": "^5.5.9",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-countdown-now": "^2.1.0",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
