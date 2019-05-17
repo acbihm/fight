@@ -53,7 +53,7 @@ class BothPlayers extends React.Component {
         hp2: 100,
         spec2: 0,
 
-        distanceApart: null
+        distanceApart: 900
     };
 
     p1Jump = () => {
@@ -101,37 +101,38 @@ class BothPlayers extends React.Component {
 
         });
     };
-    p1Punch = () => {
-        this.setState(prevState => {
-            this.setState({ punch1: true })
-            if ((this.state.distanceApart <= 150) && (this.state.punch1 === true)) {
-                this.setState({ hp2: this.state.hp2 - 5 })
-                this.setState({ spec1: this.state.spec1 + 5 })
 
-            }
+    // ======
+    p1Punch = () => {
+        this.setState({ punch1: true })
+        if ((this.state.distanceApart <= 150)) {
+            this.setState((state) => ({
+                hp2: state.hp2 - 9
+            }));
+            this.setState({ spec1: this.state.spec1 + 8 })
             setTimeout(
                 function () {
                     this.setState({ punch1: false });
-                }.bind(this), 500
+                }.bind(this), 900
             );
-        })
+        }
     }
-
+    // =======
     p1Kick = () => {
-        this.setState(prevState => {
-            this.setState({ kick1: true })
-            if ((this.state.distanceApart <= 250) && (this.state.kick1 === true)) {
-                this.setState({ hp2: this.state.hp2 - 20 })
-                this.setState({ spec1: this.state.spec1 + 8 })
-
-            }
+        this.setState({ kick1: true })
+        if ((this.state.distanceApart <= 250)) {
+            this.setState((state) => ({
+                hp2: state.hp2 - 20
+            }));
+            this.setState({ spec1: this.state.spec1 + 8 })
             setTimeout(
                 function () {
                     this.setState({ kick1: false });
-                }.bind(this), 800
+                }.bind(this), 900
             );
-        })
+        }
     }
+
 
     //  =======================
 
@@ -156,41 +157,72 @@ class BothPlayers extends React.Component {
                 this.setState({ x2: prevState.x2 + 20 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
-
+            console.log(this.state.distanceApart);
         });
     };
+    // p2Punch = () => {
+    //     // this.setState(prevState => {
+    //     this.setState({ punch2: true })
+
+    //     if ((this.state.distanceApart <= 150) && (this.state.punch2 === true)) {
+    //         this.setState({ hp1: this.state.hp1 - 5 })
+    //         this.setState({ spec2: this.state.spec2 + 5 })
+    //     }
+    //     setTimeout(
+    //         function () {
+    //             this.setState({ punch2: false });
+    //         }.bind(this), 500
+    //     );
+    //     // })
+    // }
+
+    // p2Kick = () => {
+    //     // this.setState(prevState => {
+    //     this.setState({ kick2: true })
+
+    //     if ((this.state.distanceApart <= 250) && (this.state.kick2 === true)) {
+    //         this.setState({ hp1: this.state.hp1 - 20 })
+    //         this.setState({ spec2: this.state.spec2 + 8 })
+    //     }
+    //     setTimeout(
+    //         function () {
+    //             this.setState({ kick2: false });
+    //         }.bind(this), 800
+    //     );
+    //     // })
+    // }
+
+
+
     p2Punch = () => {
-        // this.setState(prevState => {
         this.setState({ punch2: true })
-
-        if ((this.state.distanceApart <= 150) && (this.state.punch2 === true)) {
-            this.setState({ hp1: this.state.hp1 - 5 })
-            this.setState({ spec2: this.state.spec2 + 5 })
-        }
-        setTimeout(
-            function () {
-                this.setState({ punch2: false });
-            }.bind(this), 500
-        );
-        // })
-    }
-
-    p2Kick = () => {
-        // this.setState(prevState => {
-        this.setState({ kick2: true })
-
-        if ((this.state.distanceApart <= 250) && (this.state.kick2 === true)) {
-            this.setState({ hp1: this.state.hp1 - 20 })
+        if ((this.state.distanceApart <= 150)) {
+            this.setState((state) => ({
+                hp1: state.hp1 - 9
+            }));
             this.setState({ spec2: this.state.spec2 + 8 })
+            setTimeout(
+                function () {
+                    this.setState({ punch2: false });
+                }.bind(this), 900
+            );
         }
-        setTimeout(
-            function () {
-                this.setState({ kick2: false });
-            }.bind(this), 800
-        );
-        // })
     }
-
+    // =======
+    p2Kick = () => {
+        this.setState({ kick2: true })
+        if ((this.state.distanceApart <= 250)) {
+            this.setState((state) => ({
+                hp1: state.hp1 - 20
+            }));
+            this.setState({ spec2: this.state.spec2 + 8 })
+            setTimeout(
+                function () {
+                    this.setState({ kick2: false });
+                }.bind(this), 900
+            );
+        }
+    }
     render() {
         return (
             <Fragment>

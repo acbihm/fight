@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import BothPlayers from "../PlayerRange";
+import BothPlayers from "../BothPlayers";
 
 
 class Stage extends React.Component {
