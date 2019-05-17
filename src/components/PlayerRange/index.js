@@ -37,8 +37,10 @@ class BothPlayers extends React.Component {
         kick1: false,
         stand1: true,
         walk1: false,
-        hp1: 100,
+        jump1: false,
+        hp1: 100,   //make this passed in value
         spec1: 0,
+
 
         x2: 950,
         y2: 0,
@@ -47,10 +49,30 @@ class BothPlayers extends React.Component {
         kick2: false,
         stand2: true,
         walk2: false,
+        jump2: false,
         hp2: 100,
         spec2: 0,
 
         distanceApart: null
+    };
+
+    p1Jump = () => {
+        this.setState(prevState => {
+            this.setState({ jump1: true })
+            if (this.state.y1 < -174) {
+                return null;
+            }
+            else {
+                this.setState({ y1: prevState.y1 - 175 });
+                setTimeout(
+                    function () {
+                        this.setState({ jump1: false });
+                        this.setState({ y1: prevState.y1 });
+                    }.bind(this), 400
+                );
+            }
+            this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
+        });
     };
 
     p1Left = () => {
@@ -58,6 +80,8 @@ class BothPlayers extends React.Component {
             if (this.state.x1 < (-20)) {
                 this.setState({ x2: prevState.x2 + 0 });
             }
+
+            //****limit jump? */
             else {
                 this.setState({ x1: prevState.x1 - 20 });
             }
@@ -81,8 +105,8 @@ class BothPlayers extends React.Component {
         this.setState(prevState => {
             this.setState({ punch1: true })
             if ((this.state.distanceApart <= 150) && (this.state.punch1 === true)) {
-                this.setState({hp2: this.state.hp2- 5 })
-                this.setState({spec1: this.state.spec1+ 5 })
+                this.setState({ hp2: this.state.hp2 - 5 })
+                this.setState({ spec1: this.state.spec1 + 5 })
 
             }
             setTimeout(
@@ -97,8 +121,8 @@ class BothPlayers extends React.Component {
         this.setState(prevState => {
             this.setState({ kick1: true })
             if ((this.state.distanceApart <= 250) && (this.state.kick1 === true)) {
-                this.setState({hp2: this.state.hp2- 20 })
-                this.setState({spec1: this.state.spec1+ 8 })
+                this.setState({ hp2: this.state.hp2 - 20 })
+                this.setState({ spec1: this.state.spec1 + 8 })
 
             }
             setTimeout(
@@ -137,33 +161,33 @@ class BothPlayers extends React.Component {
     };
     p2Punch = () => {
         // this.setState(prevState => {
-            this.setState({ punch2: true })
-            
-            if ((this.state.distanceApart <= 150) && (this.state.punch2 === true)) {
-                this.setState({hp1: this.state.hp1- 5 })
-                this.setState({spec2: this.state.spec2+ 5 })
-            }
-            setTimeout(
-                function () {
-                    this.setState({ punch2: false });
-                }.bind(this), 500
-            );
+        this.setState({ punch2: true })
+
+        if ((this.state.distanceApart <= 150) && (this.state.punch2 === true)) {
+            this.setState({ hp1: this.state.hp1 - 5 })
+            this.setState({ spec2: this.state.spec2 + 5 })
+        }
+        setTimeout(
+            function () {
+                this.setState({ punch2: false });
+            }.bind(this), 500
+        );
         // })
     }
 
     p2Kick = () => {
         // this.setState(prevState => {
-            this.setState({ kick2: true })
-            
-            if ((this.state.distanceApart <= 250) && (this.state.kick2 === true)) {
-                this.setState({hp1: this.state.hp1- 20 })
-                this.setState({spec2: this.state.spec2+ 8 })
-            }
-            setTimeout(
-                function () {
-                    this.setState({ kick2: false });
-                }.bind(this), 800
-            );
+        this.setState({ kick2: true })
+
+        if ((this.state.distanceApart <= 250) && (this.state.kick2 === true)) {
+            this.setState({ hp1: this.state.hp1 - 20 })
+            this.setState({ spec2: this.state.spec2 + 8 })
+        }
+        setTimeout(
+            function () {
+                this.setState({ kick2: false });
+            }.bind(this), 800
+        );
         // })
     }
 
@@ -176,6 +200,7 @@ class BothPlayers extends React.Component {
                     onDKey={this.p1Right}
                     onQKey={this.p1Punch}
                     onWKey={this.p1Kick}
+                    onSpaceKey={this.p1Jump}
 
                     // =====================
                     onLeft={this.p2Left}
@@ -189,9 +214,9 @@ class BothPlayers extends React.Component {
                         pointerEvents: 'none',
                     }
                 }}>
-                    <PlayerTest 
+                    <PlayerTest
                     // isPunching={this.state.punching1}
-                     />
+                    />
 
                 </div>
                 <div style={{

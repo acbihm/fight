@@ -9,6 +9,10 @@ class KeyEvents extends React.Component {
 
     onKeyDown = event => {
         switch (event.keyCode) {
+
+            case 32:
+            this.props.onSpaceKey();
+            break;
             case 65:
                 this.props.onAKey();
 
@@ -22,6 +26,10 @@ class KeyEvents extends React.Component {
                 case 87:
                 this.props.onWKey();
                 break;
+
+
+
+
 
                 case 37:
                 this.props.onLeft();
