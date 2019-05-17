@@ -6,8 +6,9 @@ import "./style.css";
 // import CharInfo from "../CharInfo";
 // import Image from "../Image";
 import SelectHeader from "../SelectHeader"
-import Form1 from "../Form1";
-import Form2 from "../Form2";
+// import Form1 from "../Form1";
+// import Form2 from "../Form2";
+import FormTest from "../FormTest";
 // var char1 = require('../../char1.json');
 
 class LoginScreen extends React.Component {
@@ -17,9 +18,10 @@ class LoginScreen extends React.Component {
         return (
             <div className="select-screen" id="area">
                 <SelectHeader text="Log In"></SelectHeader>
-            <Form1 />
+                <FormTest />
+            {/* <Form1 />
             <h2></h2>
-            <Form2 />
+            <Form2 /> */}
             </div>
         )
     }
