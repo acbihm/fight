@@ -17,7 +17,6 @@ const renderer = ({seconds, completed }) => {
 };
 class HPBar extends React.Component {
 componentDidMount() {
-    console.log(this.props.hp2)
 }
  
 
@@ -31,12 +30,12 @@ componentDidMount() {
 
                 <div className="p1">
                     <div className="hp-bar" >
-                        <meter min="0" low="40" high="95" max="100" value={this.props.hp1}>
+                        <meter min="0" low="40" high="85" max="100" value={this.props.hp1}>
                         </meter>
                     </div>
 
                     <div className="p1Special special">
-                        <meter min="0" low="40" high="95" max="100" value={this.props.spec1}>
+                        <meter min="0" low="40" high="85" max="100" value={this.props.spec1}>
                         </meter>
                     </div>
                 </div>
@@ -53,12 +52,12 @@ componentDidMount() {
 
                 <div className="p2">
                     <div className="hp-bar" >
-                        <meter min="0" low="40" high="95" max="100" value={this.props.hp2}>
+                        <meter min="0" low="40" high="85" max="100" value={this.props.hp2}>
                         </meter>
                     </div>
 
                     <div className="p2Special special">
-                        <meter min="0" low="40" high="95" max="100" value={this.props.spec2}>
+                        <meter min="0" low="40" high="85" max="100" value={this.props.spec2}>
                         </meter>
                     </div>
                 </div>

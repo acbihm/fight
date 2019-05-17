@@ -1,0 +1,40 @@
+.select-screen {
+    margin-top: 3.7%;
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+    width: 60%;
+    margin: 10 auto;
+    background-color: #ffd17a;
+    z-index: 300px;
+    min-height: 50%;
+    max-height: 80%;
+    border: 8px groove goldenrod;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #c49c81;
+    background-image: url("https://www.transparenttextures.com/patterns/pinstriped-suit.png");
+    background-size: 40%;
+    background-blend-mode: multiply;
+    box-shadow: 10px 10px black;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+}
+
+#area {
+    animation: animatedBackground 17s linear infinite;
+    /* background-repeat: repeat-x; */
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 100% 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}

@@ -26,23 +26,29 @@ const p2Styles = {
     borderStyle: 'solid',
     borderWith: 7,
 };
+
+
 class BothPlayers extends React.Component {
     state = {
         x1: 0,
         y1: 0,
         p1width: 250,
-        punching1: 'none',
         punch1: false,
-        hp1: 50,
-        spec1: 25,
+        kick1: false,
+        stand1: true,
+        walk1: false,
+        hp1: 100,
+        spec1: 0,
 
         x2: 950,
         y2: 0,
         p2width: 250,
-        punching2: 'none',
         punch2: false,
-        hp2: 30,
-        spec2: 55,
+        kick2: false,
+        stand2: true,
+        walk2: false,
+        hp2: 100,
+        spec2: 0,
 
         distanceApart: null
     };
@@ -56,7 +62,6 @@ class BothPlayers extends React.Component {
                 this.setState({ x1: prevState.x1 - 20 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
-            console.log(this.state.distanceApart)
         });
     };
     p1Right = () => {
@@ -68,24 +73,38 @@ class BothPlayers extends React.Component {
                 this.setState({ x1: prevState.x1 + 20 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
-            console.log(this.state.distanceApart)
 
 
         });
-        // console.log(this)
     };
     p1Punch = () => {
         this.setState(prevState => {
             this.setState({ punch1: true })
             if ((this.state.distanceApart <= 150) && (this.state.punch1 === true)) {
-                // this.setState({hp2: (this.state.hp2 - 50)});
-                console.log(this.state.hp2-20)
                 this.setState({hp2: this.state.hp2- 5 })
+                this.setState({spec1: this.state.spec1+ 5 })
+
             }
             setTimeout(
                 function () {
                     this.setState({ punch1: false });
-                }.bind(this), 6000
+                }.bind(this), 500
+            );
+        })
+    }
+
+    p1Kick = () => {
+        this.setState(prevState => {
+            this.setState({ kick1: true })
+            if ((this.state.distanceApart <= 250) && (this.state.kick1 === true)) {
+                this.setState({hp2: this.state.hp2- 20 })
+                this.setState({spec1: this.state.spec1+ 8 })
+
+            }
+            setTimeout(
+                function () {
+                    this.setState({ kick1: false });
+                }.bind(this), 800
             );
         })
     }
@@ -101,7 +120,6 @@ class BothPlayers extends React.Component {
                 this.setState({ x2: prevState.x2 - 20 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
-            console.log(this.state.distanceApart)
 
         });
     };
@@ -114,59 +132,72 @@ class BothPlayers extends React.Component {
                 this.setState({ x2: prevState.x2 + 20 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
-            console.log(this.state.distanceApart)
 
         });
     };
     p2Punch = () => {
-        this.setState(prevState => {
+        // this.setState(prevState => {
             this.setState({ punch2: true })
+            
             if ((this.state.distanceApart <= 150) && (this.state.punch2 === true)) {
-                // this.setState({hp2: (this.state.hp2 - 50)});
-                console.log(this.state.hp2-20)
                 this.setState({hp1: this.state.hp1- 5 })
+                this.setState({spec2: this.state.spec2+ 5 })
             }
             setTimeout(
                 function () {
                     this.setState({ punch2: false });
-                }.bind(this), 6000
+                }.bind(this), 500
             );
-        })
+        // })
+    }
+
+    p2Kick = () => {
+        // this.setState(prevState => {
+            this.setState({ kick2: true })
+            
+            if ((this.state.distanceApart <= 250) && (this.state.kick2 === true)) {
+                this.setState({hp1: this.state.hp1- 20 })
+                this.setState({spec2: this.state.spec2+ 8 })
+            }
+            setTimeout(
+                function () {
+                    this.setState({ kick2: false });
+                }.bind(this), 800
+            );
+        // })
     }
 
     render() {
         return (
             <Fragment>
                 <HPBar hp1={this.state.hp1} hp2={this.state.hp2} spec1={this.state.spec1} spec2={this.state.spec2} />
-
                 <KeyEvents
                     onAKey={this.p1Left}
                     onDKey={this.p1Right}
-                    // onUp={this.moveUp}
-                    // onDown={this.moveDown}
-                    onSpacebar={this.p1Punch}
+                    onQKey={this.p1Punch}
+                    onWKey={this.p1Kick}
 
                     // =====================
                     onLeft={this.p2Left}
-
                     onRight={this.p2Right}
                     onPKey={this.p2Punch}
+                    onOKey={this.p2Kick}
                 />
                 <div style={{
                     ...p1Styles, ...{
                         transform: `translate(${this.state.x1}px, ${this.state.y1}px)`,
                         pointerEvents: 'none',
-                        // display: `${this.state.punching1}`,
                     }
                 }}>
-                    <PlayerTest isPunching={this.state.punching1} />
+                    <PlayerTest 
+                    // isPunching={this.state.punching1}
+                     />
 
                 </div>
                 <div style={{
                     ...p2Styles, ...{
                         transform: `translate(${this.state.x2}px, ${this.state.y2}px)`,
                         pointerEvents: 'none',
-                        // display: `${this.state.punching2}`,
                     }
                 }}>
                     <PlayerTest2 />

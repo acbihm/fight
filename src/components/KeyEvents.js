@@ -16,8 +16,11 @@ class KeyEvents extends React.Component {
             case 68:
                 this.props.onDKey();
                 break;
-            case 32:
-                this.props.onSpacebar();
+            case 81:
+                this.props.onQKey();
+                break;
+                case 87:
+                this.props.onWKey();
                 break;
 
                 case 37:
@@ -29,6 +32,9 @@ class KeyEvents extends React.Component {
                 break;
             case 80:
                 this.props.onPKey();
+                break;
+                case 79:
+                this.props.onOKey();
                 break;
 
 
@@ -72,7 +78,7 @@ class KeyEvents extends React.Component {
                 tabIndex="-1"
                 ref={ref => {
                     this.level = ref;
-                    console.log(ref);
+                    // console.log(ref);
                     // Foudn this on Stack overflow{(n) => this.node = n}
                 }}
             />

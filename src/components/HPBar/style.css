@@ -89,6 +89,7 @@
 
 meter::-webkit-meter-bar {
     background: none;
+    /* background: green; */
     /* Required to get rid of the default background property */
     background-color: whiteSmoke;
     box-shadow: 0 5px 7px -2px black inset;
@@ -103,7 +104,7 @@ meter::-webkit-meter-optimum-value {
 }
 
 meter::-webkit-meter-suboptimum-value {
-    background-image: url("https://i.gifer.com/Cad.gif");
+    /* background-image: url("https://i.gifer.com/Cad.gif"); */
     background: orange;
 }
 
