@@ -13,8 +13,8 @@ class AppLoading extends React.Component {
             <Fragment>
                 <Wrapper>
                     <Blurb>
-                        <SelectHeader text="Loading" />
-                        <Gametext text="Pls wait" />
+                        <SelectHeader text="Controls:" />
+                        <Gametext text="Player 1 fdkmsnfd dsnx lorum fdsvf fdjsd s" />
                         <Spinner />
                         {/* <BlurbSmall text="Character Select -> " /> */}
                         </Blurb>
