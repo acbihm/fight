@@ -3,6 +3,23 @@
     /* display: inline; */
     z-index: 9999;
     position: absolute;
-    top: 900;
-    left: 0;
+    top: 0;
+    background-color: #330000;
+    /* top: 900; */
+    left: 200px;
+    display: inline;
+    padding: 0 30px;
 }
+
+.nav > li {
+display: inline;
+padding: 0  6.2rem;
+
+}
+.nav > li {
+   text-decoration: none;
+    }
+
+    * {
+        text-decoration: none;
+    }
