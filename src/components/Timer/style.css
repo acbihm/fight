@@ -1,0 +1,10 @@
+.timer {
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 13;
+    left: 50%;
+    right: 50%;
+    transform: translate(-1.25rem, .7rem);
+
+}

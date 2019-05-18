@@ -11,7 +11,7 @@ function Head() {
                     &nbsp; &nbsp; Home
             </span>
             </a>
-            
+
             <span id="username">|&nbsp; test &nbsp; &nbsp;
             <span className="fa fa-cog">
                 </span>

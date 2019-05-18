@@ -1,10 +1,9 @@
 .headline {
-
-margin: 0;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     justify-content: center;
     text-align: center;
     letter-spacing: 6px;
@@ -15,7 +14,4 @@ transform: translate(-50%, -50%);
     font-family: 'Luckiest Guy', cursive;
     font-size: 6.5rem;
     text-shadow: 4px 6px black;
-
 }
-
-

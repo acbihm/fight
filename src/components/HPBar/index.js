@@ -1,20 +1,20 @@
 import React from "react";
 import "./style.css";
 import SelectHeader from "../SelectHeader";
-import Countdown from 'react-countdown-now';
+// import Countdown from 'react-countdown-now';
 
-const Completionist = () => <span>Time</span>;
+// const Completionist = () => <span>Time</span>;
 
-// Renderer callback with condition
-const renderer = ({ seconds, completed }) => {
-    if (completed) {
-        // Render a completed state
-        return <Completionist />;
-    } else {
-        // Render a countdown
-        return <span>{seconds}</span>;
-    }
-};
+// // Renderer callback with condition
+// const renderer = ({ seconds, completed }) => {
+//     if (completed) {
+//         // Render a completed state
+//         return <Completionist />;
+//     } else {
+//         // Render a countdown
+//         return <span>{seconds}</span>;
+//     }
+// };
 
 
 class HPBar extends React.Component {
@@ -35,11 +35,7 @@ class HPBar extends React.Component {
                     </div>
                 </div>
                 <div className="timer-elem">
-                    <SelectHeader text={<Countdown
-                        date={Date.now() + 59000}
-                        renderer={renderer}
-                    />}>
-                    </SelectHeader>
+                    
                 </div>
                 <div className="p2">
                     <div className="hp-bar" >

@@ -2,6 +2,10 @@ import React from "react";
 import "./style.css";
 import SelectHeader from "../SelectHeader"
 import FormContainer from "../FormContainer";
+import BlurbSmall from "../BlurbSmall";
+
+
+
 class LoginScreen extends React.Component {
 
     render() {
@@ -10,8 +14,7 @@ class LoginScreen extends React.Component {
                 <SelectHeader text="Log In"></SelectHeader>
                 <FormContainer />
                 <FormContainer />
-                <div>test</div>
-
+                <BlurbSmall text="Character Select -> " />
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import BothPlayers from "../BothPlayers";
+import Timer from "../Timer";
 
 
 class Stage extends React.Component {
@@ -8,7 +9,7 @@ class Stage extends React.Component {
     return (
       <div>
         <div className="stage">
-
+<Timer />
           <BothPlayers />
         </div>
       </div>

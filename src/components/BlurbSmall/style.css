@@ -1,0 +1,53 @@
+.blurbSmall {
+    /* margin-top: 3.7%; */
+    display: flex;
+    bottom: -170px;
+    /* padding: 5px; */
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    width: 50%;
+    vertical-align: middle;
+    margin: auto auto;
+    background-color: #ffd17a;
+    z-index: 10;
+    min-height: 10vh;
+    max-height: 12vh;
+    border: 8px double goldenrod;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #c49c81;
+    background-image: url("https://www.transparenttextures.com/patterns/pinstriped-suit.png");
+    background-size: 40%;
+    background-blend-mode: multiply;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    box-shadow: 10px 10px black;
+
+
+
+padding-top: 20px;
+    letter-spacing: 3px;
+    line-height: 2.3rem;
+    /* position: static; */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #442323;
+    color: gold;
+    z-index: 11;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.7rem;
+    text-shadow: 2px 2px black;
+    /* text-indent: 3rem;  */
+}
+
+#area {
+    animation: animatedBackground 17s linear infinite;
+    /* background-repeat: repeat-x; */
+}
+
+@keyframes animatedBackground {
+	from { background-position: 100% 0; }
+	to { background-position: 0 0; }
+}
