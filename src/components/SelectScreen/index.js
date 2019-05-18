@@ -5,31 +5,42 @@ import ImgWrapper from "../ImgWrapper";
 import SelectHeader from "../SelectHeader"
 import Player1Character from "../Player1Character";
 import Player2Character from "../Player2Character";
+import Sprites from "../Sprites";
 var charList = require('../../charList.json');
+var spriteList = require('../../spriteList.json');
+
 
 class SelectScreen extends React.Component {
     state = {
         charList,
-        // player1,
-        // player2
+        player1: null,
+        player2: null
     }
 
-
-
     // handleItemClick = id => {
-        
     //     const newData = this.state.data.map(item => {
-
-
     //     });
     // };
-
-
     // showAlert() {
     //     alert("Im an alert");
     // }
-    assignCharacter = (id) => {
-        console.log(id)
+
+    assignCharacter1 = (id) => {
+        // var spriteList;
+        // console.log(id)
+        // if (id === 1) {
+        //     spriteList = character1;
+        // }
+        // return (
+        //     // this.state.spriteList.map(spriteList => (
+        //         <Sprites
+        //             walk={spriteList.walk}
+        //             stand={spriteList.stand}
+        //             punch={spriteList.punch}
+        //             kick={spriteList.kick}
+        //         />
+        //     // ))
+        // )
     }
 
     render() {
@@ -44,11 +55,8 @@ class SelectScreen extends React.Component {
                             key={charList.id}
                             name={charList.name}
                             image={charList.image}
-                            
                             className={charList.id}
-                            // onClick={this.showAlert}
-                            handleTest={this.assignCharacter}
-
+                            handleTest={this.assignCharacter1}
                         />
                     ))}
                 </ImgWrapper>
