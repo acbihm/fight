@@ -1,0 +1,38 @@
+.formContainer {
+    /* margin-top: 3.7%; */
+    display: flex;
+    padding: 3px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2rem;
+    width: 35%;
+    vertical-align: middle;
+    margin: 2rem auto;
+    background-color: #ffd17a;
+    z-index: 10;
+    min-height: 30vh;
+    max-height: 60vh;
+    border: 8px double goldenrod;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #c49c81;
+    background-image: url("https://www.transparenttextures.com/patterns/pinstriped-suit.png");
+    background-size: 40%;
+    background-blend-mode: multiply;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius: 35px;
+    border-top-left-radius: 35px;
+    box-shadow: 10px 10px black;
+    background-color: #3f3996;
+    background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.formContainer:nth-child(odd) {
+    background-color: #3f3996;
+}
+
+.formContainer:nth-child(even) {
+    background-color: #a32521;
+}

@@ -15,7 +15,6 @@ class SelectScreen extends React.Component {
         // console.log(char1);
         return (
             <div className="select-screen" id="area">
-            
                 <SelectHeader text="Choose your character"></SelectHeader>
                 <ImgWrapper>
                     {/* <CharacterName /> */}
@@ -31,10 +30,10 @@ class SelectScreen extends React.Component {
                 {/* Create chosenCharacter object here, then 
                 reference it below, and on the fight page */}
                 <Player1Character />
-                <Player2Character name="testww"/>
+                <Player2Character name="testww" />
                 <h2> Waiting on player 1...</h2>
                 <h2> Waiting on player 2...</h2>
-                
+
             </div>
         )
     }
