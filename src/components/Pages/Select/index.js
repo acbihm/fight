@@ -1,9 +1,9 @@
 import React from "react";
-import AppMenu from "../../../AppMenu";
+import AppSelect from "../../../AppSelect";
 
 const Select = () => (
   <div>
-    <AppMenu />
+    <AppSelect />
 
   </div>
 );

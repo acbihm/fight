@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 import Wrapper from "./components/Wrapper";
 import SelectScreen from './components/SelectScreen';
 
-class AppMenu extends React.Component {
+class AppSelect extends React.Component {
   render() {
     return (
       <Fragment>
@@ -14,4 +14,4 @@ class AppMenu extends React.Component {
     );
   }
 }
-export default AppMenu;
+export default AppSelect;
