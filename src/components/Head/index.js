@@ -1,6 +1,6 @@
 import React from 'react';
 import "./style.css";
-import Container from "../Container";
+// import NavRouter from "../NavRouter";
 
 function Head() {
     return (
@@ -11,16 +11,10 @@ function Head() {
                     &nbsp; &nbsp; Home
             </span>
             </a>
-
             <span id="username">|&nbsp; test &nbsp; &nbsp;
             <span className="fa fa-cog">
                 </span>
             </span>
-
-
-
-
-
         </div>
     );
 }

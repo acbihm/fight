@@ -7,7 +7,7 @@ import Fight from "./Pages/Fight";
 import Head from "./Head";
 import Footer from "./Footer";
 
-class Container extends Component {
+class NavRouter extends Component {
     state = {
         currentPage: "Home"
     };
@@ -42,4 +42,4 @@ class Container extends Component {
     }
 }
 
-export default Container;
+export default NavRouter;

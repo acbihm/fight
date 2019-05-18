@@ -1,14 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import AppTest from './AppTest';
-// import AppMenu from './AppMenu';
-// import AppLoading from './AppLoading';
-import AppRoute from './AppRoute';
-// import * as serviceWorker from './serviceWorker';
+import NavRouter from "./components/NavRouter"
+// import AppRoute from './AppRoute';
 
 
-// ReactDOM.render(<AppTest />, document.getElementById('root'));
-ReactDOM.render(<AppRoute />, document.getElementById('root'));
+ReactDOM.render(<NavRouter />, document.getElementById('root'));
 
-// serviceWorker.unregister();
