@@ -19,6 +19,8 @@ class LoginScreen extends React.Component {
             <div className="select-screen" id="area">
                 <SelectHeader text="Log In"></SelectHeader>
                 <FormTest />
+                <h2></h2>
+                <FormTest />
             {/* <Form1 />
             <h2></h2>
             <Form2 /> */}

@@ -1,0 +1,26 @@
+.rightchar {
+    position: absolute;
+    bottom: -300px;
+    right: -260px;
+    z-index: 10;
+    width: 43%;
+    /* height: 0%; */
+}
+
+.rightPlayer {
+    z-index: 11;
+    position: absolute;
+    bottom: -240px;
+    right: -200px;
+    text-align: center;
+    background-color: blue;
+    width: 17rem;
+    height: 3rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 1.4rem;
+
+    border-radius: 20px;
+    color: white;
+    font-size: 3rem;
+}

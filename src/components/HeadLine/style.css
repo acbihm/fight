@@ -1,0 +1,21 @@
+.headline {
+
+margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 6px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #442323;
+    color: yellow;
+    z-index: 12;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 6.5rem;
+    text-shadow: 4px 6px black;
+
+}
+
+

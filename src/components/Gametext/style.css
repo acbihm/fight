@@ -12,7 +12,7 @@
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #442323;
     color: gold;
-    z-index: 300px;
+    z-index: 11;
     font-family: 'Luckiest Guy', cursive;
     font-size: 1.7rem;
     text-shadow: 2px 2px black;

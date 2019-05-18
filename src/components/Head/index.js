@@ -12,7 +12,7 @@ function Head() {
             </span>
             </a>
             
-            <span id="username">|&nbsp; videogamefan67 &nbsp; &nbsp;
+            <span id="username">|&nbsp; test &nbsp; &nbsp;
             <span className="fa fa-cog">
                 </span>
             </span>

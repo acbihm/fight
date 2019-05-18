@@ -4,6 +4,8 @@ import PlayerTest from "../PlayerTest";
 import PlayerTest2 from "../PlayerTest2";
 import KeyEvents from "../KeyEvents";
 import HPBar from "../HPBar";
+import PlayerWins from "../PlayerWins";
+import Winner from "../Winner";
 
 const p1Styles = {
     position: 'absolute',
@@ -56,6 +58,18 @@ class BothPlayers extends React.Component {
         distanceApart: 900
     };
 
+    checkForKnockout = () => {
+        if ((this.state.hp1 <= 0) || (this.state.hp2 <= 0)) {
+            if (this.state.h1 <= 0 && this.state.hp2 > 0) {
+                return <Winner p1={false} p2={true} />
+            }
+            if (this.state.h1 >= 0 && this.state.hp2 < 0) {
+                return <Winner p1={true} p2={false} />
+            }
+        }
+    }
+
+
     p1Jump = () => {
         this.setState(prevState => {
             this.setState({ jump1: true })
@@ -81,6 +95,7 @@ class BothPlayers extends React.Component {
                 this.setState({ x2: prevState.x2 + 0 });
             }
 
+
             //****limit jump? */
             else {
                 this.setState({ x1: prevState.x1 - 20 });
@@ -97,12 +112,9 @@ class BothPlayers extends React.Component {
                 this.setState({ x1: prevState.x1 + 20 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
-
-
         });
     };
 
-    // ======
     p1Punch = () => {
         this.setState({ punch1: true })
         if ((this.state.distanceApart <= 150)) {
@@ -116,8 +128,8 @@ class BothPlayers extends React.Component {
                 }.bind(this), 900
             );
         }
-    }
-    // =======
+    };
+
     p1Kick = () => {
         this.setState({ kick1: true })
         if ((this.state.distanceApart <= 250)) {
@@ -134,7 +146,9 @@ class BothPlayers extends React.Component {
     }
 
 
+
     //  =======================
+
 
     p2Left = () => {
         this.setState(prevState => {
@@ -145,9 +159,9 @@ class BothPlayers extends React.Component {
                 this.setState({ x2: prevState.x2 - 20 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
-
         });
     };
+
     p2Right = () => {
         this.setState(prevState => {
             if (this.state.x2 > 950) {
@@ -160,39 +174,6 @@ class BothPlayers extends React.Component {
             console.log(this.state.distanceApart);
         });
     };
-    // p2Punch = () => {
-    //     // this.setState(prevState => {
-    //     this.setState({ punch2: true })
-
-    //     if ((this.state.distanceApart <= 150) && (this.state.punch2 === true)) {
-    //         this.setState({ hp1: this.state.hp1 - 5 })
-    //         this.setState({ spec2: this.state.spec2 + 5 })
-    //     }
-    //     setTimeout(
-    //         function () {
-    //             this.setState({ punch2: false });
-    //         }.bind(this), 500
-    //     );
-    //     // })
-    // }
-
-    // p2Kick = () => {
-    //     // this.setState(prevState => {
-    //     this.setState({ kick2: true })
-
-    //     if ((this.state.distanceApart <= 250) && (this.state.kick2 === true)) {
-    //         this.setState({ hp1: this.state.hp1 - 20 })
-    //         this.setState({ spec2: this.state.spec2 + 8 })
-    //     }
-    //     setTimeout(
-    //         function () {
-    //             this.setState({ kick2: false });
-    //         }.bind(this), 800
-    //     );
-    //     // })
-    // }
-
-
 
     p2Punch = () => {
         this.setState({ punch2: true })
@@ -208,7 +189,7 @@ class BothPlayers extends React.Component {
             );
         }
     }
-    // =======
+
     p2Kick = () => {
         this.setState({ kick2: true })
         if ((this.state.distanceApart <= 250)) {
@@ -223,6 +204,8 @@ class BothPlayers extends React.Component {
             );
         }
     }
+
+
     render() {
         return (
             <Fragment>
@@ -235,6 +218,7 @@ class BothPlayers extends React.Component {
                     onSpaceKey={this.p1Jump}
 
                     // =====================
+
                     onLeft={this.p2Left}
                     onRight={this.p2Right}
                     onPKey={this.p2Punch}
@@ -246,9 +230,7 @@ class BothPlayers extends React.Component {
                         pointerEvents: 'none',
                     }
                 }}>
-                    <PlayerTest
-                    // isPunching={this.state.punching1}
-                    />
+                    <PlayerTest />
 
                 </div>
                 <div style={{
@@ -260,6 +242,8 @@ class BothPlayers extends React.Component {
                     <PlayerTest2 />
 
                 </div>
+
+                {/* <Winner p1={false} p2={true} /> */}
             </Fragment>
         );
     }
