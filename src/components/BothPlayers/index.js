@@ -117,7 +117,7 @@ class BothPlayers extends React.Component {
 
     p1Punch = () => {
         this.setState({ punch1: true })
-        if ((this.state.distanceApart <= 150)) {
+        if ((this.state.distanceApart <= 220)) {
             this.setState((state) => ({
                 hp2: state.hp2 - 9
             }));
@@ -132,7 +132,7 @@ class BothPlayers extends React.Component {
 
     p1Kick = () => {
         this.setState({ kick1: true })
-        if ((this.state.distanceApart <= 250)) {
+        if ((this.state.distanceApart <= 280)) {
             this.setState((state) => ({
                 hp2: state.hp2 - 20
             }));
@@ -177,7 +177,7 @@ class BothPlayers extends React.Component {
 
     p2Punch = () => {
         this.setState({ punch2: true })
-        if ((this.state.distanceApart <= 150)) {
+        if ((this.state.distanceApart <= 220)) {
             this.setState((state) => ({
                 hp1: state.hp1 - 9
             }));
@@ -192,7 +192,7 @@ class BothPlayers extends React.Component {
 
     p2Kick = () => {
         this.setState({ kick2: true })
-        if ((this.state.distanceApart <= 250)) {
+        if ((this.state.distanceApart <= 280)) {
             this.setState((state) => ({
                 hp1: state.hp1 - 20
             }));

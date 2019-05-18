@@ -1,10 +1,10 @@
 import React from "react";
-import AppLogin from "../../../AppLogin";
+import LoginHome from "../../../LoginHome";
 
 const Home = () => (
   <div>
     <h1>Home</h1>
-    <AppLogin />
+    <LoginHome />
   </div>
 );
 

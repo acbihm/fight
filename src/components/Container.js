@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NavTabs from "./NavTabs/index";
 import Home from "./Pages/Home";
-import About from "./Pages/About";
+import Info from "./Pages/Info";
 import Select from "./Pages/Select";
 import Fight from "./Pages/Fight";
 import Head from "./Head";
@@ -17,8 +17,8 @@ class Container extends Component {
     renderPage = () => {
         if (this.state.currentPage === "Home") {
             return <Home />;
-        } else if (this.state.currentPage === "About") {
-            return <About />;
+        } else if (this.state.currentPage === "Info") {
+            return <Info/>;
         }
         else if (this.state.currentPage === "Select") {
             return <Select />;

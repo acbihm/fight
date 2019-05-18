@@ -28,9 +28,18 @@ class SelectScreen extends React.Component {
     assignCharacter1 = (id) => {
         // var spriteList;
         // console.log(id)
-        // if (id === 1) {
-        //     spriteList = character1;
-        // }
+        if (id === 1) {
+            console.log("Hank Hill")
+        }
+        else if (id === 2){
+            console.log("Peggy Hill")
+        }
+        else if (id === 3){
+            console.log("Dale")
+        }
+        else if (id === 4){
+            console.log("Bobby")
+        }
         // return (
         //     // this.state.spriteList.map(spriteList => (
         //         <Sprites

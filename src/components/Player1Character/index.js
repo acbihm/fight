@@ -5,7 +5,6 @@ function Player1Character() {
     return (
         <div>
             <img src="https://i.imgur.com/DJE3utN.png" alt="" className='leftchar'/>
-
         </div>
             
         

@@ -3,11 +3,10 @@ import React, { Fragment } from "react";
 import Wrapper from "./components/Wrapper";
 import SelectHeader from "./components/SelectHeader";
 import Blurb from "./components/Blurb";
-// import BlurbSmall from "./components/BlurbSmall";
 import Gametext from "./components/Gametext";
 import Spinner from "./components/Spinner";
 
-class AppLoading extends React.Component {
+class AppInfo extends React.Component {
     render() {
         return (
             <Fragment>
@@ -16,11 +15,10 @@ class AppLoading extends React.Component {
                         <SelectHeader text="Controls:" />
                         <Gametext text="Player 1 fdkmsnfd dsnx lorum fdsvf fdjsd s" />
                         <Spinner />
-                        {/* <BlurbSmall text="Character Select -> " /> */}
                         </Blurb>
                 </Wrapper>
             </Fragment>
                 );
             }
         }
-        export default AppLoading;
+        export default AppInfo;

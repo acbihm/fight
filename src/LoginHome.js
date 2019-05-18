@@ -3,17 +3,15 @@ import React, { Fragment } from "react";
 import Wrapper from "./components/Wrapper";
 import LoginScreen from './components/LoginScreen';
 
-
-class AppLogin extends React.Component {
+class LoginHome extends React.Component {
   render() {
     return (
       <Fragment>
         <Wrapper>
-          <LoginScreen>
-          </LoginScreen>
+          <LoginScreen />
         </Wrapper>
       </Fragment>
     );
   }
 }
-export default AppLogin;
+export default LoginHome;
