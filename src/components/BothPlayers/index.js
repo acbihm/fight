@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
-// import ReactDOM from 'react-dom';
 import PlayerTest from "../PlayerTest";
 import PlayerTest2 from "../PlayerTest2";
 import KeyEvents from "../KeyEvents";
 import HPBar from "../HPBar";
-import PlayerWins from "../PlayerWins";
+// import PlayerWins from "../PlayerWins";
 import Winner from "../Winner";
 
 const p1Styles = {
@@ -30,33 +29,39 @@ const p2Styles = {
 };
 
 
+
 class BothPlayers extends React.Component {
-    state = {
-        x1: 0,
-        y1: 0,
-        p1width: 250,
-        punch1: false,
-        kick1: false,
-        stand1: true,
-        walk1: false,
-        jump1: false,
-        hp1: 100,   //make this passed in value
-        spec1: 0,
+    constructor(props) {
+        super(props);
+
+        // const hp111 ={props.p2HitPoints };
+        this.state = {
+            x1: 0,
+            y1: 0,
+            p1width: 250,
+            punch1: false,
+            kick1: false,
+            stand1: true,
+            walk1: false,
+            jump1: false,
+            hp1: 100,
+            spec1: 20,
 
 
-        x2: 950,
-        y2: 0,
-        p2width: 250,
-        punch2: false,
-        kick2: false,
-        stand2: true,
-        walk2: false,
-        jump2: false,
-        hp2: 100,
-        spec2: 0,
+            x2: 950,
+            y2: 0,
+            p2width: 250,
+            punch2: false,
+            kick2: false,
+            stand2: true,
+            walk2: false,
+            jump2: false,
+            hp2: 100,
+            spec2: 10,
 
-        distanceApart: 900
-    };
+            distanceApart: 900
+        };
+    }
 
     checkForKnockout = () => {
         if ((this.state.hp1 <= 0) || (this.state.hp2 <= 0)) {
@@ -207,9 +212,17 @@ class BothPlayers extends React.Component {
 
 
     render() {
+
         return (
             <Fragment>
-                <HPBar hp1={this.state.hp1} hp2={this.state.hp2} spec1={this.state.spec1} spec2={this.state.spec2} />
+                <HPBar
+                    hp1={this.state.hp1}
+                    // p1HitPoints={this.props.p1HitPoints}
+                    hp2={this.state.hp2}
+                    spec1={this.state.spec1}
+                    spec2={this.state.spec2}
+                />
+
                 <KeyEvents
                     onAKey={this.p1Left}
                     onDKey={this.p1Right}
@@ -240,10 +253,7 @@ class BothPlayers extends React.Component {
                     }
                 }}>
                     <PlayerTest2 />
-
                 </div>
-
-                {/* <Winner p1={false} p2={true} /> */}
             </Fragment>
         );
     }

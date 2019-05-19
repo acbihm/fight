@@ -32,8 +32,8 @@
 }
 
 .timer-elem h1 {
-    padding-left: 5.5rem;
-    padding-right: 5.5rem;
+    padding-left: 5.7rem;
+    padding-right: 5.7rem;
 }
 
 .hp-bar {
@@ -45,7 +45,7 @@
 
 .hp-bar meter {
     height: 2.7rem;
-    width: 33.7rem;
+    width: 34.7rem;
     background-color: gray;
     /* float: left; */
 }

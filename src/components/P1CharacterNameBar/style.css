@@ -1,0 +1,25 @@
+.leftchar {
+    bottom: -300px;
+    left: -260px;
+    z-index: 10;
+    position: absolute;
+    width: 43%;
+    /* height: 0%; */
+}
+
+.leftPlayer {
+    z-index: 11;
+    position: absolute;
+    bottom: -240px;
+    left: -200px;
+    text-align: center;
+    background-color: red;
+    width: 17rem;
+    height: 3rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 1.4rem;
+    border-radius: 20px;
+    color: white;
+    font-size: 3rem;
+}

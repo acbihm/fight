@@ -1,15 +1,16 @@
 import React from "react";
 import "./style.css";
 
-function Player1Character() {
+function P1CharacterNameBar(props) {
     return (
         <div>
             <img src="https://i.imgur.com/DJE3utN.png" alt="" className='leftchar'/>
+            <h4 className="leftPlayer" >{props.name}</h4>
         </div>
             
         
     );
 }
 
-export default Player1Character;
+export default P1CharacterNameBar;
 

@@ -1,7 +1,8 @@
 .blurbSmall {
     /* margin-top: 3.7%; */
     display: flex;
-    bottom: -170px;
+    bottom: -175px;
+    
     /* padding: 5px; */
     flex-wrap: wrap;
     position: absolute;
@@ -11,8 +12,8 @@
     margin: auto auto;
     background-color: #ffd17a;
     z-index: 10;
-    min-height: 10vh;
-    max-height: 12vh;
+    min-height: 14vh;
+    max-height: 16vh;
     border: 8px double goldenrod;
     background-attachment: fixed;
     background-size: cover;
@@ -25,10 +26,7 @@
     border-top-right-radius: 35px;
     border-top-left-radius: 35px;
     box-shadow: 10px 10px black;
-
-
-
-padding-top: 20px;
+    padding-top: 20px;
     letter-spacing: 3px;
     line-height: 2.3rem;
     /* position: static; */
@@ -42,12 +40,38 @@ padding-top: 20px;
     /* text-indent: 3rem;  */
 }
 
+.go-button {
+    display: block;
+    translate: (0, 4rem);
+    /* padding: 5px; */
+    margin-top: 10px;
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+    position: inherit;
+    top: 3rem;
+    justify-content: center;
+    width: 30%;
+    background-color: goldenrod;
+    z-index: 10;
+    min-height: 6vh;
+    max-height: 7vh;
+    border: 3px outset red;
+    border-radius: 25px;
+}
+
+.go-button .select-header {
+    padding-top: 0px;
+}
 #area {
     animation: animatedBackground 17s linear infinite;
     /* background-repeat: repeat-x; */
 }
 
 @keyframes animatedBackground {
-	from { background-position: 100% 0; }
-	to { background-position: 0 0; }
+    from {
+        background-position: 100% 0;
+    }
+    to {
+        background-position: 0 0;
+    }
 }

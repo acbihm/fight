@@ -6,8 +6,10 @@ import "./style.css";
 function Character (props) {
 
 const sendId = () => {
-   props.handleTest(props.id)
+   props.handleTest1(props.id)
 }
+
+
 
         return (
             <div className="card">

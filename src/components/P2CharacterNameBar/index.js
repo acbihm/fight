@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Player2Character(props) {
+function P2CharacterNameBar(props) {
     return (
         <div>
             <img src="https://i.imgur.com/DJE3utN.png" alt="" className='rightchar' />
@@ -12,5 +12,5 @@ function Player2Character(props) {
     );
 }
 
-export default Player2Character;
+export default P2CharacterNameBar;
 
