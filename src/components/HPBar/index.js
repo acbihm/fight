@@ -1,7 +1,5 @@
 import React from "react";
 import "./style.css";
-import SelectHeader from "../SelectHeader";
-import Countdown from 'react-countdown-now';
 
 // const Completionist = () => <span>Time</span>;
 
