@@ -13,8 +13,8 @@ const p1Styles = {
     bottom: 20,
     // left: 35,
     zIndex: 9999,
-    borderStyle: 'solid',
-    borderWith: 7,
+    // borderStyle: 'solid',
+    // borderWith: 7,
 };
 
 const p2Styles = {
@@ -24,8 +24,8 @@ const p2Styles = {
     bottom: 20,
     // left: 35,
     zIndex: 9999,
-    borderStyle: 'solid',
-    borderWith: 7,
+    // borderStyle: 'solid',
+    // borderWith: 7,
 };
 
 
@@ -96,7 +96,7 @@ class BothPlayers extends React.Component {
 
     p1Left = () => {
         this.setState(prevState => {
-            if (this.state.x1 < (-20)) {
+            if (this.state.x1 < (10)) {
                 this.setState({ x2: prevState.x2 + 0 });
             }
 
@@ -169,7 +169,7 @@ class BothPlayers extends React.Component {
 
     p2Right = () => {
         this.setState(prevState => {
-            if (this.state.x2 > 950) {
+            if (this.state.x2 > 930) {
                 this.setState({ x2: prevState.x2 + 0 });
             }
             else {

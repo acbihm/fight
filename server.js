@@ -12,10 +12,10 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.get('/api/combos', (req, res) => {
   const topThree = 3;
 
-  // Generate some passwords
-  // const combos = Array.from(Array(topThree).keys()).map(i =>
-  //   data(3, false)
-  // )
+  Generate some passwords
+  const combos = Array.from(Array(topThree).keys()).map(i =>
+    data(3, false)
+  )
 
   const combos = data.map(playerName => {
     if (playerName) {

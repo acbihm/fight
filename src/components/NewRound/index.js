@@ -13,7 +13,7 @@ class NewRound extends React.Component {
     return (
       <div>
         <div className="stage">
-          <Timer />
+          <Timer time={59000}/>
           <BothPlayers
             // p1HitPoints={this.props.p1HitPoints}
             // p2HitPoints={this.props.p2HitPoints}
