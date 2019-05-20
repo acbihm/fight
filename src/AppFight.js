@@ -1,7 +1,7 @@
 import "./style.css";
 import React, { Fragment } from "react";
 import Wrapper from "./components/Wrapper";
-import GameStart from "./components/GameStart";
+import GameWrapper from "./components/GameWrapper";
 
 class AppFight extends React.Component {    
     
@@ -9,10 +9,8 @@ class AppFight extends React.Component {
         return (
             <Fragment>
                 <Wrapper>
-                    <GameStart 
-                    //need to pass the previous page into this one.
-                        props="test"
-                        
+                    <GameWrapper 
+                    testPass="successfully recieved props from appFight"
                     />
                 </Wrapper>
             </Fragment>

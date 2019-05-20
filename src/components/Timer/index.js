@@ -19,10 +19,9 @@ function Timer(props) {
     return (
         <div className="timer">
             <SelectHeader
-                time={props.time}
+                gameTimer={props.gameTimer}
                 text={<Countdown
-                    // date={Date.now() + 59000}
-                    date={Date.now() + props.time}
+                    date={Date.now() + props.gameTimer}
                     renderer={renderer}
                 />}
             >

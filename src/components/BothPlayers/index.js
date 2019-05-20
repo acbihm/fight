@@ -4,6 +4,7 @@ import PlayerTest2 from "../PlayerTest2";
 import KeyEvents from "../KeyEvents";
 import HPBar from "../HPBar";
 import Winner from "../Winner";
+// import throttle from 'lodash.throttle';
 
 const p1Styles = {
     position: 'absolute',
@@ -76,16 +77,17 @@ class BothPlayers extends React.Component {
     p1Jump = () => {
         this.setState(prevState => {
             this.setState({ jump1: true })
-            if (this.state.y1 < -174) {
+            if (this.state.y1 < -154) {
                 return null;
             }
             else {
-                this.setState({ y1: prevState.y1 - 175 });
+                
+                this.setState({ y1: prevState.y1 - 155 });
                 setTimeout(
                     function () {
                         this.setState({ jump1: false });
                         this.setState({ y1: prevState.y1 });
-                    }.bind(this), 400
+                    }.bind(this), 300
                 );
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
@@ -97,8 +99,6 @@ class BothPlayers extends React.Component {
             if (this.state.x1 < (10)) {
                 this.setState({ x2: prevState.x2 + 0 });
             }
-
-
             //****limit jump? */
             else {
                 this.setState({ x1: prevState.x1 - 25 });
@@ -210,6 +210,18 @@ class BothPlayers extends React.Component {
 
 
     render() {
+        console.log("======BOTH PLAYERS COMPONENT======")
+        console.log(this.props.testPass)
+        console.log(this.props.player1Char)
+        console.log(this.props.player2Char)
+        console.log(this.props.player1Wins)
+        console.log(this.props.player2Wins)
+        console.log(this.props.gameCount)
+        // console.log(this.props.gameTimer)
+        console.log(this.props.roundIsRunning)
+        console.log(this.props.roundWinner)
+        console.log("====================================")
+        //these all work
 
         return (
             <Fragment>

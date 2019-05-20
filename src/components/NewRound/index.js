@@ -3,22 +3,52 @@ import "./style.css";
 import BothPlayers from "../BothPlayers";
 import Timer from "../Timer";
 
-
 class NewRound extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state =
+      {
+        gameTimer: 59000,
+        roundIsRunning: true,
+        roundWinner: "Alex",
+        //draw?
+        //maybe others?
+      };
+  }
+
+
   render(props) {
-    console.log(this.props.p1Wins)
-    console.log(this.props.p2Wins)
-    //the above props work
+    console.log("")
+    console.log("======NEW ROUND COMPONENT======")
+    console.log(this.props.testPass)
+    console.log(this.props.player1Char)
+    console.log(this.props.player2Char)
+    console.log(this.props.player1Wins)
+    console.log(this.props.player2Wins)
+    console.log(this.props.gameCount)
+    console.log("*****last 3 are passed states*****")
+    console.log(this.state.gameTimer)
+    console.log(this.state.roundIsRunning)
+    console.log(this.state.roundWinner)
+    console.log("========================")
+    console.log("")
+    //these all work
 
     return (
       <div>
-        <div className="stage">
-          <Timer time={59000}/>
+        <div className="new-round">
+          <Timer gameTimer={this.state.gameTimer}
+           />
+
           <BothPlayers
-            // p1HitPoints={this.props.p1HitPoints}
-            // p2HitPoints={this.props.p2HitPoints}
-            // p1SpecPoints={this.props.p1SpecPoints}
-            // p2SpecPoints={this.props.p2SpecPoints}
+            testPass={this.props.testPass}
+            player1Char={this.props.player1Char}
+            player2Char={this.props.player2Char}
+            player1Wins={this.props.player1Wins}
+            player2Wins={this.props.player2Wins}
+            gameCount={this.props.gameCount}
+            roundIsRunning={this.state.roundIsRunning}
+            roundWinner={this.state.roundWinner}
           />
         </div>
       </div>
