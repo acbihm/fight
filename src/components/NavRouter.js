@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import Info from "./Pages/Info";
 import Select from "./Pages/Select";
 import Fight from "./Pages/Fight";
-import Head from "./Head";
+// import Head from "./Head";
 import Footer from "./Footer";
 
 class NavRouter extends Component {
@@ -30,7 +30,7 @@ class NavRouter extends Component {
     render() {
         return (
             <div>
-                <Head/>
+                {/* <Head/> */}
                     <NavTabs
                         currentPage={this.state.currentPage}
                         handlePageChange={this.handlePageChange}
