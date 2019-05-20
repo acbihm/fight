@@ -8,16 +8,30 @@ class NewRound extends React.Component {
     super(props);
     this.state =
       {
+        player1Char: this.props.player1Char,
+        player2Char: this.props.player2Char,
+        player1Wins: this.props.player1Wins,
+        player2Wins: this.props.player2Wins,
+        gameCount: this.props.gameCount,
+
         gameTimer: 59000,
         roundIsRunning: true,
-        roundWinner: "Alex",
+        roundWinner: "winnnnertest",
+
         //draw?
         //maybe others?
       };
   }
+// checkRoundComplete = () => {
+//   if (this.state.roundIsRunning === false) {
+//     alert("STOP")
+//     return null
+//   }
+// }
 
 
   render(props) {
+    // this.checkRoundComplete()
     console.log("")
     console.log("======NEW ROUND COMPONENT======")
     console.log(this.props.testPass)
@@ -33,12 +47,13 @@ class NewRound extends React.Component {
     console.log("========================")
     console.log("")
     //these all work
+    console.log(this.state.player1Wins)
 
     return (
       <div>
         <div className="new-round">
           <Timer gameTimer={this.state.gameTimer}
-           />
+          />
 
           <BothPlayers
             testPass={this.props.testPass}

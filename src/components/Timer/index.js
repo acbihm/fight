@@ -1,5 +1,4 @@
 import React from "react";
-// import SelectHeader from "../SelectHeader";
 import "./style.css";
 import Countdown from 'react-countdown-now';
 import SelectHeader from "../SelectHeader";

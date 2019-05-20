@@ -35,6 +35,18 @@ class BothPlayers extends React.Component {
         super(props);
         // const hp111 ={props.p2HitPoints };
         this.state = {
+            player1Char: this.props.player1Char,
+            player2Char: this.props.player2Char,
+            player1Wins: this.props.player1Wins,
+            player2Wins: this.props.player2Wins,
+            gameCount: this.props.gameCount,
+
+            //didn't pass the timer in now
+
+            roundIsRunning: this.props.roundIsRunning,
+            roundWinner: this.props.roundWinner,
+
+            // ============================
             x1: 0,
             y1: 0,
             p1width: 250,
@@ -43,10 +55,9 @@ class BothPlayers extends React.Component {
             stand1: true,
             walk1: false,
             jump1: false,
-            hp1: 100,
+            player1HP: 100,
             spec1: 20,
-
-
+            // +++++++++++++++++++++++++++++
             x2: 950,
             y2: 0,
             p2width: 250,
@@ -55,23 +66,45 @@ class BothPlayers extends React.Component {
             stand2: true,
             walk2: false,
             jump2: false,
-            hp2: 100,
+            player2HP: 100,
             spec2: 10,
 
             distanceApart: 900
         };
     }
+    checkRoundRunning = (e) => {
+        if (this.state.roundIsRunning === false) {
+            alert("STOPP")
+        }
+    }
 
-    checkForKnockout = () => {
-        if ((this.state.hp1 <= 0) || (this.state.hp2 <= 0)) {
-            if (this.state.h1 <= 0 && this.state.hp2 > 0) {
-                return <Winner p1={false} p2={true} />
+
+    componentDidUpdate(prevProps, prevState) {
+        this.checkRoundRunning()
+        if (prevState.roundIsRunning !== this.state.roundIsRunning) {
+            return null
+        }
+    }
+
+    checkForKnockout = (e) => {
+        if ((this.state.player1HP < 0) || (this.state.player2HP < 0)) {
+            if (this.state.player1HP <= 0 && this.state.player2HP > 0) {
+                console.log(this.props.player2Char + ' WINS');
+                console.log(this.props.player2Wins);
+                
+                this.setState({ roundIsRunning: false })
+                this.setState({ player2Wins: this.state.player2Wins + 1 })
+
+
+                console.log(this.state.player2Wins)
             }
-            if (this.state.h1 >= 0 && this.state.hp2 < 0) {
-                return <Winner p1={true} p2={false} />
+            if (this.state.player1HP >= 0 && this.state.player2HP < 0) {
+                console.log(this.props.player1Char + ' WINS')
             }
         }
     }
+
+
 
 
     p1Jump = () => {
@@ -81,7 +114,6 @@ class BothPlayers extends React.Component {
                 return null;
             }
             else {
-                
                 this.setState({ y1: prevState.y1 - 155 });
                 setTimeout(
                     function () {
@@ -122,7 +154,7 @@ class BothPlayers extends React.Component {
         this.setState({ punch1: true })
         if ((this.state.distanceApart <= 220)) {
             this.setState((state) => ({
-                hp2: state.hp2 - 9
+                player2HP: state.player2HP - 9
             }));
             this.setState({ spec1: this.state.spec1 + 8 })
             setTimeout(
@@ -137,7 +169,7 @@ class BothPlayers extends React.Component {
         this.setState({ kick1: true })
         if ((this.state.distanceApart <= 280)) {
             this.setState((state) => ({
-                hp2: state.hp2 - 20
+                player2HP: state.player2HP - 20
             }));
             this.setState({ spec1: this.state.spec1 + 8 })
             setTimeout(
@@ -182,7 +214,7 @@ class BothPlayers extends React.Component {
         this.setState({ punch2: true })
         if ((this.state.distanceApart <= 220)) {
             this.setState((state) => ({
-                hp1: state.hp1 - 9
+                player1HP: state.player1HP - 9
             }));
             this.setState({ spec2: this.state.spec2 + 8 })
             setTimeout(
@@ -197,7 +229,7 @@ class BothPlayers extends React.Component {
         this.setState({ kick2: true })
         if ((this.state.distanceApart <= 280)) {
             this.setState((state) => ({
-                hp1: state.hp1 - 20
+                player1HP: state.player1HP - 20
             }));
             this.setState({ spec2: this.state.spec2 + 8 })
             setTimeout(
@@ -210,6 +242,7 @@ class BothPlayers extends React.Component {
 
 
     render() {
+
         console.log("======BOTH PLAYERS COMPONENT======")
         console.log(this.props.testPass)
         console.log(this.props.player1Char)
@@ -222,15 +255,18 @@ class BothPlayers extends React.Component {
         console.log(this.props.roundWinner)
         console.log("====================================")
         //these all work
+        console.log(this.state)
 
+
+        this.checkForKnockout()
+        this.checkRoundRunning()
         return (
             <Fragment>
                 <HPBar
-                    hp1={this.state.hp1}
-                    // p1HitPoints={this.props.p1HitPoints}
-                    hp2={this.state.hp2}
-                    spec1={this.state.spec1}
-                    spec2={this.state.spec2}
+                    player1HP={this.state.player1HP}
+                    player2HP={this.state.player2HP}
+                // spec1={this.state.spec1}
+                // spec2={this.state.spec2}
                 />
 
                 <KeyEvents
@@ -239,21 +275,24 @@ class BothPlayers extends React.Component {
                     onQKey={this.p1Punch}
                     onWKey={this.p1Kick}
                     onSpaceKey={this.p1Jump}
-
-                    // =====================
-
                     onLeft={this.p2Left}
                     onRight={this.p2Right}
                     onPKey={this.p2Punch}
                     onOKey={this.p2Kick}
                 />
+
+
                 <div style={{
                     ...p1Styles, ...{
                         transform: `translate(${this.state.x1}px, ${this.state.y1}px)`,
                         pointerEvents: 'none',
                     }
                 }}>
+
+
+
                     <PlayerTest />
+
 
                 </div>
                 <div style={{
@@ -262,7 +301,11 @@ class BothPlayers extends React.Component {
                         pointerEvents: 'none',
                     }
                 }}>
+
+
                     <PlayerTest2 />
+
+
                 </div>
             </Fragment>
         );
