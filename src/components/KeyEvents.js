@@ -19,9 +19,11 @@ class KeyEvents extends React.Component {
                     break;
                 case 13:
                     this.props.onDKey();
+                    this.props.onDKey();
                     // console.log(event.keyCode)
                     break;
                 case 15:
+                    this.props.onAKey();
                     this.props.onAKey();
                     break;
                 case 4:
@@ -69,8 +71,8 @@ class KeyEvents extends React.Component {
         }
     };
     render() {
-        const gamepad = new Gamepad(true);
-        gamepad.on('gamepadevent', event => console.log(event));
+        // const gamepad = new Gamepad(true);
+        // gamepad.on('gamepadevent', event => console.log(event));
 
         return (
             <div
@@ -79,9 +81,9 @@ class KeyEvents extends React.Component {
                     position: "absolute",
                     width: '92vw',
                     height: '89vh',
-                    outlineStyle: 'double',
-                    outlineColor: 'pink',
-                    outlineWidth: 10
+                    // outlineStyle: 'double',
+                    // outlineColor: 'pink',
+                    // outlineWidth: 10
                 }}
                 tabIndex="0"
                 ref={ref => {

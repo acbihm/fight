@@ -3,7 +3,6 @@ import PlayerTest from "../PlayerTest";
 import PlayerTest2 from "../PlayerTest2";
 import KeyEvents from "../KeyEvents";
 import HPBar from "../HPBar";
-// import PlayerWins from "../PlayerWins";
 import Winner from "../Winner";
 
 const p1Styles = {
@@ -33,7 +32,6 @@ const p2Styles = {
 class BothPlayers extends React.Component {
     constructor(props) {
         super(props);
-
         // const hp111 ={props.p2HitPoints };
         this.state = {
             x1: 0,
@@ -103,7 +101,7 @@ class BothPlayers extends React.Component {
 
             //****limit jump? */
             else {
-                this.setState({ x1: prevState.x1 - 20 });
+                this.setState({ x1: prevState.x1 - 25 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
         });
@@ -114,7 +112,7 @@ class BothPlayers extends React.Component {
                 this.setState({ x1: prevState.x1 + 0 });
             }
             else {
-                this.setState({ x1: prevState.x1 + 20 });
+                this.setState({ x1: prevState.x1 + 25 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
         });
@@ -161,7 +159,7 @@ class BothPlayers extends React.Component {
                 this.setState({ x2: prevState.x2 - 0 });
             }
             else {
-                this.setState({ x2: prevState.x2 - 20 });
+                this.setState({ x2: prevState.x2 - 25 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
         });
@@ -173,7 +171,7 @@ class BothPlayers extends React.Component {
                 this.setState({ x2: prevState.x2 + 0 });
             }
             else {
-                this.setState({ x2: prevState.x2 + 20 });
+                this.setState({ x2: prevState.x2 + 25 });
             }
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
             console.log(this.state.distanceApart);
