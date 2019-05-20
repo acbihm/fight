@@ -73,6 +73,7 @@ class BothPlayers extends React.Component {
         };
     }
     checkRoundRunning = (e) => {
+        this.setState({ roundIsRunning: false })
         if (this.state.roundIsRunning === false) {
             alert("STOPP")
         }
@@ -91,8 +92,8 @@ class BothPlayers extends React.Component {
             if (this.state.player1HP <= 0 && this.state.player2HP > 0) {
                 console.log(this.props.player2Char + ' WINS');
                 console.log(this.props.player2Wins);
-                
-                this.setState({ roundIsRunning: false })
+                this.checkRoundRunning()
+                // this.setState({ roundIsRunning: false })
                 this.setState({ player2Wins: this.state.player2Wins + 1 })
 
 
@@ -259,7 +260,7 @@ class BothPlayers extends React.Component {
 
 
         this.checkForKnockout()
-        this.checkRoundRunning()
+        // this.checkRoundRunning()
         return (
             <Fragment>
                 <HPBar
