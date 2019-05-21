@@ -8,6 +8,7 @@
     "express": "^4.16.4",
     "formik": "^1.5.4",
     "joystick-react": "^1.0.1",
+    "mongodb": "^3.2.5",
     "mongoose": "^5.5.9",
     "react": "^16.8.6",
     "react-countdown-now": "^2.1.0",

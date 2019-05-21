@@ -3,7 +3,7 @@ import PlayerTest from "../PlayerTest";
 import PlayerTest2 from "../PlayerTest2";
 import KeyEvents from "../KeyEvents";
 import HPBar from "../HPBar";
-import Winner from "../Winner";
+// import Winner from "../Winner";
 // import throttle from 'lodash.throttle';
 
 const p1Styles = {
@@ -37,9 +37,9 @@ class BothPlayers extends React.Component {
         this.state = {
             player1Char: this.props.player1Char,
             player2Char: this.props.player2Char,
-            player1Wins: this.props.player1Wins,
-            player2Wins: this.props.player2Wins,
-            gameCount: this.props.gameCount,
+            // player1Wins: this.props.player1Wins,
+            // player2Wins: this.props.player2Wins,
+            // gameCount: this.props.gameCount,
 
             //didn't pass the timer in now
 
@@ -72,20 +72,20 @@ class BothPlayers extends React.Component {
             distanceApart: 900
         };
     }
-    checkRoundRunning = (e) => {
-        this.setState({ roundIsRunning: false })
-        if (this.state.roundIsRunning === false) {
-            alert("STOPP")
-        }
-    }
+    // checkRoundRunning = (e) => {
+    //     if (this.state.roundIsRunning === false) {
+    //         alert("STOPP")
+    //     }
+    // }
 
 
-    componentDidUpdate(prevProps, prevState) {
-        this.checkRoundRunning()
-        if (prevState.roundIsRunning !== this.state.roundIsRunning) {
-            return null
-        }
-    }
+    // componentDidUpdate(prevProps, prevState) {
+    //     this.checkRoundRunning()
+    //     if (prevState.roundIsRunning !== this.state.roundIsRunning) {
+    //         this.setState({roundIsRunning: false })
+    //     }
+    //     else {return null}
+    // }
 
     checkForKnockout = (e) => {
         if ((this.state.player1HP < 0) || (this.state.player2HP < 0)) {
@@ -95,8 +95,6 @@ class BothPlayers extends React.Component {
                 this.checkRoundRunning()
                 // this.setState({ roundIsRunning: false })
                 this.setState({ player2Wins: this.state.player2Wins + 1 })
-
-
                 console.log(this.state.player2Wins)
             }
             if (this.state.player1HP >= 0 && this.state.player2HP < 0) {
@@ -248,9 +246,9 @@ class BothPlayers extends React.Component {
         console.log(this.props.testPass)
         console.log(this.props.player1Char)
         console.log(this.props.player2Char)
-        console.log(this.props.player1Wins)
-        console.log(this.props.player2Wins)
-        console.log(this.props.gameCount)
+        // console.log(this.props.player1Wins)
+        // console.log(this.props.player2Wins)
+        // console.log(this.props.gameCount)
         // console.log(this.props.gameTimer)
         console.log(this.props.roundIsRunning)
         console.log(this.props.roundWinner)
