@@ -18,16 +18,11 @@ function Timer(props) {
     return (
         <div className="timer">
             <SelectHeader
-
-
                 gameTimer={props.gameTimer}
-                // onChange={props.handleTimeout}
-
-
                 text={<Countdown
                     date={Date.now() + props.gameTimer}
                     renderer={renderer}
-                    onComplete={props.onComplete}
+                    onComplete={props.onDone}
                 />}
             >
             </SelectHeader>

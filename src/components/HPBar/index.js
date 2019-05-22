@@ -19,9 +19,7 @@ class HPBar extends React.Component {
                     </div>
                 </div>
 
-
                 <div className="timer-elem"></div>
-
 
                 <div className="p2">
                     <div className="hp-bar" >
@@ -36,9 +34,6 @@ class HPBar extends React.Component {
             </div>
         );
     }
-
-
-
 }
 export default HPBar;
 

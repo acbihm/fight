@@ -15,7 +15,6 @@ class NewRound extends React.Component {
         gameCount: this.props.gameCount,
 
         gameTimer: 59000,
-        // gameTimer: 3000,
         roundIsRunning: true,
         roundWinner: "winnnnertest",
 
@@ -33,15 +32,7 @@ class NewRound extends React.Component {
     // });
   };
 
-
-
-
-
   render(props) {
-
-
-
-    // this.checkRoundComplete()
     console.log("")
     console.log("======NEW ROUND COMPONENT======")
     console.log(this.props.testPass)
@@ -72,7 +63,7 @@ class NewRound extends React.Component {
       <div>
         <div className="new-round">
           <Timer gameTimer={this.state.gameTimer}
-                  onComplete={this.handleTimeout}
+                  onDone={this.handleTimeout}
           />
 
           <BothPlayers

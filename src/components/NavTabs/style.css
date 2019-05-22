@@ -30,6 +30,7 @@
     z-index: 13;
     position: inherit;
     display: inline;
+    overflow: hidden;
 }
 
 .nav>ul {
@@ -46,4 +47,5 @@
 
 * {
     text-decoration: none;
+    
 }

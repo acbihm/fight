@@ -33,7 +33,6 @@ const p2Styles = {
 class BothPlayers extends React.Component {
     constructor(props) {
         super(props);
-        // const hp111 ={props.p2HitPoints };
         this.state = {
             player1Char: this.props.player1Char,
             player2Char: this.props.player2Char,
@@ -68,29 +67,13 @@ class BothPlayers extends React.Component {
             jump2: false,
             player2HP: 100,
             spec2: 10,
-
             distanceApart: 900
         };
     }
-    // checkRoundRunning = (e) => {
-    //     if (this.state.roundIsRunning === false) {
-    //         alert("STOPP")
-    //     }
-    // }
-
-
-    // componentDidUpdate(prevProps, prevState) {
-    //     this.checkRoundRunning()
-    //     if (prevState.roundIsRunning !== this.state.roundIsRunning) {
-    //         this.setState({roundIsRunning: false })
-    //     }
-    //     else {return null}
-    // }
 
     checkForKnockout = (e) => {
         if ((this.state.player1HP <= 0) || (this.state.player2HP <= 0)) {
             if (this.state.player1HP <= 0 && this.state.player2HP >= 0) {
-
                 this.setState({
                     player2Wins: this.state.player2Wins + 1,
                     roundIsRunning: false
@@ -104,22 +87,16 @@ class BothPlayers extends React.Component {
                 });
                 alert(this.props.player1Char + ' WINS')
             }
-
         }
     }
-
 
     componentDidUpdate(_, prevState) {
-        console.log(prevState.roundIsRunning);
-        console.log(this.state.roundIsRunning)
+        // console.log(prevState.roundIsRunning);
+        // console.log(this.state.roundIsRunning)
         if (this.state.roundIsRunning === true) {
-
             this.checkForKnockout();
-
         }
     }
-
-
 
     p1Jump = () => {
         this.setState(prevState => {
@@ -194,10 +171,7 @@ class BothPlayers extends React.Component {
         }
     }
 
-
-
     //  =======================
-
 
     p2Left = () => {
         this.setState(prevState => {
@@ -210,7 +184,6 @@ class BothPlayers extends React.Component {
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
         });
     };
-
     p2Right = () => {
         this.setState(prevState => {
             if (this.state.x2 > 930) {
@@ -223,7 +196,6 @@ class BothPlayers extends React.Component {
             console.log(this.state.distanceApart);
         });
     };
-
     p2Punch = () => {
         this.setState({ punch2: true })
         if ((this.state.distanceApart <= 220)) {
@@ -238,7 +210,6 @@ class BothPlayers extends React.Component {
             );
         }
     }
-
     p2Kick = () => {
         this.setState({ kick2: true })
         if ((this.state.distanceApart <= 280)) {
@@ -254,20 +225,17 @@ class BothPlayers extends React.Component {
         }
     }
 
-
-
     render() {
-
         console.log("======BOTH PLAYERS COMPONENT======")
-        console.log(this.props.testPass)
-        console.log(this.props.player1Char)
-        console.log(this.props.player2Char)
+        // console.log(this.props.testPass)
+        // console.log(this.props.player1Char)
+        // console.log(this.props.player2Char)
         // console.log(this.props.player1Wins)
         // console.log(this.props.player2Wins)
         // console.log(this.props.gameCount)
         // console.log(this.props.gameTimer)
-        console.log(this.props.roundIsRunning)
-        console.log(this.props.roundWinner)
+        // console.log(this.props.roundIsRunning)
+        // console.log(this.props.roundWinner)
         console.log("====================================")
         //these all work
         console.log(this.state)
@@ -295,31 +263,24 @@ class BothPlayers extends React.Component {
                     onOKey={this.p2Kick}
                 />
 
-
                 <div style={{
                     ...p1Styles, ...{
                         transform: `translate(${this.state.x1}px, ${this.state.y1}px)`,
                         pointerEvents: 'none',
                     }
                 }}>
-
-
-
                     <PlayerTest />
-
-
                 </div>
+
+
+
                 <div style={{
                     ...p2Styles, ...{
                         transform: `translate(${this.state.x2}px, ${this.state.y2}px)`,
                         pointerEvents: 'none',
                     }
                 }}>
-
-
                     <PlayerTest2 />
-
-
                 </div>
             </Fragment>
         );

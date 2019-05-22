@@ -26,7 +26,6 @@ class GameWrapper extends React.Component {
         return (
             <div className="game-wrapper">
 
-
                 <NewRound
                     key={this.state.roundId}
                     testPass={this.props.testPass}
