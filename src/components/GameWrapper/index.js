@@ -12,7 +12,8 @@ class GameWrapper extends React.Component {
                 player1Wins: 1,
                 player2Wins: 0,
                 gameCount: 1,
-                roundId: Date.now()
+                roundId: Date.now(),
+                gameRunning: false
             };
     }
 
@@ -21,8 +22,38 @@ class GameWrapper extends React.Component {
             roundId: Date.now()
         })
     }
-    render(props) {
 
+    updateWins = (roundWinner) => {
+        if (roundWinner === this.state.player1Char) {
+            this.setState({
+                player1Wins: this.state.player1Wins + 1,
+                gameCount: this.state.gameCount + 1
+            })
+        }
+        if (roundWinner === this.state.player2Char) {
+            this.setState({
+                player2Wins: this.state.player2Wins + 1,
+                gameCount: this.state.gameCount + 1
+            })
+        }
+        // alert("success")
+        this.onRoundEnd()
+    }
+
+    // exitRound = () => {
+    //     alert('round over')
+    // }
+    // componentDidUpdate(_, prevState) {
+
+    //     if (this.state.gameRunning === true) {
+    //         return null
+    //     }
+    //     else if (this.state.gameRunning === false) {
+    //         this.exitRound();
+    //     }
+    // }
+
+    render(props) {
         return (
             <div className="game-wrapper">
 
@@ -34,7 +65,8 @@ class GameWrapper extends React.Component {
                     player1Wins={this.state.player1Wins}
                     player2Wins={this.state.player2Wins}
                     gameCount={this.state.gameCount}
-
+                    updateWins={this.updateWins}
+                    exitRound={this.exitRound}
                 />
             </div>
         );

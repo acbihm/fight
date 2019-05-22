@@ -16,7 +16,7 @@ class NewRound extends React.Component {
 
         gameTimer: 59000,
         roundIsRunning: true,
-        roundWinner: "winnnnertest",
+        roundWinner: null,
 
         //draw?
         //maybe others?
@@ -24,13 +24,18 @@ class NewRound extends React.Component {
   }
 
   handleTimeout = () => {
-  
-      alert("Timeout")
-    
+    alert("Timeout")
+
     // this.setState({
     //   [name]: value
     // });
   };
+
+
+  winTest = (win) => {
+    var winner = win;
+    this.props.updateWins(winner)
+  }
 
   render(props) {
     console.log("")
@@ -54,27 +59,28 @@ class NewRound extends React.Component {
 
 
 
-
-
-
-
-
     return (
       <div>
         <div className="new-round">
-          <Timer gameTimer={this.state.gameTimer}
-                  onDone={this.handleTimeout}
+          <Timer
+            gameTimer={this.state.gameTimer}
+            onDone={this.handleTimeout}
           />
 
           <BothPlayers
-            testPass={this.props.testPass}
+            // testPass={this.props.testPass}
             player1Char={this.props.player1Char}
             player2Char={this.props.player2Char}
             player1Wins={this.props.player1Wins}
             player2Wins={this.props.player2Wins}
             gameCount={this.props.gameCount}
+
+
+            updateWins={this.props.updateWins}
             roundIsRunning={this.state.roundIsRunning}
             roundWinner={this.state.roundWinner}
+          // gameRunning={this.props.gameRunning}
+          // exitRound={this.exitRound}
           />
         </div>
       </div>

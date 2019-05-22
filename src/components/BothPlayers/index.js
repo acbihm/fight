@@ -3,7 +3,6 @@ import PlayerTest from "../PlayerTest";
 import PlayerTest2 from "../PlayerTest2";
 import KeyEvents from "../KeyEvents";
 import HPBar from "../HPBar";
-// import Winner from "../Winner";
 // import throttle from 'lodash.throttle';
 
 const p1Styles = {
@@ -11,8 +10,9 @@ const p1Styles = {
     height: 420,
     width: 300,
     bottom: 20,
-    // left: 35,
     zIndex: 9999,
+
+    // left: 35,
     // borderStyle: 'solid',
     // borderWith: 7,
 };
@@ -22,8 +22,9 @@ const p2Styles = {
     height: 420,
     width: 300,
     bottom: 20,
-    // left: 35,
+
     zIndex: 9999,
+    // left: 35,
     // borderStyle: 'solid',
     // borderWith: 7,
 };
@@ -39,7 +40,6 @@ class BothPlayers extends React.Component {
             // player1Wins: this.props.player1Wins,
             // player2Wins: this.props.player2Wins,
             // gameCount: this.props.gameCount,
-
             //didn't pass the timer in now
 
             roundIsRunning: this.props.roundIsRunning,
@@ -56,7 +56,7 @@ class BothPlayers extends React.Component {
             jump1: false,
             player1HP: 100,
             spec1: 20,
-            // +++++++++++++++++++++++++++++
+
             x2: 950,
             y2: 0,
             p2width: 250,
@@ -71,32 +71,13 @@ class BothPlayers extends React.Component {
         };
     }
 
-    checkForKnockout = (e) => {
-        if ((this.state.player1HP <= 0) || (this.state.player2HP <= 0)) {
-            if (this.state.player1HP <= 0 && this.state.player2HP >= 0) {
-                this.setState({
-                    player2Wins: this.state.player2Wins + 1,
-                    roundIsRunning: false
-                });
-                alert(this.state.player2Wins)
-            }
-            if (this.state.player1HP >= 0 && this.state.player2HP <= 0) {
-                this.setState({
-                    player1Wins: this.state.player1Wins + 1,
-                    roundIsRunning: false
-                });
-                alert(this.props.player1Char + ' WINS')
-            }
-        }
-    }
+    // exitRound = () => {
+    //     // this.props.exitRound();
+    //     // return
+    //     alert("game done")
+    // }
 
-    componentDidUpdate(_, prevState) {
-        // console.log(prevState.roundIsRunning);
-        // console.log(this.state.roundIsRunning)
-        if (this.state.roundIsRunning === true) {
-            this.checkForKnockout();
-        }
-    }
+
 
     p1Jump = () => {
         this.setState(prevState => {
@@ -122,7 +103,6 @@ class BothPlayers extends React.Component {
             if (this.state.x1 < (10)) {
                 this.setState({ x2: prevState.x2 + 0 });
             }
-            //****limit jump? */
             else {
                 this.setState({ x1: prevState.x1 - 25 });
             }
@@ -225,6 +205,56 @@ class BothPlayers extends React.Component {
         }
     }
 
+//     exitRound = () => {
+// alert("trest")
+//     }
+
+    updateWinsTest = (testCount)=>{
+        this.props.updateWins(testCount)
+    }
+    checkForKnockout = (e) => {
+        if ((this.state.player1HP <= 0) || (this.state.player2HP <= 0)) {
+            if (this.state.player1HP <= 0 && this.state.player2HP >= 0) {
+                this.setState({
+                    player2Wins: this.state.player2Wins + 1,
+                    roundIsRunning: false,
+                    roundWinner: this.state.player2Char
+                });
+                
+                alert(this.state.player2Char + ' WINS')
+                this.updateWinsTest(this.state.player2Char)
+            }
+            if (this.state.player1HP >= 0 && this.state.player2HP <= 0) {
+                this.setState({
+                    player1Wins: this.state.player1Wins + 1,
+                    roundIsRunning: false,
+                    roundWinner: this.state.player2Char
+                    
+                });
+                alert(this.state.player1Char + ' WINS')
+                this.updateWinsTest(this.state.player2Char)
+                
+            }
+        }
+    }
+
+    componentDidUpdate(_, prevState) {
+        // console.log(prevState.roundIsRunning);
+        // console.log(this.state.roundIsRunning)
+        if (this.state.roundIsRunning === true) {
+            this.checkForKnockout();
+        }
+        else if (this.state.roundIsRunning === false) {
+
+            // this.exitRound();
+            // this.setState({gameRunning: false})
+            // this.setState({roundWinner: })
+
+        }
+    }
+
+ 
+
     render() {
         console.log("======BOTH PLAYERS COMPONENT======")
         // console.log(this.props.testPass)
@@ -240,8 +270,6 @@ class BothPlayers extends React.Component {
         //these all work
         console.log(this.state)
 
-
-        // this.checkForKnockout()
         return (
             <Fragment>
                 <HPBar
