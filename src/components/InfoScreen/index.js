@@ -3,7 +3,7 @@ import "./style.css";
 import SelectHeader from "../SelectHeader"
 import BlurbSmall from "../BlurbSmall";
 // import SelectHeader from "./components/SelectHeader";
-import Blurb from "../Blurb";
+// import Blurb from "../Blurb";
 // import Gametext from "../Gametext";
 import Gametext from "../Gametext"
 // import Spinner from "./components/Spinner";

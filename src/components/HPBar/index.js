@@ -9,7 +9,7 @@ class HPBar extends React.Component {
             <div className="timer-and-hp area">
                 <div className="p1">
                     <div className="hp-bar" >
-                        <meter min="0" low="40" high="85" max="100" value={this.props.player1HP}>
+                        <meter min="0" low="40" high="85" max="100" value={this.props.player1HP}        >
                             {/* <meter min="0" low="40" high="85" max="100" value={props.p1HitPoints}> */}
                         </meter>
                     </div>

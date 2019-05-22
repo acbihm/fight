@@ -88,21 +88,36 @@ class BothPlayers extends React.Component {
     // }
 
     checkForKnockout = (e) => {
-        if ((this.state.player1HP < 0) || (this.state.player2HP < 0)) {
-            if (this.state.player1HP <= 0 && this.state.player2HP > 0) {
-                console.log(this.props.player2Char + ' WINS');
-                console.log(this.props.player2Wins);
-                this.checkRoundRunning()
-                // this.setState({ roundIsRunning: false })
-                this.setState({ player2Wins: this.state.player2Wins + 1 })
-                console.log(this.state.player2Wins)
+        if ((this.state.player1HP <= 0) || (this.state.player2HP <= 0)) {
+            if (this.state.player1HP <= 0 && this.state.player2HP >= 0) {
+
+                this.setState({
+                    player2Wins: this.state.player2Wins + 1,
+                    roundIsRunning: false
+                });
+                alert(this.state.player2Wins)
             }
-            if (this.state.player1HP >= 0 && this.state.player2HP < 0) {
-                console.log(this.props.player1Char + ' WINS')
+            if (this.state.player1HP >= 0 && this.state.player2HP <= 0) {
+                this.setState({
+                    player1Wins: this.state.player1Wins + 1,
+                    roundIsRunning: false
+                });
+                alert(this.props.player1Char + ' WINS')
             }
+
         }
     }
 
+
+    componentDidUpdate(_, prevState) {
+        console.log(prevState.roundIsRunning);
+        console.log(this.state.roundIsRunning)
+        if (this.state.roundIsRunning === true) {
+
+            this.checkForKnockout();
+
+        }
+    }
 
 
 
@@ -240,6 +255,7 @@ class BothPlayers extends React.Component {
     }
 
 
+
     render() {
 
         console.log("======BOTH PLAYERS COMPONENT======")
@@ -257,8 +273,7 @@ class BothPlayers extends React.Component {
         console.log(this.state)
 
 
-        this.checkForKnockout()
-        // this.checkRoundRunning()
+        // this.checkForKnockout()
         return (
             <Fragment>
                 <HPBar

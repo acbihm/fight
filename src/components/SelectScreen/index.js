@@ -7,9 +7,9 @@ import BlurbSmall from "../BlurbSmall";
 
 import P1CharacterNameBar from "../P1CharacterNameBar";
 import P2CharacterNameBar from "../P2CharacterNameBar";
-import Sprites from "../Sprites";
+// import Sprites from "../Sprites";
 var charList = require('../../charList.json');
-var spriteList = require('../../spriteList.json');
+// var spriteList = require('../../spriteList.json');
 
 
 class SelectScreen extends React.Component {
@@ -19,6 +19,20 @@ class SelectScreen extends React.Component {
         player2Name: false
     }
 
+
+  
+
+    handleItemClick = id => {
+        // let guessedCorrectly = false;
+        // const newData = this.state.data.map(item => {
+        //     if (newItem.id === id) {
+        //         if (!newItem.clicked) {
+        //         }
+        //     }
+        //     return newItem;
+        // });
+    };
+
     // handleItemClick = id => {
     //     const newData = this.state.data.map(item => {
     //     });
@@ -27,53 +41,53 @@ class SelectScreen extends React.Component {
     //     alert("Im an alert");
     // }
 
-    assignCharacter1 = (id) => {
-        // var spriteList;
-        // console.log(id)
+    assignPlayer1 = (id) => {
+
         if (id === 1) {
-            console.log("Hank Hill")
+            console.log("ONE")
             // this.setState(this.state.player1Name);
-            this.setState({ player1Name: "Hank" })
+            this.setState({ player1Name: "ONE" })
 
         }
         else if (id === 2) {
-            console.log("Peggy Hill")
-            this.setState({ player1Name: "Peggy" })
+            console.log("TWO")
+            this.setState({ player1Name: "TWO" })
 
         }
         else if (id === 3) {
-            console.log("Dale")
-            this.setState({ player1Name: "Dale" })
+            console.log("THREE")
+            this.setState({ player1Name: "THREE" })
 
         }
         else if (id === 4) {
-            console.log("Bobby")
-            this.setState({ player1Name: "Bobby" })
+            console.log("FOUR")
+            this.setState({ player1Name: "FOUR" })
         }
     }
-    assignCharacter2 = (id) => {
-        // var spriteList;
-        // console.log(id)
-        if (id === 1) {
-            console.log("Hank Hill")
-            // this.setState(this.state.player1Name);
-            this.setState({ player2Name: "Hank" })
 
-        }
-        else if (id === 2) {
-            console.log("Peggy Hill")
-            this.setState({ player2Name: "Peggy" })
 
-        }
-        else if (id === 3) {
-            console.log("Dale")
-            this.setState({ player2Name: "Dale" })
+    // assignPlayer2 = (id) => {
 
-        }
-        else if (id === 4) {
-            console.log("Bobby")
-            this.setState({ player2Name: "Bobby" })
-        }
+    //     if (id === 1) {
+    //         console.log("ONE")
+    //         // this.setState(this.state.player1Name);
+    //         this.setState({ player2Name: "ONE" })
+
+    //     }
+    //     else if (id === 2) {
+    //         console.log("TWO")
+    //         this.setState({ player2Name: "TWO" })
+
+    //     }
+    //     else if (id === 3) {
+    //         console.log("THREE")
+    //         this.setState({ player2Name: "THREE" })
+
+    //     }
+    //     else if (id === 4) {
+    //         console.log("FOUR")
+    //         this.setState({ player2Name: "FOUR" })
+    //     }
         // return (
         //     // this.state.spriteList.map(spriteList => (
         //         <Sprites
@@ -84,7 +98,7 @@ class SelectScreen extends React.Component {
         //         />
         //     // ))
         // )
-    }
+    // }
 
     render() {
         return (
