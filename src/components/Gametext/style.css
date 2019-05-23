@@ -1,7 +1,8 @@
 .game-text {
     display: flex;
     padding: 5px;
-    padding-top: 5px;
+    padding-top: 15px;
+    margin-top: 10px;
     flex-wrap: wrap;
     justify-content: center;
     width: 95%;

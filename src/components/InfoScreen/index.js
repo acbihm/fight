@@ -19,9 +19,10 @@ class InfoScreen extends React.Component {
         return (
             <div className="select-screen" id="area">
                 <SelectHeader text="How to play"></SelectHeader>
-                <Gametext text="Players can play one of two ways: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-                They can choose to use the keyboard to control their character.
-                &nbsp; &nbsp;&nbsp; &nbsp;  --or-- &nbsp; &nbsp; They can choose to use a gamepad/controller." />
+                
+               <img src="https://imgur.com/Y4lslr0.png" alt="controls"/>
+               <Gametext text="Players can play with a gamepad or with the keyboard. The arrow keys control movement, and the 'P' key will punch, and the 'O' key will kick" />
+               
                 <BlurbSmall text="Got it?" />
             </div>
         )

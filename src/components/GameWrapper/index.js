@@ -7,11 +7,11 @@ class GameWrapper extends React.Component {
         super(props);
         this.state =
             {
-                player1Char: "Alex",
-                player2Char: "Jeff",
-                player1Wins: 1,
+                player1Char: "PLAYER 1",
+                player2Char: "PLAYER 2",
+                player1Wins: 0,
                 player2Wins: 0,
-                gameCount: 1,
+                gameCount: 0,
                 roundId: Date.now(),
                 gameRunning: false
             };
