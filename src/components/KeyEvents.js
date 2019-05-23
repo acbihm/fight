@@ -19,12 +19,12 @@ class KeyEvents extends React.Component {
                     break;
                 case 13:
                     this.props.onDKey();
-                    this.props.onDKey();
+                    // this.props.onDKey();
                     // console.log(event.keyCode)
                     break;
                 case 15:
                     this.props.onAKey();
-                    this.props.onAKey();
+                    // this.props.onAKey();
                     break;
                 case 4:
                     this.props.onSpaceKey();
