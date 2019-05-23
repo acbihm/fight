@@ -29,27 +29,22 @@ const p2Styles = {
     // borderWith: 7,
 };
 
-
-
 class BothPlayers extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             player1Char: this.props.player1Char,
             player2Char: this.props.player2Char,
-            // player1Wins: this.props.player1Wins,
-            // player2Wins: this.props.player2Wins,
-            // gameCount: this.props.gameCount,
-            //didn't pass the timer in now
 
             roundIsRunning: this.props.roundIsRunning,
             roundWinner: this.props.roundWinner,
 
-            // ============================
             x1: 0,
             y1: 0,
             p1width: 250,
             punch1: false,
+            p1Img: "https://i.imgur.com/8jGjmCb.gif",
+            // punch1Img: "https://media.giphy.com/media/mhh4VA7LKYL9S/giphy.gif",
             kick1: false,
             stand1: true,
             walk1: false,
@@ -61,23 +56,17 @@ class BothPlayers extends React.Component {
             y2: 0,
             p2width: 250,
             punch2: false,
+            p2Img: "https://i.imgur.com/OKD5tND.gif",
+
             kick2: false,
             stand2: true,
             walk2: false,
-            jump2: false,
+            // jump2: false,
             player2HP: 100,
             spec2: 10,
             distanceApart: 900
         };
     }
-
-    // exitRound = () => {
-    //     // this.props.exitRound();
-    //     // return
-    //     alert("game done")
-    // }
-
-
 
     p1Jump = () => {
         this.setState(prevState => {
@@ -97,7 +86,6 @@ class BothPlayers extends React.Component {
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
         });
     };
-
     p1Left = () => {
         this.setState(prevState => {
             if (this.state.x1 < (10)) {
@@ -120,35 +108,49 @@ class BothPlayers extends React.Component {
             this.setState({ distanceApart: Math.abs((this.state.x2 + this.state.p2width) - (this.state.x1 + this.state.p1width)) })
         });
     };
-
     p1Punch = () => {
-        this.setState({ punch1: true })
+        this.setState({
+            punch1: true,
+            p1Img: "https://media.giphy.com/media/mhh4VA7LKYL9S/giphy.gif"
+        })
         if ((this.state.distanceApart <= 220)) {
             this.setState((state) => ({
-                player2HP: state.player2HP - 9
-            }));
-            this.setState({ spec1: this.state.spec1 + 8 })
-            setTimeout(
-                function () {
-                    this.setState({ punch1: false });
-                }.bind(this), 900
-            );
-        }
-    };
+                player2HP: state.player2HP - 9,
+                spec1: this.state.spec1 + 8,
 
+            }));
+            // this.setState({  })
+            
+        }
+        setTimeout(
+            function () {
+                this.setState({
+                    // punch1: false,
+                    p1Img: "https://i.imgur.com/8jGjmCb.gif"
+                });
+            }.bind(this), 300
+        );
+    };
     p1Kick = () => {
-        this.setState({ kick1: true })
+        this.setState({ 
+            kick1: true,
+            p1Img: "https://media.giphy.com/media/mhh4VA7LKYL9S/giphy.gif"
+        })
         if ((this.state.distanceApart <= 280)) {
             this.setState((state) => ({
-                player2HP: state.player2HP - 20
+                player2HP: state.player2HP - 20,
+                spec1: this.state.spec1 + 8 ,
+
             }));
-            this.setState({ spec1: this.state.spec1 + 8 })
-            setTimeout(
-                function () {
-                    this.setState({ kick1: false });
-                }.bind(this), 900
-            );
         }
+        setTimeout(
+                function () {
+                    this.setState({ 
+                        // kick1: false,
+                        p1Img: "https://i.imgur.com/8jGjmCb.gif" 
+                    });
+                }.bind(this), 600
+            );
     }
 
     //  =======================
@@ -177,41 +179,50 @@ class BothPlayers extends React.Component {
         });
     };
     p2Punch = () => {
-        this.setState({ punch2: true })
+        this.setState({ 
+            punch2: true,
+            p2Img: "https://media.giphy.com/media/mhh4VA7LKYL9S/giphy.gif"
+        })
         if ((this.state.distanceApart <= 220)) {
             this.setState((state) => ({
-                player1HP: state.player1HP - 9
+                player1HP: state.player1HP - 9,
+                spec2: this.state.spec2 + 8,
             }));
-            this.setState({ spec2: this.state.spec2 + 8 })
-            setTimeout(
-                function () {
-                    this.setState({ punch2: false });
-                }.bind(this), 900
-            );
         }
+        setTimeout(
+            function () {
+                this.setState({ 
+                    // punch2: false,
+                    p2Img: "https://i.imgur.com/OKD5tND.gif"
+                });
+            }.bind(this), 300
+        );
     }
     p2Kick = () => {
-        this.setState({ kick2: true })
+        this.setState({ 
+            kick2: true,
+            p2Img: "https://media.giphy.com/media/mhh4VA7LKYL9S/giphy.gif"
+        })
         if ((this.state.distanceApart <= 280)) {
             this.setState((state) => ({
-                player1HP: state.player1HP - 20
+                player1HP: state.player1HP - 20,
+                spec2: this.state.spec2 + 8,
             }));
-            this.setState({ spec2: this.state.spec2 + 8 })
-            setTimeout(
-                function () {
-                    this.setState({ kick2: false });
-                }.bind(this), 900
-            );
         }
+        setTimeout(
+            function () {
+                this.setState({ 
+                    // kick2: false,
+                    p2Img: "https://i.imgur.com/OKD5tND.gif"
+                });
+            }.bind(this), 600
+        );
     }
 
-//     exitRound = () => {
-// alert("trest")
-//     }
-
-    updateWinsTest = (testCount)=>{
+    updateWinsTest = (testCount) => {
         this.props.updateWins(testCount)
     }
+
     checkForKnockout = (e) => {
         if ((this.state.player1HP <= 0) || (this.state.player2HP <= 0)) {
             if (this.state.player1HP <= 0 && this.state.player2HP >= 0) {
@@ -220,8 +231,7 @@ class BothPlayers extends React.Component {
                     roundIsRunning: false,
                     roundWinner: this.state.player2Char
                 });
-                
-                alert(this.state.player2Char + ' WINS')
+                // alert(this.state.player2Char + ' WINS')
                 this.updateWinsTest(this.state.player2Char)
             }
             if (this.state.player1HP >= 0 && this.state.player2HP <= 0) {
@@ -229,11 +239,9 @@ class BothPlayers extends React.Component {
                     player1Wins: this.state.player1Wins + 1,
                     roundIsRunning: false,
                     roundWinner: this.state.player2Char
-                    
                 });
-                alert(this.state.player1Char + ' WINS')
+                // alert(this.state.player1Char + ' WINS')
                 this.updateWinsTest(this.state.player2Char)
-                
             }
         }
     }
@@ -245,30 +253,14 @@ class BothPlayers extends React.Component {
             this.checkForKnockout();
         }
         else if (this.state.roundIsRunning === false) {
-
-            // this.exitRound();
-            // this.setState({gameRunning: false})
-            // this.setState({roundWinner: })
-
+            return null
         }
     }
 
- 
-
+    componentDidMount() {
+        console.log(this.state.p1Img)
+    }
     render() {
-        console.log("======BOTH PLAYERS COMPONENT======")
-        // console.log(this.props.testPass)
-        // console.log(this.props.player1Char)
-        // console.log(this.props.player2Char)
-        // console.log(this.props.player1Wins)
-        // console.log(this.props.player2Wins)
-        // console.log(this.props.gameCount)
-        // console.log(this.props.gameTimer)
-        // console.log(this.props.roundIsRunning)
-        // console.log(this.props.roundWinner)
-        console.log("====================================")
-        //these all work
-        console.log(this.state)
 
         return (
             <Fragment>
@@ -297,10 +289,10 @@ class BothPlayers extends React.Component {
                         pointerEvents: 'none',
                     }
                 }}>
-                    <PlayerTest />
+                    <PlayerTest
+                        ImgProps={this.state.p1Img}
+                    />
                 </div>
-
-
 
                 <div style={{
                     ...p2Styles, ...{
@@ -308,7 +300,9 @@ class BothPlayers extends React.Component {
                         pointerEvents: 'none',
                     }
                 }}>
-                    <PlayerTest2 />
+                    <PlayerTest2 
+                        Img2Props={this.state.p2Img}
+                    />
                 </div>
             </Fragment>
         );

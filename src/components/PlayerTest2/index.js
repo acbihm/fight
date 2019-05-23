@@ -2,10 +2,10 @@ import React from 'react';
 import "./style.css";
 
 
-function PlayerTest2() {
+function PlayerTest2(props) {
     return (
         <div id="player-placeholder2">
-            <img src="https://i.imgur.com/OKD5tND.gif" width="100%" alt="p2"/>
+                        <img src={props.Img2Props} width="100%" alt="p1"/>
             {/* <h3>Test <br></br>(400 x 250px)</h3> */}
         </div>
     );

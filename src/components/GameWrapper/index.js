@@ -26,13 +26,13 @@ class GameWrapper extends React.Component {
     updateWins = (roundWinner) => {
         if (roundWinner === this.state.player1Char) {
             this.setState({
-                player1Wins: this.state.player1Wins + 1,
+                // player1Wins: this.state.player1Wins + 1,
                 gameCount: this.state.gameCount + 1
             })
         }
         if (roundWinner === this.state.player2Char) {
             this.setState({
-                player2Wins: this.state.player2Wins + 1,
+                // player2Wins: this.state.player2Wins + 1,
                 gameCount: this.state.gameCount + 1
             })
         }
@@ -65,8 +65,9 @@ class GameWrapper extends React.Component {
                     player1Wins={this.state.player1Wins}
                     player2Wins={this.state.player2Wins}
                     gameCount={this.state.gameCount}
+                    
                     updateWins={this.updateWins}
-                    exitRound={this.exitRound}
+                    
                 />
             </div>
         );

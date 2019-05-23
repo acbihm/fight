@@ -38,22 +38,22 @@ class NewRound extends React.Component {
   }
 
   render(props) {
-    console.log("")
-    console.log("======NEW ROUND COMPONENT======")
-    console.log(this.props.testPass)
-    console.log(this.props.player1Char)
-    console.log(this.props.player2Char)
-    console.log(this.props.player1Wins)
-    console.log(this.props.player2Wins)
-    console.log(this.props.gameCount)
-    console.log("*****last 3 are passed states*****")
-    console.log(this.state.gameTimer)
-    console.log(this.state.roundIsRunning)
-    console.log(this.state.roundWinner)
-    console.log("========================")
-    console.log("")
-    //these all work
-    console.log(this.state.player1Wins)
+    // console.log("")
+    // console.log("======NEW ROUND COMPONENT======")
+    // console.log(this.props.testPass)
+    // console.log(this.props.player1Char)
+    // console.log(this.props.player2Char)
+    // console.log(this.props.player1Wins)
+    // console.log(this.props.player2Wins)
+    // console.log(this.props.gameCount)
+    // console.log("*****last 3 are passed states*****")
+    // console.log(this.state.gameTimer)
+    // console.log(this.state.roundIsRunning)
+    // console.log(this.state.roundWinner)
+    // console.log("========================")
+    // console.log("")
+    // //these all work
+    // console.log(this.state.player1Wins)
 
 
 
