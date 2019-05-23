@@ -112,6 +112,69 @@ meter::-webkit-meter-even-less-good-value {
     background: red;
 }
 
+#play1{
+    top: 90px;
+    position: absolute;
+    left: 20px;
+    color: yellow;
+    z-index: 12;
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #442323;
+      letter-spacing: 2px;
+}
+
+#play2{
+    top: 90px;
+    position: absolute;
+    right: 20px;
+    color: yellow;
+    z-index: 12;
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #442323;
+      letter-spacing: 2px;
+}
+
+#wins1{
+    display: flex;
+    padding: 0px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    top: 39px;
+    position: absolute;
+    /* left: 567px; */
+    color: yellow;
+    z-index: 12;
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #442323;
+      letter-spacing: 2px;
+}
+
+#winsCount{
+    /* transform: translate(-50%, -50%); */
+    display: flex;
+    padding: 0px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    top: 58px;
+    position: absolute;
+    /* left: 540px; */
+    margin: 0 auto;
+    color: yellow;
+    z-index: 12;
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #442323;
+      letter-spacing: 2px;
+}
 
 /* =========== */
 

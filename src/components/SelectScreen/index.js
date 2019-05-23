@@ -15,8 +15,8 @@ var charList = require('../../charList.json');
 class SelectScreen extends React.Component {
     state = {
         charList,
-        player1Name: false,
-        player2Name: false
+        player1Name: "Player 1",
+        player2Name: "Player 2"
     }
 
 
@@ -112,7 +112,7 @@ class SelectScreen extends React.Component {
                             name={charList.name}
                             image={charList.image}
                             className={charList.id}
-                            handleTest1={this.assignCharacter1}
+                            // handleTest1={this.assignCharacter1}
                         // handleTest2={this.assignCharacter2}
                         />
                     ))}
@@ -120,7 +120,7 @@ class SelectScreen extends React.Component {
                 {/* Create chosenCharacter object here, then 
                 reference it below, and on the fight page */}
                 <P1CharacterNameBar name={this.state.player1Name} />
-                <P2CharacterNameBar name={this.state.player1Name} />
+                <P2CharacterNameBar name={this.state.player2Name} />
                 {/* <h2> Waiting on player 1...</h2>
                 <h2> Waiting on player 2...</h2> */}
                 <BlurbSmall text="Ready to fight?" />

@@ -46,7 +46,7 @@ class BothPlayers extends React.Component {
             walk1: false,
             jump1: false,
             player1HP: 100,
-            spec1: 20,
+            spec1: 0,
             x2: 950,
             y2: 0,
             p2width: 250,
@@ -57,7 +57,7 @@ class BothPlayers extends React.Component {
             walk2: false,
             jump2: false,
             player2HP: 100,
-            spec2: 10,
+            spec2: 0,
             distanceApart: 900
         };
     }
@@ -295,8 +295,10 @@ class BothPlayers extends React.Component {
                 <HPBar
                     player1HP={this.state.player1HP}
                     player2HP={this.state.player2HP}
-                // spec1={this.state.spec1}
-                // spec2={this.state.spec2}
+                spec1={this.state.spec1}
+                spec2={this.state.spec2}
+                player1Wins={this.props.player1Wins}
+            player2Wins={this.props.player2Wins}
                 />
                 <KeyEvents
      

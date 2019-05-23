@@ -12,7 +12,7 @@ class LoginScreen extends React.Component {
                 <SelectHeader text="Log In"></SelectHeader>
                 <FormContainer />
                 <FormContainer />
-                <BlurbSmall text="Character Select -> " />
+                <BlurbSmall text="Game Info " />
             </div>
         )
     }

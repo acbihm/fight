@@ -8,7 +8,7 @@
 }
 
 .leftPlayer {
-    z-index: 11;
+    z-index: 19;
     position: absolute;
     bottom: -240px;
     left: -200px;
