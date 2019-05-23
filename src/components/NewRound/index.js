@@ -24,8 +24,8 @@ class NewRound extends React.Component {
   }
 
   handleTimeout = () => {
-    alert("Timeout")
-
+    // alert("Timeout")
+console.log("timeout")
     // this.setState({
     //   [name]: value
     // });

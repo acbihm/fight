@@ -20,7 +20,8 @@ class KeyEvents extends React.Component {
                 case 13:
                     this.props.onDKey();
                     this.props.onDKey();
-                    // console.log(event.keyCode)
+                    //because the controller keys are slower than a keyboard, 
+                    // I run the function twice when using a controller
                     break;
                 case 15:
                     this.props.onAKey();
@@ -29,35 +30,37 @@ class KeyEvents extends React.Component {
                 case 4:
                     this.props.onSpaceKey();
                     break;
+                default:
+                    this.props.onNoKey1();
             }
         });
 
 
-        const gamepad2 = new Gamepad(true);
-        gamepad2.on('gamepadevent', event => {
-            switch (event.keyCode) {
-                case 1:
-                    this.props.onQKey();
-                    break;
-                case 2:
-                    this.props.onWKey();
-                    break;
-                case 13:
-                    this.props.onDKey();
-                    this.props.onDKey();
-                    // console.log(event.keyCode)
-                    break;
-                case 15:
-                    this.props.onAKey();
-                    this.props.onAKey();
-                    break;
-                case 4:
-                    this.props.onSpaceKey();
-                    break;
-            }
-        });
+        // const gamepad2 = new Gamepad(true);
+        // gamepad2.on('gamepadevent', event => {
+        //     switch (event.keyCode) {
+        //         case 1:
+        //             this.props.onQKey();
+        //             break;
+        //         case 2:
+        //             this.props.onWKey();
+        //             break;
+        //         case 13:
+        //             this.props.onDKey();
+        //             this.props.onDKey();
+        //             // console.log(event.keyCode)
+        //             break;
+        //         case 15:
+        //             this.props.onAKey();
+        //             this.props.onAKey();
+        //             break;
+        //         case 4:
+        //             this.props.onSpaceKey();
+        //             break;
+        //     }
+        // });
 
-        
+
 
     }
 
@@ -95,6 +98,8 @@ class KeyEvents extends React.Component {
             case 79:
                 this.props.onOKey();
                 break;
+            // default:
+            //     this.props.onNoKey1();
         }
     };
     render() {
@@ -109,11 +114,8 @@ class KeyEvents extends React.Component {
                 onKeyDown={this.onKeyDown}
                 style={{
                     position: "absolute",
-                    width: '92vw',
-                    height: '89vh',
-                    // outlineStyle: 'double',
-                    // outlineColor: 'pink',
-                    // outlineWidth: 10
+                    width: '90vw',
+                    height: '90vh',
                 }}
                 tabIndex="0"
                 ref={ref => {
