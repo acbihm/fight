@@ -1,4 +1,4 @@
-import React from "react";
+import React from "./node_modules/react";
 // import SelectHeader from "../SelectHeader";
 import "./style.css";
 import HeadLine from "../HeadLine";

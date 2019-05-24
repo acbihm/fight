@@ -31,6 +31,8 @@ class HPBar extends React.Component {
                     <div className="p2Special special">
                     <h1 id="play1">PLAYER 1</h1>
                     <h1 id="play2">PLAYER 2</h1>
+                    <h1 id="combo1">COMBOS: {this.props.combo1}</h1>
+                    <h1 id="combo2">COMBOS: {this.props.combo2}</h1>
                     <h4 id="wins1">WIN COUNT</h4>
                     <h2 id="winsCount">{this.props.player1Wins} | {this.props.player2Wins}</h2>
                         <meter min="0" low="40" high="85" max="100" value={this.props.spec2}>

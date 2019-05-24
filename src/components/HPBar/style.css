@@ -136,6 +136,31 @@ meter::-webkit-meter-even-less-good-value {
       letter-spacing: 2px;
 }
 
+#combo1{
+    top: 620px;
+    position: absolute;
+    left: 20px;
+    color: yellow;
+    /* z-index: 12; */
+    z-index: 200000;
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #442323;
+      letter-spacing: 2px;
+}
+
+#combo2{
+    top: 620px;
+    position: absolute;
+    right: 60px;
+    color: yellow;
+    z-index: 199999;
+    font-family: 'Luckiest Guy', cursive;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #442323;
+      letter-spacing: 2px;
+}
+
 #wins1{
     display: flex;
     padding: 0px;

@@ -47,6 +47,7 @@ class BothPlayers extends React.Component {
             jump1: false,
             player1HP: 100,
             spec1: 0,
+            combo1: 0,
             x2: 950,
             y2: 0,
             p2width: 250,
@@ -58,6 +59,7 @@ class BothPlayers extends React.Component {
             jump2: false,
             player2HP: 100,
             spec2: 0,
+            combo2: 0,
             distanceApart: 900
         };
     }
@@ -148,6 +150,8 @@ class BothPlayers extends React.Component {
             this.setState((state) => ({
                 player2HP: state.player2HP - 9,
                 spec1: this.state.spec1 + 8,
+                combo1: this.state.combo1 +1,
+                combo2: 0
             }));
         }
         setTimeout(
@@ -169,6 +173,8 @@ class BothPlayers extends React.Component {
             this.setState((state) => ({
                 player2HP: state.player2HP - 20,
                 spec1: this.state.spec1 + 8,
+                combo1: this.state.combo1 +1,
+                combo2: 0
             }));
         }
         setTimeout(
@@ -215,6 +221,8 @@ class BothPlayers extends React.Component {
             this.setState((state) => ({
                 player1HP: state.player1HP - 9,
                 spec2: this.state.spec2 + 8,
+                combo2: this.state.combo2 +1,
+                combo1: 0
             }));
         }
         setTimeout(
@@ -236,6 +244,8 @@ class BothPlayers extends React.Component {
             this.setState((state) => ({
                 player1HP: state.player1HP - 20,
                 spec2: this.state.spec2 + 8,
+                combo2: this.state.combow +1,
+                combo1: 0
             }));
         }
         setTimeout(
@@ -267,10 +277,10 @@ class BothPlayers extends React.Component {
                 this.setState({
                     player1Wins: this.state.player1Wins + 1,
                     roundIsRunning: false,
-                    roundWinner: this.state.player2Char
+                    roundWinner: this.state.player1Char
                 });
                 // alert(this.state.player1Char + ' WINS')
-                this.updateWinsTest(this.state.player2Char)
+                this.updateWinsTest(this.state.player1Char)
             }
         }
     }
@@ -295,13 +305,15 @@ class BothPlayers extends React.Component {
                 <HPBar
                     player1HP={this.state.player1HP}
                     player2HP={this.state.player2HP}
-                spec1={this.state.spec1}
-                spec2={this.state.spec2}
-                player1Wins={this.props.player1Wins}
-            player2Wins={this.props.player2Wins}
+                    spec1={this.state.spec1}
+                    spec2={this.state.spec2}
+                    player1Wins={this.props.player1Wins}
+                    player2Wins={this.props.player2Wins}
+                    combo1={this.state.combo1}
+                    combo2={this.state.combo2}
                 />
                 <KeyEvents
-     
+
                     onAKey={this.p1Left}
                     onDKey={this.p1Right}
                     onQKey={this.p1Punch}
