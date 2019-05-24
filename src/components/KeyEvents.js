@@ -57,7 +57,7 @@ class KeyEvents extends React.Component {
             }
         });
 
-        
+
 
     }
 
@@ -88,6 +88,15 @@ class KeyEvents extends React.Component {
                 break;
             case 39:
                 this.props.onRight();
+                break;
+            case 40:
+                this.props.onDownKey();
+                break;
+            case 75:
+                this.props.onKKey();
+                break;
+            case 76:
+                this.props.onLKey();
                 break;
             case 80:
                 this.props.onPKey();
