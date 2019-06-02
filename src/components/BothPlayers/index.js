@@ -303,24 +303,39 @@ class BothPlayers extends React.Component {
 
     checkForKnockout = (e) => {
         if ((this.state.player1HP <= 0) || (this.state.player2HP <= 0)) {
+
+
             if (this.state.player1HP <= 0 && this.state.player2HP >= 0) {
+
                 this.setState({
                     player2Wins: this.state.player2Wins + 1,
                     roundIsRunning: false,
                     roundWinner: this.state.player2Char
                 });
-                // alert(this.state.player2Char + ' WINS')
-                this.updateWinsTest(this.state.player2Char)
+                setTimeout(
+                    () => {
+                        this.updateWinsTest(this.state.player2Char)
+
+                        //put KO state changes here, with another settimeout
+                        //make sure the HP goes to zero, the player falls, and 
+                        //then "player WINS appears" for 3 seconds, while they laugh.
+                        //then, start another round.
+                    }, 1000)
             }
             if (this.state.player1HP >= 0 && this.state.player2HP <= 0) {
+
                 this.setState({
                     player1Wins: this.state.player1Wins + 1,
                     roundIsRunning: false,
                     roundWinner: this.state.player1Char
                 });
-                // alert(this.state.player1Char + ' WINS')
-                this.updateWinsTest(this.state.player1Char)
+
+                setTimeout(
+                    () => {
+                        this.updateWinsTest(this.state.player1Char)
+                    }, 1000)
             }
+
         }
     }
 
@@ -363,7 +378,7 @@ class BothPlayers extends React.Component {
                     onPKey={this.p2Punch}
                     onOKey={this.p2Kick}
                     onKKey={this.p2LowK}
-                    // onLKey={this.p2LowL}
+                // onLKey={this.p2LowL}
                 />
 
                 <div style={{
