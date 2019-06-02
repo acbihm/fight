@@ -19,14 +19,8 @@ class KeyEvents extends React.Component {
                     break;
                 case 13:
                     this.props.onDKey();
-<<<<<<< HEAD
-                    this.props.onDKey();
-                    //because the controller keys are slower than a keyboard, 
-                    // I run the function twice when using a controller
-=======
                     // this.props.onDKey();
                     // console.log(event.keyCode)
->>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
                     break;
                 case 15:
                     this.props.onAKey();
@@ -66,10 +60,6 @@ class KeyEvents extends React.Component {
         // });
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
 
     }
 

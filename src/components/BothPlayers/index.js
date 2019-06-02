@@ -46,12 +46,8 @@ class BothPlayers extends React.Component {
             walk1: false,
             jump1: false,
             player1HP: 100,
-<<<<<<< HEAD
-            spec1: 20,
-=======
             spec1: 0,
             combo1: 0,
->>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
             x2: 950,
             y2: 0,
             p2width: 250,
@@ -155,11 +151,8 @@ class BothPlayers extends React.Component {
             this.setState((state) => ({
                 player2HP: state.player2HP - 9,
                 spec1: this.state.spec1 + 8,
-<<<<<<< HEAD
-=======
                 combo1: this.state.combo1 + 1,
                 combo2: 0
->>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
             }));
         }
         setTimeout(
@@ -181,11 +174,8 @@ class BothPlayers extends React.Component {
             this.setState((state) => ({
                 player2HP: state.player2HP - 20,
                 spec1: this.state.spec1 + 8,
-<<<<<<< HEAD
-=======
                 combo1: this.state.combo1 + 1,
                 combo2: 0
->>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
             }));
         }
         setTimeout(
@@ -210,8 +200,6 @@ class BothPlayers extends React.Component {
         });
     };
 
-<<<<<<< HEAD
-=======
     p2Down = () => {
         this.setState(prevState => {
             if (this.state.walk2 === false) {
@@ -232,7 +220,6 @@ class BothPlayers extends React.Component {
         });
     };
 
->>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
     p2Right = () => {
         this.setState(prevState => {
             if (this.state.x2 > 930) {
@@ -307,11 +294,7 @@ class BothPlayers extends React.Component {
                     // kick2: false,
                     p2Img: "https://imgur.com/muX9UYS.gif"
                 });
-<<<<<<< HEAD
-            }.bind(this), 500
-=======
             }.bind(this), 1000
->>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
         );
     }
 
@@ -370,11 +353,6 @@ class BothPlayers extends React.Component {
                     combo2={this.state.combo2}
                 />
                 <KeyEvents
-<<<<<<< HEAD
-     
-=======
-
->>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
                     onAKey={this.p1Left}
                     onDownKey={this.p2Down}
                     onDKey={this.p1Right}
