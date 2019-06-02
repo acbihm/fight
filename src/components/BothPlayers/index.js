@@ -10,7 +10,6 @@ const p1Styles = {
     width: 300,
     bottom: 20,
     zIndex: 20,
-
     // left: 35,
     // borderStyle: 'solid',
     // borderWith: 7,
