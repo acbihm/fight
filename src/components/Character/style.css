@@ -11,7 +11,7 @@
     float: left;
     background-size: cover;
     background-position: center;
-    z-index: 11;
+    z-index: 17;
     box-shadow: 6px 9px black;
 }
 
@@ -19,7 +19,7 @@
     height: 85%;
     overflow: hidden;
     text-align: center;
-    background: #6CADDC;
+    background:white;
 }
 
 .card>.img-container>img {

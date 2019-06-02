@@ -46,7 +46,12 @@ class BothPlayers extends React.Component {
             walk1: false,
             jump1: false,
             player1HP: 100,
+<<<<<<< HEAD
             spec1: 20,
+=======
+            spec1: 0,
+            combo1: 0,
+>>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
             x2: 950,
             y2: 0,
             p2width: 250,
@@ -57,7 +62,9 @@ class BothPlayers extends React.Component {
             walk2: false,
             jump2: false,
             player2HP: 100,
-            spec2: 10,
+            spec2: 0,
+            combo2: 0,
+            crouch2: false,
             distanceApart: 900
         };
     }
@@ -148,6 +155,11 @@ class BothPlayers extends React.Component {
             this.setState((state) => ({
                 player2HP: state.player2HP - 9,
                 spec1: this.state.spec1 + 8,
+<<<<<<< HEAD
+=======
+                combo1: this.state.combo1 + 1,
+                combo2: 0
+>>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
             }));
         }
         setTimeout(
@@ -169,6 +181,11 @@ class BothPlayers extends React.Component {
             this.setState((state) => ({
                 player2HP: state.player2HP - 20,
                 spec1: this.state.spec1 + 8,
+<<<<<<< HEAD
+=======
+                combo1: this.state.combo1 + 1,
+                combo2: 0
+>>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
             }));
         }
         setTimeout(
@@ -193,6 +210,29 @@ class BothPlayers extends React.Component {
         });
     };
 
+<<<<<<< HEAD
+=======
+    p2Down = () => {
+        this.setState(prevState => {
+            if (this.state.walk2 === false) {
+                this.setState({
+                    p2Img: "https://imgur.com/p6KMt2m.gif",
+                    crouch2: true
+                });
+            }
+            setTimeout(
+                function () {
+                    this.setState({
+                        // punch2: false,
+                        p2Img: "https://imgur.com/muX9UYS.gif"
+                    });
+                }.bind(this), 2000
+            );
+
+        });
+    };
+
+>>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
     p2Right = () => {
         this.setState(prevState => {
             if (this.state.x2 > 930) {
@@ -215,6 +255,8 @@ class BothPlayers extends React.Component {
             this.setState((state) => ({
                 player1HP: state.player1HP - 9,
                 spec2: this.state.spec2 + 8,
+                combo2: this.state.combo2 + 1,
+                combo1: 0
             }));
         }
         setTimeout(
@@ -236,6 +278,8 @@ class BothPlayers extends React.Component {
             this.setState((state) => ({
                 player1HP: state.player1HP - 20,
                 spec2: this.state.spec2 + 8,
+                combo2: this.state.combow + 1,
+                combo1: 0
             }));
         }
         setTimeout(
@@ -245,6 +289,29 @@ class BothPlayers extends React.Component {
                     p2Img: "https://imgur.com/muX9UYS.gif"
                 });
             }.bind(this), 500
+        );
+    }
+    p2LowK = () => {
+        this.setState({
+            kick2: true,
+            p2Img: "https://imgur.com/GfHaAzi.gif"
+        })
+        if ((this.state.crouch2 === true)) {
+            this.setState((state) => ({
+                p2Img: "https://imgur.com/Kv19u5p.gif"
+            }));
+        }
+        setTimeout(
+            function () {
+                this.setState({
+                    // kick2: false,
+                    p2Img: "https://imgur.com/muX9UYS.gif"
+                });
+<<<<<<< HEAD
+            }.bind(this), 500
+=======
+            }.bind(this), 1000
+>>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
         );
     }
 
@@ -267,10 +334,10 @@ class BothPlayers extends React.Component {
                 this.setState({
                     player1Wins: this.state.player1Wins + 1,
                     roundIsRunning: false,
-                    roundWinner: this.state.player2Char
+                    roundWinner: this.state.player1Char
                 });
                 // alert(this.state.player1Char + ' WINS')
-                this.updateWinsTest(this.state.player2Char)
+                this.updateWinsTest(this.state.player1Char)
             }
         }
     }
@@ -295,12 +362,21 @@ class BothPlayers extends React.Component {
                 <HPBar
                     player1HP={this.state.player1HP}
                     player2HP={this.state.player2HP}
-                // spec1={this.state.spec1}
-                // spec2={this.state.spec2}
+                    spec1={this.state.spec1}
+                    spec2={this.state.spec2}
+                    player1Wins={this.props.player1Wins}
+                    player2Wins={this.props.player2Wins}
+                    combo1={this.state.combo1}
+                    combo2={this.state.combo2}
                 />
                 <KeyEvents
+<<<<<<< HEAD
      
+=======
+
+>>>>>>> dbee030285b83fe399e2b765d74ed65046f1ab08
                     onAKey={this.p1Left}
+                    onDownKey={this.p2Down}
                     onDKey={this.p1Right}
                     onQKey={this.p1Punch}
                     onWKey={this.p1Kick}
@@ -309,6 +385,8 @@ class BothPlayers extends React.Component {
                     onRight={this.p2Right}
                     onPKey={this.p2Punch}
                     onOKey={this.p2Kick}
+                    onKKey={this.p2LowK}
+                    // onLKey={this.p2LowL}
                 />
 
                 <div style={{

@@ -7,11 +7,11 @@ class GameWrapper extends React.Component {
         super(props);
         this.state =
             {
-                player1Char: "Alex",
-                player2Char: "Jeff",
-                player1Wins: 1,
+                player1Char: "PLAYER 1",
+                player2Char: "PLAYER 2",
+                player1Wins: 0,
                 player2Wins: 0,
-                gameCount: 1,
+                gameCount: 0,
                 roundId: Date.now(),
                 gameRunning: false
             };
@@ -26,13 +26,13 @@ class GameWrapper extends React.Component {
     updateWins = (roundWinner) => {
         if (roundWinner === this.state.player1Char) {
             this.setState({
-                // player1Wins: this.state.player1Wins + 1,
+                player1Wins: this.state.player1Wins + 1,
                 gameCount: this.state.gameCount + 1
             })
         }
         if (roundWinner === this.state.player2Char) {
             this.setState({
-                // player2Wins: this.state.player2Wins + 1,
+                player2Wins: this.state.player2Wins + 1,
                 gameCount: this.state.gameCount + 1
             })
         }
